@@ -1,0 +1,97 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --neutral-white: #ffffff;
+  --neutral-silver: #f5f7fa;
+  --neutral-greyblue: #abbed1;
+  --neutral-lgrey: #89939e;
+  --neutral-grey: #717171;
+  --neutral-dgrey: #4d4d4d;
+  --neutral-black: #263238;
+  --neutral-white-stroke: transparent;
+  --brand-info: #263238;
+  --brand-secondary: #455d68;
+  --brand-primary: #4caf4f;
+  --shade-s1: #43a046;
+  --shade-s2: #388e3b;
+  --shade-s3: #237d31;
+  --shade-s4: #1b5e1f;
+  --shade-s5: #103e13;
+  --tint-t1: #66bb69;
+  --tint-t2: #81c784;
+  --tint-t3: #a5d6a7;
+  --tint-t4: #c8e6c9;
+  --tint-t5: #e8f5e9;
+  --action-success: #2e7d31;
+  --action-error: #e53835;
+  --action-warning: #fbc02d;
+
+  /* Fonts */
+  --heading-headline-1-font-family: Inter-SemiBold, sans-serif;
+  --heading-headline-1-font-size: 64px;
+  --heading-headline-1-line-height: 76px;
+  --heading-headline-1-font-weight: 600;
+  --heading-headline-1-font-style: normal;
+  --heading-headline-2-font-family: Inter-SemiBold, sans-serif;
+  --heading-headline-2-font-size: 36px;
+  --heading-headline-2-line-height: 44px;
+  --heading-headline-2-font-weight: 600;
+  --heading-headline-2-font-style: normal;
+  --heading-headline-3-font-family: Inter-Bold, sans-serif;
+  --heading-headline-3-font-size: 28px;
+  --heading-headline-3-line-height: 36px;
+  --heading-headline-3-font-weight: 700;
+  --heading-headline-3-font-style: normal;
+  --heading-headline-4-font-family: Inter-SemiBold, sans-serif;
+  --heading-headline-4-font-size: 20px;
+  --heading-headline-4-line-height: 28px;
+  --heading-headline-4-font-weight: 600;
+  --heading-headline-4-font-style: normal;
+  --body-regular-body-1-font-family: Inter-Regular, sans-serif;
+  --body-regular-body-1-font-size: 18px;
+  --body-regular-body-1-line-height: 28px;
+  --body-regular-body-1-font-weight: 400;
+  --body-regular-body-1-font-style: normal;
+  --body-regular-body-2-font-family: Inter-Regular, sans-serif;
+  --body-regular-body-2-font-size: 16px;
+  --body-regular-body-2-line-height: 24px;
+  --body-regular-body-2-font-weight: 400;
+  --body-regular-body-2-font-style: normal;
+  --body-regular-body-3-font-family: Inter-Regular, sans-serif;
+  --body-regular-body-3-font-size: 14px;
+  --body-regular-body-3-line-height: 20px;
+  --body-regular-body-3-font-weight: 400;
+  --body-regular-body-3-font-style: normal;
+  --body-regular-body-4-font-family: Inter-Regular, sans-serif;
+  --body-regular-body-4-font-size: 12px;
+  --body-regular-body-4-line-height: 16px;
+  --body-regular-body-4-font-weight: 400;
+  --body-regular-body-4-font-style: normal;
+  --body-medium-body-1-font-family: Inter-Medium, sans-serif;
+  --body-medium-body-1-font-size: 18px;
+  --body-medium-body-1-line-height: 28px;
+  --body-medium-body-1-font-weight: 500;
+  --body-medium-body-1-font-style: normal;
+  --body-medium-body-2-font-family: Inter-Medium, sans-serif;
+  --body-medium-body-2-font-size: 16px;
+  --body-medium-body-2-line-height: 24px;
+  --body-medium-body-2-font-weight: 500;
+  --body-medium-body-2-font-style: normal;
+  --body-medium-body-3-font-family: Inter-Medium, sans-serif;
+  --body-medium-body-3-font-size: 14px;
+  --body-medium-body-3-line-height: 20px;
+  --body-medium-body-3-font-weight: 500;
+  --body-medium-body-3-font-style: normal;
+  --body-medium-body-4-font-family: Inter-Medium, sans-serif;
+  --body-medium-body-4-font-size: 12px;
+  --body-medium-body-4-line-height: 16px;
+  --body-medium-body-4-font-weight: 500;
+  --body-medium-body-4-font-style: normal;
+
+  /* Effects */
+  --shadow-2px-box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.6);
+  --shadow-4px-box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
+  --shadow-6px-box-shadow: 0px 6px 12px 0px rgba(171, 190, 209, 0.3);
+  --shadow-8px-box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.4);
+  --shadow-16px-box-shadow: 0px 16px 32px 0px rgba(171, 190, 209, 0.3);
+}

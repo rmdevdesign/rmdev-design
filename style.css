@@ -1,0 +1,1017 @@
+/* =========================
+   Règles globales
+========================= */
+
+/* Réinitialisation de base + layout */
+.landing-page,
+.landing-page * {
+  box-sizing: border-box;
+}
+
+.logo img {
+  max-width: 200px; /* Ajustez selon vos besoins */
+  height: auto;
+  display: block; /* Évite les espaces indésirables */
+}
+
+.landing-page {
+  background: var(--neutral-white);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-2231 {
+  width: 100%;
+  position: relative;
+}
+
+/* =========================
+   Header
+========================= */
+.frame-36 {
+  background: linear-gradient(to right, #464E58, #23252A);
+  width: 100%;
+  height: 84px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-name {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  position: relative;
+  z-index: 1002;
+  margin-left: auto;
+}
+
+.header-menu-default {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.label,
+.label2 {
+  color: var(--neutral-white, #ffffff);
+  text-align: left;
+  font-family: var(--body-medium-body-2-font-family, "Inter-Medium", sans-serif);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: var(--body-medium-body-2-font-weight, 500);
+  position: relative;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.label:hover,
+.label2:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  z-index: 1002;
+}
+
+.icon {
+  width: 210px;
+  height: 63px;
+  position: relative;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.group-2228 {
+  display: none;
+}
+
+/* =========================
+   Hero
+========================= */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-section {
+  background: var(--neutral-white);
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-top: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+
+
+/* =========================
+   Services (Community)
+========================= */
+.community {
+  width: 100%;
+  padding: 80px 20px;
+  background: var(--neutral-white);
+}
+
+.community2 {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.section-title {
+  color: var(--neutral-dgrey, #4d4d4d);
+  text-align: center;
+  font-family: var(--heading-headline-2-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--heading-headline-2-font-size, 36px);
+  line-height: var(--heading-headline-2-line-height, 44px);
+  font-weight: var(--heading-headline-2-font-weight, 600);
+  position: relative;
+ 
+}
+
+.description {
+  color: var(--neutral-grey, #717171);
+  text-align: center;
+  font-family: var(--body-regular-body-2-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--body-regular-body-2-font-size, 16px);
+  line-height: var(--body-regular-body-2-line-height, 24px);
+  font-weight: var(--body-regular-body-2-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  margin-bottom: 40px;
+  max-width: 600px;      /* Limite la largeur pour forcer le retour à la ligne */
+  margin-left: auto;     /* Centre l'élément horizontalement */
+  margin-right: auto;
+  margin-top: 10px;     /* Ajoutez ou augmentez cette valeur */
+}
+.frame-4 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* On factorise ici les deux colonnes de services */
+.Bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 350px;
+  text-align: center;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 267px;
+  position: relative;
+}
+
+.icon2 {
+  flex-shrink: 0;
+  width: 65px;
+  height: 56px;
+  position: relative;
+  
+}
+
+
+
+.icon3 {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: visible;
+}
+
+.Service_Title {
+  color: var(--neutral-dgrey, #4d4d4d);
+  text-align: center;
+  font-family: var(--heading-headline-3-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--heading-headline-3-font-size, 28px);
+  line-height: var(--heading-headline-3-line-height, 36px);
+  font-weight: var(--heading-headline-3-font-weight, 700);
+  align-self: stretch;
+  position: relative;
+}
+
+.frame-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  text-align: center;
+}
+
+.SubTitle {
+  color: var(--neutral-grey, #717171);
+  font-family: var(--body-regular-body-3-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--body-regular-body-3-font-size, 14px);
+  line-height: var(--body-regular-body-3-line-height, 20px);
+  font-weight: var(--body-regular-body-3-font-weight, 400);
+  position: relative;
+  width: 251px;
+}
+
+.group-2 {
+  width: 67.44%;
+  height: 62.5%;
+  position: absolute;
+  right: 15.96%;
+  left: 16.6%;
+  bottom: 18.75%;
+  top: 18.75%;
+  overflow: visible;
+}
+
+/* =========================
+   Clients
+========================= */
+.clients {
+  background: var(--neutral-silver);
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clients-content {
+  width: 100%;
+  /*max-width: 1440px;*/
+  margin: 0 auto;
+  padding: 0 00px;
+}
+
+.clients2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.clients-logos {
+  display: flex;
+  align-items: center;       
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 4rem 0;
+  background: var(--neutral-silver);
+}
+
+/* Gradient de masquage sur les bords */
+.clients-logos::before,
+.clients-logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+}
+.clients-logos::before {
+  left: 0;
+  background: linear-gradient(to right, var(--neutral-silver), transparent);
+}
+.clients-logos::after {
+  right: 0;
+  background: linear-gradient(to left, var(--neutral-silver), transparent);
+}
+
+/* Wrapper global animé pour tous les logos */
+.logos-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;              /* Espacement uniforme entre les logos */
+  width: 100%;
+  animation: slide 20s linear infinite;
+}
+
+/* Conteneur de chaque logo sans padding individuel */
+.logo2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Taille des logos : hauteur fixe, largeur auto */
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+
+
+/* Animation du wrapper */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================
+   Projets
+========================= */
+
+
+.projects-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: var(--neutral-white);
+  margin: 0;
+}
+
+/* En-tête de la section */
+.projects-header {
+  max-width: 1440px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.projects-title {
+  color: var(--neutral-dgrey, #4d4d4d);
+  text-align: center;
+  font-family: var(--heading-headline-2-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--heading-headline-2-font-size, 36px);
+  line-height: var(--heading-headline-2-line-height, 44px);
+  font-weight: var(--heading-headline-2-font-weight, 600);
+  align-self: stretch;
+  position: relative;
+}
+
+.projects-description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--neutral-grey, #717171);
+  max-width: 628px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grille des projets */
+.projects-grid {
+  display: grid;
+  gap: 24px;
+  padding: 40px 20px;
+  /* On autorise 300px mini par colonne et on limite à 3 colonnes max */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Largeur max pour ne pas dépasser 3 colonnes */
+  max-width: 1000px; /* Ajustez selon la largeur souhaitée (300px x 3 + ~gaps) */
+  margin: 0 auto;
+}
+
+/* Chaque projet */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image du projet */
+.project-image {
+  width: 100%;
+  max-width: 368px;
+  height: 286px;
+  border-radius: 8px;
+  object-fit: cover;
+  position: relative;
+}
+
+/* Étiquette et description du projet */
+.project-label {
+  margin-top: 16px;
+  background: var(--neutral-silver, #f5f7fa);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.4);
+  font-family: var(--heading-headline-4-font-family, "Inter-SemiBold", sans-serif);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--neutral-grey, #717171);
+  width: 300px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-grid {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   Contact (footer section)
+========================= */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.frame-162 {
+  background: var(--neutral-silver);
+  width: 100%;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.contact-content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.group-2229 {
+  width: 100%;
+  max-width: 685px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+
+
+.frame-37 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.col-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.nom,
+.e-mail,
+.message {
+  color: var(--neutral-dgrey, #4d4d4d);
+  font-family: var(--heading-headline-4-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--heading-headline-4-font-size, 20px);
+  line-height: var(--heading-headline-4-line-height, 28px);
+  font-weight: var(--heading-headline-4-font-weight, 600);
+}
+
+.input-field-bg {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: var(--body-regular-body-2-font-size, 16px);
+  line-height: var(--body-regular-body-2-line-height, 24px);
+  font-family: var(--body-regular-body-2-font-family, "Inter-Regular", sans-serif);
+  transition: border-color 0.3s;
+}
+
+.input-field-bg:focus {
+  border-color: var(--brand-info, #263238);
+  outline: none;
+}
+
+textarea.input-field-bg {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: var(--brand-info, #263238);
+  color: var(--neutral-white, #ffffff);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--body-medium-body-2-font-size, 16px);
+  line-height: var(--body-medium-body-2-line-height, 24px);
+  font-family: var(--body-medium-body-2-font-family, "Inter-Medium", sans-serif);
+  font-weight: var(--body-medium-body-2-font-weight, 500);
+  transition: background-color 0.3s;
+  width: auto;
+  max-width: 200px;
+  margin: 1rem auto 0;
+  display: block;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e515b;
+}
+
+.col-4 {
+  flex-shrink: 0;
+  width: 255px;
+  height: 92px;
+  position: relative;
+  overflow: hidden;
+}
+
+.col-5 {
+  flex-shrink: 0;
+  width: 542px;
+  height: 174px;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-field-bg2 {
+  background: var(--neutral-black, #263238);
+  border-radius: 8px;
+  opacity: 0.2;
+  width: 540px;
+  height: 70.11%;
+  position: absolute;
+  right: 1px;
+  bottom: 6.9%;
+  top: 22.99%;
+}
+
+.button2 {
+  background: var(--brand-info, #263238);
+  border-radius: 4px;
+  padding: 14px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+._16-arrows-directions-right {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+
+.down {
+  height: auto;
+  position: absolute;
+  left: 2.06px;
+  top: 5px;
+  overflow: visible;
+}
+
+/* =========================
+   Footer final
+========================= */
+.footer-big-4 {
+  background: linear-gradient(to right, #464E58, #23252A);
+   width: 100%;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo10 {
+  display: flex;
+  flex-direction: row;
+  gap: 9.89px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.icon5 {
+  flex-shrink: 0;
+  width: 259.63px;
+  height: 77.89px;
+  position: relative;
+}
+
+.logoRMDevDesign {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  object-fit: contain;
+ 
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.copyright-2020-landify-ui-kit,
+.all-rights-reserved {
+  color: var(--neutral-silver, #f5f7fa);
+  text-align: left;
+  font-family: var(--body-regular-body-3-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--body-regular-body-3-font-size, 14px);
+  line-height: var(--body-regular-body-3-line-height, 20px);
+  font-weight: var(--body-regular-body-3-font-weight, 400);
+  width: 350px;
+}
+
+.social-links {
+
+ display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons,
+.social-icons2,
+.social-icons3,
+.social-icons4 {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: visible;
+}
+
+.links {
+  display : none;
+  /*display: flex;*/
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.company {
+  color: var(--neutral-white, #ffffff);
+  text-align: left;
+  font-family: var(--heading-headline-4-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--heading-headline-4-font-size, 20px);
+  line-height: var(--heading-headline-4-line-height, 28px);
+  font-weight: var(--heading-headline-4-font-weight, 600);
+  width: 160px;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us,
+.contact-us {
+  color: var(--neutral-silver, #f5f7fa);
+  text-align: left;
+  font-family: var(--body-regular-body-3-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--body-regular-body-3-font-size, 14px);
+  line-height: var(--body-regular-body-3-line-height, 20px);
+  font-weight: var(--body-regular-body-3-font-weight, 400);
+  width: 160px;
+}
+
+/* =========================
+   Responsive / Media queries
+========================= */
+
+/* ----- Base : Smooth scroll + offset pour le header ----- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px; /* Hauteur du header */
+}
+
+/* =========================
+   Tablettes (max-width: 768px)
+========================= */
+@media screen and (max-width: 768px) {
+  .frame-36 {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .heading-name {
+    gap: 20px;
+  }
+
+  /* (Déjà défini en global)
+   .label, .label2 {
+     font-size: 14px;
+     line-height: 20px;
+   }
+  */
+
+  .icon {
+    width: 180px;
+    height: 54px;
+  }
+
+  .hero-section {
+    height: 500px;
+    margin-top: 70px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .frame-15,
+  .frame-16 {
+    grid-template-columns: 1fr;
+  }
+
+  .frame-22312 {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .frame-37 {
+    grid-template-columns: 1fr;
+  }
+
+  .frame-2230 {
+    padding: 1rem;
+  }
+
+  .clients-logos {
+    padding: 3rem 0;
+  }
+
+  .logo2 {
+    padding: 0 3rem;
+  }
+
+  .logo2 img {
+    max-width: 180px;
+  }
+
+  .frame-4 {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* (Plus besoin de réécrire la même chose pour .membership-organizatios,
+     .national-associations, car on l'a déjà défini globalement.) */
+
+
+  .let-nextcent-do-the-work-so-you-don-t-have-to {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+
+
+  .header-menu-default {
+    gap: 20px;
+  }
+}
+
+/* =========================
+   Mobiles (max-width: 480px)
+========================= */
+@media screen and (max-width: 480px) {
+  .frame-36 {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .heading-name {
+    gap: 15px;
+  }
+
+  .label,
+  .label2 {
+    font-size: 13px; /* plus petit sur mobile */
+  }
+
+  .icon {
+    width: 150px;
+    height: 45px;
+  }
+
+  .hero-section {
+    height: 400px;
+    margin-top: 60px;
+  }
+
+  .group-2229 {
+    text-align: center;
+  }
+
+
+
+  .logos-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;              /* Espacement entre les logos */
+    width: 4000%;            /* Contient deux sets de logos */
+    animation: slide 25s linear infinite; /* Durée plus longue pour un défilement plus lent */
+  }
+
+  .logo-img {
+    height: 150px;   /* Augmente la taille des logos */
+    width: auto;     /* Conserve le ratio */
+  }
+/* Conteneur de chaque logo sans padding individuel */
+.logo2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Taille des logos : hauteur fixe, largeur auto */
+
+
+  .let-nextcent-do-the-work-so-you-don-t-have-to {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+
+  button[type="submit"] {
+    width: 100%;
+    max-width: none;
+  }
+
+
+
+
+  .header-menu-default {
+    gap: 15px;
+  }
+
+  .frame-4 {
+    gap: 30px;
+  }
+
+  .frame-15,
+  .frame-16 {
+    grid-template-columns: 1fr;
+    display: block;
+    margin:  auto;
+  }
+
+  .ProjectImages {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+  }
+
+  .community-updates {
+    width: 100%;
+    padding: 80px 0px 0px 0px;
+    background: var(--neutral-white);
+  }
+
+}
+
+/* ----- Ajustement du scroll-padding-top sur mobile ----- */
+@media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px; /* Hauteur du header en mode tablette */
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    scroll-padding-top: 60px; /* Hauteur du header en mode mobile */
+  }
+}

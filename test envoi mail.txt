@@ -1,0 +1,20 @@
+Pour tester l'envoi de mail, vous devez 
+Configurer un serveur local 
+Installer XAMPP, WAMP ou un autre serveur local PHP
+Placer vos fichiers dans le dossier htdocs (XAMPP) ou www (WAMP)
+Modifier le fichier send_mail.php 
+Remplacer votre-email@example.com par votre adresse email réelle
+Vérifier que la fonction mail() est activée dans votre configuration PHP
+Tester le formulaire 
+Accéder à votre site via httplocalhostvotre-dossier
+Remplir le formulaire et soumettre
+Vérifier votre boîte mail pour voir si vous recevez le message
+Si vous utilisez XAMPP 
+Démarrez Apache dans le panneau de contrôle XAMPP
+Placez vos fichiers dans le dossier Cxampphtdocsvotre-dossier
+Accédez à votre site via httplocalhostvotre-dossier
+Si vous avez toujours des erreurs 
+Vérifiez la console du navigateur (F12) pour voir les erreurs JavaScript
+Vérifiez les logs PHP dans Cxamppphplogs
+Assurez-vous que PHP est correctement configuré pour l'envoi de mail
+Voulez-vous que je vous aide à configurer une solution alternative ou à déboguer les erreurs 
