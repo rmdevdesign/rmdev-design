@@ -240,68 +240,74 @@
           </div>
           <div class="projects-grid">
 
-            <div class="project">
-              <img class="project-image" src="Images/3DPlan.png" alt="Plan to 3D">
-              <div class="project-label">Plan to 3D</div>
-            </div>
-
-            <div class="project">
-              <img class="project-image" src="Images/Demonstrateur.png" alt="Démonstrateur">
-              <div class="project-label">Démonstrateur</div>
-            </div>
-
-            <div class="project">
-              <img class="project-image" src="Images/Reno.png" alt="Systèmes embarqués">
-              <div class="project-label">Systèmes embarqués</div>
-            </div>
-
-            <div class="project">
-              <img class="project-image" src="Images/ShowroomVR.png" alt="VR ShowRoom">
-              <div class="project-label">ShowRoom VR</div>
-            </div>
+            <button id="openPlan3D" class="project">
+              <img class="project-image" src="Images/3DPlan.png" alt="planTo3D">
+              <span class="project-label">Plan to 3D</span>
+            </button>
             
 
+            <button id="openDemonstrateur" class="project">
+              <img class="project-image" src="Images/Demonstrateur.png" alt="Demonstrateur">
+              <span class="project-label">Démonstrateur</span>
+            </button>
 
-            <div class="project">
-              <img class="project-image" src="Images/VRinCar.png" alt="VR In Car">
-              <div class="project-label">VR in Cockpit</div>
-            </div>
+            <button id="openSystemes" class="project">
+              <img class="project-image" src="Images/Reno.png" alt="Systèmes embarqués">
+              <span class="project-label">Systèmes embarqués</span>
+            </button>
 
-            <div class="project">
+            <button id="openShowroomVR" class="project">
+              <img class="project-image" src="Images/ShowroomVR.png" alt="ShowRoom VR</span>
+            </button>">
+              <span class="project-label">ShowRoom VR</span>
+            </button>
+            
+            
+            <button id="openVRInCar" class="project">
+              <img class="project-image" src="Images/VRinCar.png" alt="VRInCar">
+              <span class="project-label">VR in Cockpit</span>
+            </button>
+            
+
+            <button id="openImmersiveExp" class="project">
               <img class="project-image" src="Images/ImmersiveExp.png" alt="Immersive Experience">
-              <div class="project-label">Expérience Immersive</div>
-            </div>
+              <span class="project-label">Expérience Immersive</span>
+            </button>
+                     
 
-            <div class="project">
+            <button id="openVisitesVR" class="project">
               <img class="project-image" src="Images/VisitesVirtuelles.png" alt="Visites Virtuelles">
-              <div class="project-label">Visites Virtuelles</div>
-            </div>
+              <span class="project-label">Visites Virtuelles</span>
+            </button>
 
-            <div class="project">
+
+            <button id="openMaquette" class="project">
               <img class="project-image" src="Images/Calypshome.png" alt="Maquette UI/UX">
-              <div class="project-label">Maquette UI/UX</div>
-            </div>
-           
+              <span class="project-label">Maquette UI/UX</span>
+            </button>
 
-            <div class="project">
+            <button id="openMultijoueur" class="project">
               <img class="project-image" src="Images/XRSHARE.png" alt="Multijoueur multiplateforme">
-              <div class="project-label">Multijoueur multiplateforme</div>
-            </div>
+              <span class="project-label">Multijoueur multiplateforme</span>
+            </button>
 
-            <div class="project">
+           
+            <button id="openErgonomie" class="project">
               <img class="project-image" src="Images/Ergonomie.png" alt="Ergonomie">
-              <div class="project-label">Ergonomie</div>
-            </div>
+              <span class="project-label">Ergonomie</span>
+            </button>
 
-            <div class="project">
-              <img class="project-image" src="Images/AR.png" alt="Réalité Augmentée">
-              <div class="project-label">Réalité Augmentée</div>
-            </div>
+            <button id="openAR" class="project">                           
+            <img class="project-image" src="Images/AR.png" alt="Réalité Augmentée">         
+            <span class="project-label">Réalité Augmentée</span>          
+            </button>    
 
-            <div class="project">
-              <img class="project-image" src="Images/Creativity.png" alt="Expertise design">
-              <div class="project-label">Expertise design</div>
-            </div>
+            <button id="openExpertise" class="project">                           
+                 <img class="project-image" src="Images/Creativity.png" alt="Expertise design">     
+                  <span class="project-label">Expertise design</span>                  
+                  </button>       
+
+           
 
            
             
@@ -406,5 +412,803 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     });
 });
 </script>
+<!-- ============================= -->
+<!--  RMDev.Design - Overlays      -->
+<!--  Visites Virtuelles & Plan3D  -->
+<!--  (coller avant </body>)       -->
+<!-- ============================= -->
+
+<!-- === Overlay 1 : Visites Virtuelles (VR) === -->
+<!-- Bouton déclencheur attendu dans la grille :
+     <button id="openVisitesVR" class="project"> … </button> -->
+     <div id="cs-visites-virtuelles" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-visites-title" tabindex="-1">
+      <div class="cs-dialog">
+        <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+    
+        <figure class="cs-hero"><img src="Images/VisitesVirtuelles.png" alt="Visite VR immersive"></figure>
+    
+        <section class="cs-section">
+          <h1 id="cs-visites-title" class="section-title">Visites Virtuelles</h1>
+          <p class="description">Création d’une <strong>visite VR</strong> et d’un walkthrough vidéo à partir de plans <strong>DWG</strong> – première signature d’achat sur plan obtenue en&nbsp;<strong>48 h</strong>.</p>
+        </section>
+    
+        <section class="cs-section cs-alt">
+          <h2 class="section-title">Contexte &amp; objectifs</h2>
+          <p class="description">Acheteuse en VEFA souhaitant valider volumes, agencement et lumière avant de s’engager.</p>
+        </section>
+    
+        <section class="cs-section">
+          <h2 class="section-title">Défis techniques &amp; UX</h2>
+          <ul class="description cs-list disc">
+            <li>Conversion DWG ➜ modèle 3D propre.</li>
+            <li>Rendu temps réel sur Quest 2 à 90 FPS.</li>
+            <li>Walkthrough vidéo 4 K fluide.</li>
+          </ul>
+        </section>
+    
+        <section class="cs-section cs-alt">
+          <h2 class="section-title">Approche – sprint 48 h</h2>
+          <ol class="description cs-list decimal">
+            <li>Nettoyage DWG, extrusion murs (Solidworks).</li>
+            <li>Portage Unity URP, navigation téléportation.</li>
+            <li>Optimisation occlusion + baking lumières.</li>
+            <li>Export APK + capture walkthrough.</li>
+          </ol>
+        </section>
+    
+        <section class="cs-section">
+          <h2 class="section-title">Résultats</h2>
+          <p class="description"><strong>Signature sur plan confirmée</strong> après la démo VR.</p>
+        </section>
+      </div>
+    </div>
+    
+    <!-- === Overlay 2 : Plan to 3D (rendus & vidéo, sans VR) === -->
+    <!-- Bouton déclencheur attendu :
+         <button id="openPlan3D" class="project"> … </button> -->
+    <div id="cs-plan-to-3d" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-plan3d-title" tabindex="-1">
+      <div class="cs-dialog">
+        <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+    
+        <figure class="cs-hero"><img src="Images/3DPlan.png" alt="Rendus 3D Plan to 3D"></figure>
+    
+        <section class="cs-section">
+          <h1 id="cs-plan3d-title" class="section-title">Plan to 3D</h1>
+          <p class="description">Transformation rapide d’un <strong>plan 2D</strong> en maquette <strong>3D</strong> avec walkthrough vidéo pour valider l’aménagement intérieur.</p>
+        </section>
+    
+        <section class="cs-section cs-alt">
+          <h2 class="section-title">Contexte &amp; objectifs</h2>
+          <p class="description">Promoteur immobilier cherchant à présenter un bien sur plan de façon immersive lors de salons et en ligne, sans disposer d’un prototype VR.</p>
+        </section>
+    
+        <section class="cs-section">
+          <h2 class="section-title">Défis techniques</h2>
+          <ul class="description cs-list disc">
+            <li>Fiabilité des cotes lors de la conversion DWG ➜ 3D.</li>
+            <li>Rendus réalistes prêts en < 72 h.</li>
+            <li>Walkthrough 4 K à 60 fps pour diffusion web.</li>
+          </ul>
+        </section>
+    
+        <section class="cs-section cs-alt">
+          <h2 class="section-title">Approche – 2 jours</h2>
+          <ol class="description cs-list decimal">
+            <li>Import DWG ➜ Solidworks, modélisation fine.</li>
+            <li>Portage Unity URP: Texturing + lighting.</li>
+            <li>Animation caméra &amp; montage walkthrough.</li>
+          </ol>
+        </section>
+    
+        <section class="cs-section">
+          <h2 class="section-title">Résultats</h2>
+          <p class="description">Visuels et vidéo livrés en <strong>48 h</strong> • Validation design obtenue.</p>
+        </section>
+      </div>
+    </div>
+
+   <!-- === Overlay 3 : Démonstrateur (motorisation transparente) === -->
+<!-- Bouton déclencheur : <button id="openDemonstrateur" class="project"> … </button> -->
+<div id="cs-demonstrateur" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-demo-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <figure class="cs-hero"><img src="Images/Demonstrateur.png" alt="Démonstrateur motorisation véhicule"></figure>
+
+    <section class="cs-section">
+      <h1 id="cs-demo-title" class="section-title">Démonstrateur</h1>
+      <p class="description">Prototype <strong>Unity HDRP</strong> illustrant, de manière réaliste, plusieurs configurations de motorisation (thermique, hybride) sur un véhicule transparent roulant sur une route infinie.</p>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">Appel d'offre pour démonstrateur technique présenté lors d'un salon ; objectif : <strong>montrer les différentes motorisations possibles</strong> et leur fonctionnement interne.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="section-title">Défis techniques</h2>
+      <ul class="description cs-list disc">
+        <li>Modèle transparent révélant la chaîne cinématique.</li>
+        <li>Switch temps‑réel entre deux variantes de motorisation.</li>
+        <li>Route procédurale infinie sans artefacts.</li>
+        <li>Rendu HDRP à 60 fps sur station RTX.</li>
+      </ul>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Import CAO, création shaders transparents HDRP.</li>
+        <li>Système de commutation moteur (scripts C#).</li>
+        <li>Route procédurale + mouvements caméra.</li>
+        <li>Post‑process, capture vidéo 4 K.</li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">Prototype livré dans le délai imparti. L’appel d’offres a finalement été remporté par un concurrent, mais la démo a été ré‑utilisée comme support visuel.</p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 4 : Systèmes embarqués === -->
+<!-- Bouton déclencheur : <button id="openSystemes" class="project"> … </button> -->
+<div id="cs-systemes-embarques" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-sys-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <figure class="cs-hero"><img src="Images/Reno.png" alt="Prototype systèmes embarqués"></figure>
+
+    <section class="cs-section">
+      <h1 id="cs-sys-title" class="section-title">Systèmes Embarqués</h1>
+      <p class="description">Développement d’un <strong>prototype Unity</strong> interfaçant volant, pédales et autres commandes via <strong>bus CAN</strong>, avec visualisation UX/UI temps réel.</p>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">Programme R&amp;D de <strong>24 mois</strong>: prouver la faisabilité d’une passerelle logicielle temps réel entre hardware cockpit et maquette Unity.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Décodage CAN.</li>
+        <li>Mapping inputs ➜ animations volant/pédales.</li>
+        <li>Interface tactile minimaliste (UX/UI) co‑conçue avec un motion designer.</li>
+      </ul>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Architecture Unity + DLL CAN custom.</li>
+        <li>Boucle d’acquisition CAN en continu injectée en temps réel dans la scène Unity.</li>
+        <li>Plusieurs cycles UX avec motion designer, tests internes.</li>
+      </ol>
+    </section>
+
+    
+  </div>
+</div>
+
+<!-- === Overlay 5 : ShowRoom VR === -->
+<!-- Bouton déclencheur : <button id="openShowroomVR" class="project"> … </button> -->
+<div id="cs-showroom-vr" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-show-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <figure class="cs-hero"><img src="Images/ShowroomVR.png" alt="ShowRoom VR portes"></figure>
+
+    <section class="cs-section">
+      <h1 id="cs-show-title" class="section-title">ShowRoom VR</h1>
+      <p class="description">Exposer la <strong>gamme complète de portes</strong> du client à l’échelle 1 dans un showroom virtuel immersif.</p>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">Remplacer 200 m² de stand physique par une démonstration VR transportable en salon et en agence commerciale.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="section-title">Défis techniques</h2>
+      <ul class="description cs-list disc">
+        <li>Catalogue > 50 références, finitions variables.</li>
+        <li>Conversion Solidworks ➜ FBX ➜ Unity.</li>
+        <li>Texturing unifié, optimisation.</li>
+        <li>Low‑latency navigation sur PCVR.</li>
+      </ul>
+    </section>
+
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Pipeline Solidworks ➜ FBX ➜ prefab Unity.</li>
+        <li>Material library + variantes dynamiques (couleurs, finitions).</li>
+        <li>UI catalogue pour filtrer et charger modèles à la volée.</li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">Présentation exhaustive de la gamme sans stock physique.</p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 6 : VR in Cockpit ========================================== -->
+<!-- Bouton déclencheur à placer dans la grille :
+     <button id="openVRCockpit" class="project">
+       <img class="project-image" src="Images/VRinCar.png" alt="">
+       <span class="project-label">VR in Cockpit</span>
+     </button>                                                         -->
+
+     <div id="cs-vr-cockpit" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-vr-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Héros ---------------------------------------------------------------->
+    <figure class="cs-hero">
+      <img src="Images/VRinCar.png" alt="Expérience VR in Cockpit – Renault Triber">
+    </figure>
+
+    <!-- Intro ---------------------------------------------------------------->
+    <section class="cs-section">
+      <h1 id="cs-vr-title" class="section-title">VR in Cockpit</h1>
+      <p class="description">
+        Expérience marketing <strong>Unity</strong> présentée au <strong>New Delhi Auto Show</strong> : visiter des sites emblématiques
+        de l’Inde (Gateway of India, tempête de neige himalayenne, tigre du Bengale)
+        <em>sans quitter le siège du Renault Triber</em>.
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs ------------------------------------------------->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Opération de lancement sur le marché indien : attirer les visiteurs sur le stand,
+        générer des leads et démontrer le confort du Triber dans des environnements extrêmes.
+      </p>
+    </section>
+
+    <!-- Défis techniques ----------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Gamme de scènes variées (urbain, montagne, jungle) en <strong>60 FPS</strong> PC VR.</li>
+        <li>Conversion SolidWorks → FBX → Unity HDRP sans perte de détails.</li>
+        <li>Texturing réaliste + neige &amp; FX particules.</li>
+        <li>Robustesse “salon” : lancement 1-clic et boucle autonome 8 h/jour.</li>
+      </ul>
+    </section>
+
+    <!-- Approche ------------------------------------------------------------->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Conversion des modèles SolidWorks du Triber en FBX puis import Unity HDRP.</li>
+        <li>Mise à l’échelle 1 : 1 et éclairage HDRI unique pour les trois scènes (ville, montagne, jungle).</li>
+        <li>Boucle de démo stable 8 h sur PC VR; aucun crash constaté en salon.</li>
+      </ol>
+    </section>
+
+    <!-- Résultats ------------------------------------------------------------>
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        <strong>1 200+</strong> visiteurs ont vécu l’expérience sur 5 jours.
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 7 : Expérience Immersive =================================== -->
+<!-- Bouton déclencheur à mettre dans la grille :
+     <button id="openImmersiveExp" class="project">
+       <img class="project-image" src="Images/ImmersiveExp.png" alt="">
+       <span class="project-label">Expérience Immersive</span>
+     </button>                                                          -->
+
+     <div id="cs-immersive-exp" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-immersive-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Héros --------------------------------------------------------------->
+    <figure class="cs-hero">
+      <img src="Images/ImmersiveExp.png"
+           alt="Démo VR sécurité nacelle élévatrice">
+    </figure>
+
+    <!-- Intro --------------------------------------------------------------->
+    <section class="cs-section">
+      <h1 id="cs-immersive-title" class="section-title">Expérience Immersive</h1>
+      <p class="description">
+        Démonstration sur salon des <strong>innovations de sécurité</strong> d’une nacelle élévatrice :
+        l’utilisateur vérifie, en réalité virtuelle, la stabilité et les techniques de contrôle.
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs ------------------------------------------------>
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Mettre en valeur les dispositifs de sécurité d’un constructeur d’engins. Montrer
+        en <em>live</em> les dispositifs anti-basculement et l’ergonomie du pupitre sans
+        déplacer la machine sur le stand.
+      </p>
+    </section>
+
+    <!-- Défis techniques ---------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Fichiers 3D CAD très lourds (1200 Mo CAD ➜ &nbsp;&lt; 100 Mo FBX).</li>
+        <li>Animation d’environnement (chantier + engins) sur PC VR.</li>
+        <li>Calage métrique précis pour aligner la nacelle virtuelle sur la nacelle réelle.</li>
+      </ul>
+    </section>
+
+    <!-- Approche ------------------------------------------------------------>
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Réduction des poids de fichiers puis import Unity.</li>
+        <li>Intégration des séquences sécurité : stabilisateurs et anti-basculement animés par Timeline.</li>
+        <li>Réglage pour correspondre à la nacelle physique.</li>
+      </ol>
+    </section>
+
+    <!-- Résultats ----------------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        <strong>800+</strong> démonstrations sur 5 jours.
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 8 : Maquette UI/UX ======================================= -->
+<!-- Bouton déclencheur à mettre dans la grille :
+     <button id="openMaquette" class="project">
+       <img class="project-image" src="Images/Calypshome.png" alt="">
+       <span class="project-label">Maquette UI/UX</span>
+     </button> -->
+
+     <div id="cs-maquette-uiux" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-uiux-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Hero -->
+    <figure class="cs-hero"><img src="Images/Calypshome.png" alt="Maquettes UI/UX – app domotique"></figure>
+
+    <!-- Intro -->
+    <section class="cs-section">
+      <h1 id="cs-uiux-title" class="section-title">Maquette UI / UX</h1>
+      <p class="description">
+        De la page blanche au <strong>kit développeur</strong> : wireframes, maquettes&nbsp;Figma haute fidélité
+        et assets marketing d’une application mobile pilotant volets, stores et BSO d’une maison connectée.
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Accompagner le client depuis le cahier des charges jusqu’au passage aux devs : définir l’architecture
+        fonctionnelle, concevoir un design system complet et livrer les visuels App Store / Play Store.
+      </p>
+    </section>
+
+    <!-- Défis techniques / UX -->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Gérer plusieurs types d’équipements (volets roulants, stores, BSO) dans une même interface.</li>
+        <li>Création de 40+ pictogrammes.</li>
+        <li>Respect des guidelines iOS&nbsp;17 &amp; Material 3 pour un look natif.</li>
+      </ul>
+    </section>
+
+    <!-- Approche -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Atelier cadrage : personas, user‑flows.</li>
+        <li>Wireframes basse fidélité.</li>
+        <li>Maquettes haute fidélité &amp; design system Figma (couleurs, typographie, icônes).</li>
+        <li>Export DevMode Ready + spec PDF &amp; visuels marketing (screenshots, icônes, bannière).</li>
+      </ol>
+    </section>
+
+    <!-- Résultats -->
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        <strong>+100 écrans Figma</strong> livrés. Application disponible sur les stores.
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 9 : Multijoueur multiplateforme ============================= -->
+<!-- Bouton déclencheur à mettre dans la grille :
+     <button id="openMultijoueur" class="project">
+       <img class="project-image" src="Images/XRSHARE.png" alt="">
+       <span class="project-label">Multijoueur multiplateforme</span>
+     </button> -->
+
+     <div id="cs-multijoueur" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-multi-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Hero -------------------------------------------------------------->
+    <figure class="cs-hero">
+      <img src="Images/XRSHARE.png" alt="Prototype VR/AR multijoueur à distance">
+    </figure>
+
+    <!-- Intro -------------------------------------------------------------->
+    <section class="cs-section">
+      <h1 id="cs-multi-title" class="section-title">Multijoueur multiplateforme</h1>
+      <p class="description">
+        Application <strong>VR/AR</strong> de <strong>co‑créativité à distance</strong>, développée au LCPI : réunion virtuelle,
+        tableau blanc 3D et revue de design temps réel, accessibles depuis casque VR,
+        mobile ou PC.
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs ----------------------------------------------->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Projet de recherche académique visant à améliorer les séances de créativité
+        distribuées ; permettre à des équipes dispersées d’itérer sur des modèles 3D
+        comme si elles partageaient la même salle.
+      </p>
+    </section>
+
+    <!-- Défis techniques ---------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Réalité mixte synchronisée (VR + AR + PC) via <em>Photon PUN</em>.</li>
+        <li>Support iOS, Android, PC et casques Meta Quest avec un seul code‑base.</li>
+        <li>Outils de créativité : post‑it 3D, sketch in‑air, import rapide OBJ.</li>
+      </ul>
+    </section>
+
+    <!-- Approche ------------------------------------------------------------>
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Wireframes &amp; prototypes rapides (Figma) pour valider le flow multijoueur.</li>
+        <li>Implémentation réseau avec Photon PUN 2 ; gestion avatars, voix, permissions.</li>
+        <li>Tests cross‑device : Quest 2 / iPhone / PC .</li>
+      </ol>
+    </section>
+
+    <!-- Résultats ----------------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        Étude en cours : en attente de publication.
+      </p>
+    </section>
+  </div>
+</div>
+
+
+<!-- === Overlay 10 : Ergonomie – hand‑tracking cockpit avion =============== -->
+<!-- Déclencheur à placer dans la grille :
+     <button id="openErgonomie" class="project">
+       <img class="project-image" src="Images/Ergonomie.png" alt="">
+       <span class="project-label">Ergonomie</span>
+     </button> -->
+
+     <div id="cs-ergonomie" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-ergo-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Image héros -->
+    <figure class="cs-hero">
+      <img src="Images/Ergonomie.png" alt="Prototype Leap Motion dans un cockpit avion">
+    </figure>
+
+    <!-- Intro -->
+    <section class="cs-section">
+      <h1 id="cs-ergo-title" class="section-title">Ergonomie – Commande gestuelle cockpit avion</h1>
+      <p class="description">
+        Maquette <strong>Unity + Leap Motion</strong> pour tester, en réalité virtuelle, la
+        prise en main d’une <em>nouvelle commande produit</em> dans un cockpit d’avion avant toute
+        fabrication physique.
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Projet R&amp;D avionique : proposer un design de contrôle pour fonctions
+        de contrôle. Valider la <strong>faisabilité ergonomique</strong> et la
+        zone de confort pilote avant de lancer les maquettes physiques.
+      </p>
+    </section>
+
+    <!-- Défis techniques -->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Suivi mains fiable sous canopy resserré, bras appuyés sur accoudoirs.</li>
+        <li>Respect des volumes certifiés CS‑23 (champ visuel + gestes limités).</li>
+        <li>Cycle <em>design → test VR</em> &lt; 48 h pour itérations rapides.</li>
+      </ul>
+    </section>
+
+    <!-- Approche -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Import CAO cockpit ➜ Unity URP ; calibration 1 : 1 avec sièges fixes.</li>
+        <li>Intégration SDK <strong>Leap Motion</strong> .</li>
+        <li>Mesures sur plusieurs morphologies.</li>
+      </ol>
+    </section>
+
+    <!-- Résultats -->
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        Zone de confort validée pour la plupart des morphologies.
+        Passage en maquette physique avec un <strong>layout figé</strong> issu du prototype VR.
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 11 : Réalité augmentée – Renault ========================= -->
+<!-- 1. Placez ce fichier juste avant </body> dans index.html                   -->
+<!-- 2. Remplacez la vignette par le bouton déclencheur suivant :             -->
+<!--    <button id="openAR" class="project">                                 -->
+<!--      <img class="project-image" src="Images/AR.png" alt="">            -->
+<!--      <span class="project-label">Réalité Augmentée</span>                -->
+<!--    </button>                                                             -->
+
+<div id="cs-ar" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-ar-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
+
+    <!-- Héros -->
+    <figure class="cs-hero">
+      <img src="Images/AR.png" alt="Application AR Renault sur tablette">
+    </figure>
+
+    <!-- Intro -->
+    <section class="cs-section">
+      <h1 id="cs-ar-title" class="section-title">Réalité augmentée – Renault</h1>
+      <p class="description">
+        Application <strong>Unity + Vuforia</strong> sur tablette Android : filmer un véhicule
+        Renault et faire apparaître des contenus augmentés (vue en coupe,
+        intérieurs, animations d'ouverture).
+      </p>
+    </section>
+
+    <!-- Contexte & objectifs -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Contexte &amp; objectifs</h2>
+      <p class="description">
+        Démo salon destinée au grand public : montrer en live les atouts
+        techniques directement sur la maquette exposée.
+      </p>
+    </section>
+
+    <!-- Défis techniques -->
+    <section class="cs-section">
+      <h2 class="section-title">Défis clés</h2>
+      <ul class="description cs-list disc">
+        <li>Suivi image + shape‑based Vuforia sous forte lumière salon.</li>
+        <li>Réduction des modèles 3D (&gt; 250 Mo ➜ 30 Mo) pour la tablette.</li>
+        <li>Maintien &gt; 45 FPS sur SoC Snapdragon milieu de gamme.</li>
+      </ul>
+    </section>
+
+    <!-- Approche -->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Approche</h2>
+      <ol class="description cs-list decimal">
+        <li>Création d’un marker profil de calandre pour lock AR.</li>
+        <li>Pipeline de décimation ➜ FBX, textures.</li>
+        <li>Scripts toggle options couleur, éclaté moteur, fiche technique animée.</li>
+      </ol>
+    </section>
+
+    <!-- Résultats -->
+    <section class="cs-section">
+      <h2 class="section-title">Résultats</h2>
+      <p class="description">
+        <strong>500+</strong> démonstrations sur 3 jours .
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Overlay 12 : Expertise Design – récapitulatif compétences ========= -->
+<!-- 1. Insérez ce bloc juste avant </body> dans index.html                       -->
+<!-- 2. Transformez la vignette en bouton déclencheur :                          -->
+<!--    <button id="openExpertise" class="project">                           -->
+<!--      <img class="project-image" src="Images/Creativity.png" alt="">      -->
+<!--      <span class="project-label">Expertise design</span>                   -->
+<!--    </button>                                                                -->
+
+<div id="cs-expertise" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-expertise-title" tabindex="-1">
+  <div class="cs-dialog">
+    <button class="cs-close" aria-label="Fermer la fiche expertise">&times;</button>
+
+    <!-- Héros ---------------------------------------------------------------->
+    <figure class="cs-hero">
+      <img src="Images/Creativity.png" alt="Collage représentant UI, VR et 3D">
+    </figure>
+
+    <!-- Intro ---------------------------------------------------------------->
+    <section class="cs-section">
+      <h1 id="cs-expertise-title" class="section-title">Expertise Design &amp; Prototypage</h1>
+      <p class="description">
+        7 ans d’expérience à la croisée du <strong>design produit</strong> et du <strong>développement interactif</strong> :
+        de l’idéation à la mise en production, en AR/VR, mobile ou embarqué.
+      </p>
+    </section>
+
+    <!-- Compétences clés ------------------------------------------------------>
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Compétences principales</h2>
+      <ul class="description cs-list disc">
+        <li><strong>UI/UX&nbsp;mobile&nbsp;&&nbsp;VR</strong> : wireframes ➜ maquettes Figma ➜ design system.</li>
+        <li><strong>Prototypage temps‑réel</strong> : Unity&nbsp;HDRP/URP, OpenXR, Vuforia, Photon PUN.</li>
+        <li><strong>3D pipeline</strong> : SolidWorks ➜ optimisation LOD, textures atlas.</li>
+      </ul>
+    </section>
+
+    <!-- Savoir‑faire mis en pratique ----------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">Savoir‑faire en action</h2>
+      <p class="description">
+        Ces compétences ont été déployées sur les <em>11 projets</em> présentés ci‑dessus : showroom VR, AR tablette,
+        cockpit avion hand‑tracking, contrôle domotique, etc. Chaque overlay détaille le contexte, les défis et
+        les résultats obtenus.
+      </p>
+    </section>
+
+    <!-- Outils & stack -------------------------------------------------------->
+    <section class="cs-section cs-alt">
+      <h2 class="section-title">Outils &amp; stack favoris</h2>
+      <ul class="description cs-list disc">
+        <li>Figma, Illustrator pour UI/UX.</li>
+        <li>Unity, C#, URP/HDRP.</li>
+        <li>SolidWorks, Blender.</li>
+       
+      </ul>
+    </section>
+
+    <!-- Conclusion ----------------------------------------------------------->
+    <section class="cs-section">
+      <h2 class="section-title">En bref</h2>
+      <p class="description">
+        Que vous ayez besoin d’un <strong>prototype fonctionnel</strong>, d’une <strong>refonte UX</strong> ou d’un
+        <strong>POC AR/VR</strong>, je peux prendre votre idée et la transformer en expérience testable rapidement.
+      </p>
+    </section>
+  </div>
+</div>
+
+<!-- === Script autonome pour cet overlay  --------------------------------- -->
+<script>
+(function () {
+  const btn = document.getElementById('openImmersive');
+  const ov  = document.getElementById('cs-immersive-exp');
+  if (!btn || !ov) return;
+
+  const closeBtn = ov.querySelector('.cs-close');
+  const open  = () => { ov.style.display = 'block'; document.body.style.overflow = 'hidden'; ov.focus(); };
+  const close = () => { ov.style.display = 'none';  document.body.style.overflow = '';      };
+
+  btn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  ov.addEventListener('click', e => { if (e.target === ov) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && ov.style.display === 'block') close(); });
+})();
+</script>
+
+
+
+    <!-- === Styles & Script générique (réutilisable) === -->
+    <style>
+      .cs-overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.75);
+    backdrop-filter:blur(4px);display:none;overflow-y:auto;
+    z-index:2000;padding:60px 20px;
+  }
+  .cs-dialog{
+    background:#fff;border-radius:8px;max-width:1000px;
+    margin:0 auto;position:relative;padding:40px 20px;
+    display:flex;flex-direction:column;gap:32px;
+  }
+  .cs-close{
+  position:absolute;
+  top:16px;
+  right:20px;
+  width:40px;
+  height:40px;
+  border:none;
+  color: #f5f7fa;
+  border-radius:50%;
+  background:#4d4d4d;
+  cursor:pointer;
+  padding:0;                /* aucune marge interne */
+}
+
+  /* ↓ Taille réduite du visuel héros (desktop & tablette) */
+  .cs-hero{
+    width:100%;height:300px;               /* au lieu de 420 px */
+    overflow:hidden;border-radius:8px;margin:0;
+  }
+  .cs-hero img{width:100%;height:100%;object-fit:cover;}
+
+  .cs-section{display:flex;flex-direction:column;gap:16px;}
+  .cs-alt{background:var(--neutral-silver,#f5f7fa);
+          padding:40px 20px;border-radius:8px;}
+  .cs-list{max-width:800px;margin:0 auto;text-align:left;padding-left:20px;}
+  .cs-list.disc{list-style:disc;}
+  .cs-list.decimal{list-style:decimal;}
+
+  /* ---------- Mobile (≤ 480 px) ---------- */
+  @media screen and (max-width:480px){
+    .cs-dialog{padding:24px 16px;gap:24px;}
+    .cs-hero{height:220px;}                /* encore plus compact */
+   
+    .cs-section{gap:12px;}
+  }
+  
+
+    </style>
+    
+    <script>
+      (function(){
+        const maps=[
+          {btn:'openVisitesVR',ov:'cs-visites-virtuelles'},
+          {btn:'openPlan3D',ov:'cs-plan-to-3d'},
+          {btn:'openDemonstrateur',ov:'cs-demonstrateur'},
+          {btn:'openSystemes',ov:'cs-systemes-embarques'},
+          {btn:'openShowroomVR',ov:'cs-showroom-vr'},
+          {btn:'openVRInCar',ov:'cs-vr-cockpit'},
+          {btn:'openImmersiveExp',ov:'cs-immersive-exp'},
+          {btn:'openMaquette',ov:'cs-maquette-uiux'},
+          {btn:'openMultijoueur',ov:'cs-multijoueur'},
+          {btn:'openErgonomie',ov:'cs-ergonomie'},
+          {btn:'openAR',ov:'cs-ar'},
+          {btn:'openExpertise',ov:'cs-expertise'}
+                   
+        ];
+        maps.forEach(({btn,ov})=>{
+          const b=document.getElementById(btn);
+          const o=document.getElementById(ov);
+          if(!(b&&o))return;
+          const close=o.querySelector('.cs-close');
+          const open=()=>{o.style.display='block';document.body.style.overflow='hidden';o.focus();};
+          const shut=()=>{o.style.display='none';document.body.style.overflow='';};
+          b.addEventListener('click',open);
+          close.addEventListener('click',shut);
+          o.addEventListener('click',e=>{if(e.target===o)shut();});
+          document.addEventListener('keydown',e=>{if(e.key==='Escape'&&o.style.display==='block')shut();});
+        });
+      })();
+      </script>
+      
+
 </body>
 </html>

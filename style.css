@@ -449,6 +449,17 @@
   align-items: center;
   text-align: center;
 }
+/* Permet au <button class="project"> de se comporter comme le <div class="project"> d’origine */
+.project {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.project:focus-visible {
+  outline: 2px solid var(--brand-info, #263238);   /* accessibilité clavier */
+}
+
 
 /* Image du projet */
 .project-image {
