@@ -484,8 +484,13 @@
   font-weight: 600;
   color: var(--neutral-grey, #717171);
   width: 300px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+.project:hover .project-label {  /* arrière-plan et texte quand la souris passe */
+  background-color: #d5d7da7c;   /* ou toute autre couleur */
+  /*color: #c0c5d5;              /* optionnel : change aussi la couleur du texte */
+}
 /* Responsive */
 @media screen and (max-width: 768px) {
   .projects-grid {
