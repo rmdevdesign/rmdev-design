@@ -19,6 +19,11 @@
   
   <!-- Rendre la page responsive sur mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Polices Google Fonts (Inter + Space Grotesk pour les titres) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   
   <!-- CSS principal -->
   <link rel="stylesheet" href="./vars.css">
@@ -31,33 +36,6 @@
       emailjs.init("-asrVpY5HcztiLZIs");
     })();
   </script>
-  
-  <!-- Style reset / normalisation -->
-  <style>
-    a,
-    button,
-    input,
-    select,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      border: none;
-      text-decoration: none;
-      background: none;
-      -webkit-font-smoothing: antialiased;
-    }
-    menu, ol, ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Images/logo.png">
@@ -84,92 +62,86 @@
 </head>
 <body>
   <div class="landing-page">
-    <div class="frame-2231">
-      <div class="frame-36">
+    <div class="main-wrapper">
+      <div class="site-header">
         <div class="logo">
-          <div class="icon">
-            <img class="logoRMDevDesign" src="Images/RMDesignLogo.png" alt="Logo" />
-          </div>
+          <a href="#" class="icon">
+            <!-- Logo original (couleur) pour le header -->
+            <img class="logoRMDevDesign" src="Images/RMDesignLogo.png" alt="RM Dev Design Logo" />
+          </a>
         </div>
-        <div class="heading-name">
-          <div class="header-menu-default">
-            <a href="#services" class="label">Services</a>
+        <div class="site-nav">
+          <nav class="header-menu-default">
+            <a href="#services" class="label">Expertises</a>
             <a href="#projets" class="label">Projets</a>
             <a href="#contact" class="label">Contact</a>
-          </div>
+          </nav>
+          <!-- Icône Burger pour le menu mobile -->
+          <button class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+      </div>
+      <!-- Menu Mobile -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="#services" class="mobile-nav-link">Expertises</a>
+        <a href="#projets" class="mobile-nav-link">Projets</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
       </div>
 
 
       <div class="home">
-
-
-        <div class="hero-section">                  
-              <img src="Images/backgroundstart.webp" alt="Hero Image" class="image">          
+        <!-- Hero Section Modernisée -->
+        <div class="hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">Donnez vie à vos idées <br> <span class="highlight">Virtuelles & Interactives</span></h1>
+            <p class="hero-subtitle">Designer & Développeur Freelance spécialisé en VR, Unity et UI/UX.</p>
+            <div class="hero-actions">
+              <a href="#projets" class="btn-primary">Voir mes réalisations</a>
+              <a href="#contact" class="btn-secondary">Me contacter</a>
+            </div>
+          </div>
+          <img src="Images/backgroundstart.webp" alt="Background Hero" class="hero-bg-image">
         </div>
 
 
-        <div class="community" id="services">
+        <div class="services" id="services">
           <div class="community2">
-            <div class="section-title">Services</div>
-            <div class="description">Que proposons-nous ?</div>
+            <h2 class="section-title">Mes Expertises</h2>
+            <p class="description">Une approche globale, du design à l'intégration technique.</p>
           </div>
-          <div class="frame-4">
-            <div class="Bloc">
-              <div class="member">
-                <div class="icon2">
-                 
-                  <img class="icon3" src="Images/IconDev.svg" />
-                </div>
-                <div class="Service_Title">
-              Prototypage<BR>Maquettage<BR>Interaction
-                </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <img class="service-icon" src="Images/IconDev.svg" alt="Dev Icon" />
               </div>
-              <div class="frame-3">
-                <div
-                  class="SubTitle"
-                >
-                Donnez vie à votre projet avec des solutions sur mesure développées selon vos besoins.
-                </div>
-              </div>
+              <h3 class="service-title">Prototypage & Interaction</h3>
+              <p class="service-text">
+                Transformez vos concepts en prototypes fonctionnels. Développement sur mesure adapté à vos besoins spécifiques.
+              </p>
             </div>
-            <div class="Bloc">
-              <div class="member">
-                <div class="icon2">
-                 
-                  <div class="icon4">
-                    <img  class="icon3" src="Images/IconVR.svg" />
-                  </div>
-                </div>
-                <div class="Service_Title">
-                  Applications <BR>en <BR>Réalité Virtuelle
-                </div>
+            
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <img class="service-icon" src="Images/IconVR.svg" alt="VR Icon" />
               </div>
-              <div class="frame-3">
-                <div
-                  class="SubTitle"
-                >
-                Créez des expériences immersives optimisées pour vos cas d'usage dans des environnements spécifiques.
-                </div>
-              </div>
+              <h3 class="service-title">Réalité Virtuelle (VR)</h3>
+              <p class="service-text">
+                Conception d'expériences immersives pour la formation, le showrooming ou l'événementiel.
+              </p>
             </div>
-            <div class="Bloc">
-              <div class="member">
-                <div class="icon2">
-                  
-                  <div class="icon4">
-                    <img class="icon3" src="Images/IconFigma.svg" />
-                  </div>
-                </div>
-                <div class="Service_Title">Expérience<BR> UX/UI<BR> Intuitive</div>
+
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <img class="service-icon" src="Images/IconFigma.svg" alt="UI/UX Icon" />
               </div>
-              <div class="frame-3">
-                <div
-                  class="SubTitle"
-                >
-                  Concevez des interfaces fluides et efficaces pour offrir une expérience utilisateur optimale.
-                </div>
-              </div>
+              <h3 class="service-title">Design UI / UX</h3>
+              <p class="service-text">
+                Création d'interfaces intuitives et esthétiques (Figma) pour une expérience utilisateur fluide sur mobile et desktop.
+              </p>
             </div>
           </div>
         </div>
@@ -178,277 +150,287 @@
         <div class="clients">
           <div class="clients-content">
             <div class="clients2">
-              <div class="section-title">Clients</div>
-              <div class="description">Ils ont concrétisé leurs projets avec nous</div>
+              <h2 class="section-title">Ils me font confiance</h2>
             </div>
             <div class="clients-logos">
               <div class="logos-wrapper">
                 <!-- Premier set de logos -->
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoENSAM.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoCalypshome.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoDana.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoRenault.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoKline.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoTotal.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoLoreal.svg" alt="Client logo" />
-                </div>
-                <!-- Duplication pour un défilement continu -->
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoENSAM.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoCalypshome.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoDana.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoRenault.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoKline.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoTotal.svg" alt="Client logo" />
-                </div>
-                <div class="logo2">
-                  <img class="logo-img" src="Images/LogoLoreal.svg" alt="Client logo" />
-                </div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoENSAM.svg" alt="ENSAM" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoCalypshome.svg" alt="Calypshome" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoDana.svg" alt="Dana" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoRenault.svg" alt="Renault" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" alt="K-Line" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" alt="Total" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" alt="L'Oréal" /></div>
+                <!-- Duplication -->
+                <div class="logo2"><img class="logo-img" src="Images/LogoENSAM.svg" alt="ENSAM" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoCalypshome.svg" alt="Calypshome" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoDana.svg" alt="Dana" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoRenault.svg" alt="Renault" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" alt="K-Line" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" alt="Total" /></div>
+                <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" alt="L'Oréal" /></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="projects-section" id="projets">
+
+        <div class="projects" id="projets">
           <div class="projects-header">
-            <h2 class="section-title">Projets</h2>
+            <h2 class="section-title">Projets Récents</h2>
             <p class="description">
-              Découvrez quelques-unes de nos réalisations, mêlant innovation et créativité pour répondre aux besoins variés de nos clients.
+              Une sélection de travaux alliant créativité technique et design.
             </p>
           </div>
           <div class="projects-grid">
 
-            <button id="openPlan3D" class="project">
-              <img class="project-image" src="Images/3DPlan.webp" alt="planTo3D">
-              <span class="project-label">Plan to 3D</span>
+            <button id="openPlan3D" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/3DPlan.webp" alt="planTo3D">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Plan to 3D</h3>
+                <span class="project-cat">Visualisation 3D</span>
+              </div>
             </button>
             
-
-            <button id="openDemonstrateur" class="project">
-              <img class="project-image" src="Images/Demonstrateur.png" alt="Demonstrateur">
-              <span class="project-label">Démonstrateur</span>
+            <button id="openDemonstrateur" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/Demonstrateur.png" alt="Demonstrateur">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Démonstrateur Moteur</h3>
+                <span class="project-cat">Unity HDRP</span>
+              </div>
             </button>
 
-            <button id="openSystemes" class="project">
-              <img class="project-image" src="Images/Reno.webp" alt="Systèmes Embarqués">
-              <span class="project-label">Systèmes Embarqués</span>
+            <button id="openSystemes" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/Reno.webp" alt="Systèmes Embarqués">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Systèmes Embarqués</h3>
+                <span class="project-cat">Automobile</span>
+              </div>
             </button>
 
-            <button id="openShowroomVR" class="project">
-              <img class="project-image" src="Images/ShowroomVR.png" alt="ShowRoom VR</span>
-            </button>">
-              <span class="project-label">ShowRoom VR</span>
+            <button id="openShowroomVR" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/ShowroomVR.png" alt="ShowRoom VR">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">ShowRoom VR</h3>
+                <span class="project-cat">Réalité Virtuelle</span>
+              </div>
             </button>
             
-            
-            <button id="openVRInCar" class="project">
-              <img class="project-image" src="Images/VRinCar.png" alt="VRInCar">
-              <span class="project-label">VR in Cockpit</span>
+            <button id="openVRInCar" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/VRinCar.png" alt="VRInCar">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">VR in Cockpit</h3>
+                <span class="project-cat">Expérience Immersive</span>
+              </div>
             </button>
             
-
-            <button id="openImmersiveExp" class="project">
-              <img class="project-image" src="Images/ImmersiveExp.png" alt="Immersive Experience">
-              <span class="project-label">Expérience Immersive</span>
+            <button id="openImmersiveExp" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/ImmersiveExp.png" alt="Immersive Experience">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Sécurité VR</h3>
+                <span class="project-cat">Formation</span>
+              </div>
             </button>
                      
-
-            <button id="openVisitesVR" class="project">
-              <img class="project-image" src="Images/VisitesVirtuelles.webp" alt="Visites Virtuelles">
-              <span class="project-label">Visites Virtuelles</span>
+            <button id="openVisitesVR" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/VisitesVirtuelles.webp" alt="Visites Virtuelles">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Visites Virtuelles</h3>
+                <span class="project-cat">Immobilier</span>
+              </div>
             </button>
 
-
-            <button id="openMaquette" class="project">
-              <img class="project-image" src="Images/Calypshome.webp" alt="Maquette UI/UX">
-              <span class="project-label">Maquette UI/UX</span>
+            <button id="openMaquette" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/Calypshome.webp" alt="Maquette UI/UX">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">App Domotique</h3>
+                <span class="project-cat">UI / UX Design</span>
+              </div>
             </button>
 
-            <button id="openMultijoueur" class="project">
-              <img class="project-image" src="Images/XRSHARE.webp" alt="Multijoueur multiplateforme">
-              <span class="project-label">Multijoueur Multiplateforme</span>
+            <button id="openMultijoueur" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/XRSHARE.webp" alt="Multijoueur multiplateforme">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">XR Share</h3>
+                <span class="project-cat">Multijoueur AR/VR</span>
+              </div>
             </button>
 
-           
-            <button id="openErgonomie" class="project">
-              <img class="project-image" src="Images/Ergonomie.png" alt="Ergonomie">
-              <span class="project-label">Ergonomie</span>
+            <button id="openErgonomie" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/Ergonomie.png" alt="Ergonomie">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Ergonomie Cockpit</h3>
+                <span class="project-cat">R&D</span>
+              </div>
             </button>
 
-            <button id="openAR" class="project">
-            <img class="project-image" src="Images/AR.webp" alt="Réalité Augmentée">         
-            <span class="project-label">Réalité Augmentée</span>          
+            <button id="openAR" class="project-card-item">
+              <div class="project-thumb">
+                <img src="Images/AR.webp" alt="Réalité Augmentée">
+                <div class="project-overlay">
+                  <span class="view-project">Voir le projet</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Réalité Augmentée</h3>
+                <span class="project-cat">Mobile</span>
+              </div>          
             </button>    
 
-            <button id="openExpertise" class="project">
-                 <img class="project-image" src="Images/Creativity.webp" alt="Expertise Design">     
-                  <span class="project-label">Expertise Design</span>                  
-                  </button>       
-
-           
-
-           
-            
-           
+            <button id="openExpertise" class="project-card-item">
+              <div class="project-thumb">
+                 <img src="Images/Creativity.webp" alt="Expertise Design">
+                 <div class="project-overlay">
+                  <span class="view-project">En savoir plus</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Mon Expertise</h3>
+                <span class="project-cat">Design & Tech</span>
+              </div>                  
+            </button>       
 
           </div>
         </div>
-      <div class="footer" id="contact">
-        <div class="frame-162">
-          <div class="contact-content">
-            <div class="group-2229">
-              <div class="section-title">
-                Contactez-nous
-              </div>
-              <div class="description">
-                Discutez de votre projet avec RM Dev.Design
-              </div>
+
+      <div class="site-footer" id="contact">
+        <div class="contact-section">
+          <div class="contact-container">
+            
+            <div class="contact-header">
+              <h2 class="section-title">Parlons de votre projet</h2>
+              <p class="description">
+                Une idée ? Un besoin spécifique ? N'hésitez pas à me contacter.
+              </p>
             </div>
-            <form id="contactForm" class="frame-2230">
-              <div class="frame-37">
-                <div class="col-3">
-                  <label for="name" class="nom">Nom</label>
-                  <input type="text" id="name" name="name" required class="input-field-bg" placeholder="Votre nom">
-                </div>
-                <div class="col-3">
-                  <label for="email" class="nom">Email</label>
-                  <input type="email" id="email" name="email" required class="input-field-bg" placeholder="Votre email">
-                </div>
-                <div class="col-3">
-                  <label for="message" class="nom">Message</label>
-                  <textarea id="message" name="message" required class="input-field-bg" placeholder="Votre message"></textarea>
-                </div>
+
+            <!-- NOUVELLE STRUCTURE CONTACT -->
+            <div class="contact-grid">
+              
+              <!-- Formulaire -->
+              <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="name">Nom</label>
+                      <input type="text" id="name" name="name" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required placeholder="Votre email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Comment puis-je vous aider ?"></textarea>
+                  </div>
+                  <button type="submit" class="btn-submit">Envoyer</button>
+                </form>
               </div>
-              <button type="submit" class="button">Envoyer le message</button>
-            </form>
-            <div class="contact-sidebar">
-              <div class="contact-card">
-                <!-- Email -->
-                <div class="contact-line">
-                  <span class="contact-icon">
-                    <img src="Images/mail.png" width="20" height="20" alt="Email" />
-                  </span>
-                  <a href="mailto:contact@rmdev.design">contact@rmdev.design</a>
-                </div>
-            
-                <div class="separator"></div>
-            
-                <!-- Adresse -->
-                <div class="contact-line">
-                  <span class="contact-icon">
-                    <img src="Images/adresse.png" width="20" height="27" alt="Adresse" />
-                  </span>
-                  <div>
-                    <strong>RM Dev.Design</strong><br>
-                    
-                    Paris & Ile-de-France
+
+              <!-- Infos -->
+              <div class="contact-info-wrapper">
+                <div class="contact-info-card">
+                  <div class="info-block">
+                    <h3>Me contacter</h3>
+                    <a href="mailto:contact@rmdev.design" class="info-link">
+                      <img src="Images/mail.png" alt="Email" class="info-icon"/>
+                      contact@rmdev.design
+                    </a>
+                  </div>
+                  
+                  <div class="info-block">
+                    <h3>Localisation</h3>
+                    <p class="info-text">
+                      <img src="Images/adresse.png" alt="Location" class="info-icon"/>
+                      Paris & Île-de-France
+                    </p>
+                  </div>
+
+                  <div class="social-block">
+                    <a href="https://www.malt.fr/profile/romainmaunier" target="_blank" class="social-btn">
+                      <img src="social-icons0.svg" alt="Malt" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/romain-maunier-826850108/" target="_blank" class="social-btn">
+                      <img src="social-icons1.svg" alt="Linkedin" />
+                    </a>
                   </div>
                 </div>
               </div>
+
             </div>
+            <!-- FIN NOUVELLE STRUCTURE -->
+
           </div>
         </div>
-        <div class="footer-big-4">
-          <div class="footer-content">
-            <div class="company-info">
-              <div class="logo10">
-                <div class="icon5">
-                  <img class="logoRMDevDesign" src="Images/RMDesignLogo.png" />
-                </div>
-              </div>
-              <div class="copyright">
-                <div class="copyright-2020-landify-ui-kit">
-                  <a href="mailto:contact@rmdev.design">contact@rmdev.design</a>               
-                </div>
-                <div class="copyright-2020-landify-ui-kit">
-                  Copyright © 2025 RM Dev.Design
-                </div>
-                <div class="all-rights-reserved">Tous droits réservés</div>
-              </div>
-              <div class="social-links">
-                <a href="https://www.malt.fr/profile/romainmaunier" target="_blank">
-                    <img class="social-icons" src="social-icons0.svg" alt="Malt" />
-                </a>
-                <a href="https://www.linkedin.com/in/romain-maunier-826850108/" target="_blank">
-                    <img class="social-icons2" src="social-icons1.svg" alt="Linkedin" />
-                </a>
-            </div>
-               <!--  <img class="social-icons3" src="social-icons2.svg" />
-                <img class="social-icons4" src="social-icons3.svg" />  -->
-              
-            </div>
-            <div class="links">
-              <div class="col-1">
-                <div class="company">RM Dev.Design</div>
-                <div class="list-items">
-                  <div class="about-us">A propos</div>
-                  <div class="contact-us">Contactez-nous</div>
-                </div>
-              </div>
-            </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <!-- Logo original pour le footer (comme le header) -->
+            <img class="footer-logo" src="Images/RMDesignLogo.png" alt="RM Dev Design" />
+            <p class="copyright">© 2025 RM Dev.Design - Tous droits réservés</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const formData = new FormData(this);
-  const data = {
-    name: formData.get('name'),
-    email: formData.get('email'),
-    message: formData.get('message')
-  };
-
-  // Ici, vous pouvez ajouter votre logique d'envoi d'email
-  // Par exemple, utiliser un service comme EmailJS ou votre propre backend
-  console.log('Données du formulaire:', data);
-
-  // Exemple avec EmailJS (vous devrez ajouter votre clé API)
-  emailjs.send('service_v0dat3b', 'template_3wmx9ge', data)
-    .then(function(response) {
-      alert('Message envoyé avec succès!');
-      document.getElementById('contactForm').reset();
-    }, function(error) {
-      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
-      console.error('Erreur:', error);
-    });
-});
-</script>
 <!-- ============================= -->
 <!--  RMDev.Design - Overlays      -->
-<!--  Visites Virtuelles & Plan3D  -->
-<!--  (coller avant </body>)       -->
+<!--  (Code inchangé pour les modales) -->
 <!-- ============================= -->
 
 <!-- === Overlay 1 : Visites Virtuelles (VR) === -->
-<!-- Bouton déclencheur attendu dans la grille :
-     <button id="openVisitesVR" class="project"> … </button> -->
      <div id="cs-visites-virtuelles" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-visites-title" tabindex="-1">
       <div class="cs-dialog">
         <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
@@ -491,9 +473,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
       </div>
     </div>
     
-    <!-- === Overlay 2 : Plan to 3D (rendus & vidéo, sans VR) === -->
-    <!-- Bouton déclencheur attendu :
-         <button id="openPlan3D" class="project"> … </button> -->
+    <!-- === Overlay 2 : Plan to 3D === -->
     <div id="cs-plan-to-3d" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-plan3d-title" tabindex="-1">
       <div class="cs-dialog">
         <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
@@ -545,8 +525,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
       </div>
     </div>
 
-   <!-- === Overlay 3 : Démonstrateur (motorisation transparente) === -->
-<!-- Bouton déclencheur : <button id="openDemonstrateur" class="project"> … </button> -->
+   <!-- === Overlay 3 : Démonstrateur === -->
 <div id="cs-demonstrateur" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-demo-title" tabindex="-1">
   <div class="cs-dialog">
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
@@ -591,7 +570,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 </div>
 
 <!-- === Overlay 4 : Systèmes embarqués === -->
-<!-- Bouton déclencheur : <button id="openSystemes" class="project"> … </button> -->
 <div id="cs-systemes-embarques" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-sys-title" tabindex="-1">
   <div class="cs-dialog">
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
@@ -631,7 +609,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 </div>
 
 <!-- === Overlay 5 : ShowRoom VR === -->
-<!-- Bouton déclencheur : <button id="openShowroomVR" class="project"> … </button> -->
 <div id="cs-showroom-vr" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="cs-show-title" tabindex="-1">
   <div class="cs-dialog">
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
@@ -674,13 +651,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 6 : VR in Cockpit ========================================== -->
-<!-- Bouton déclencheur à placer dans la grille :
-     <button id="openVRCockpit" class="project">
-       <img class="project-image" src="Images/VRinCar.png" alt="">
-       <span class="project-label">VR in Cockpit</span>
-     </button>                                                         -->
-
+<!-- === Overlay 6 : VR in Cockpit === -->
      <div id="cs-vr-cockpit" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-vr-title" tabindex="-1">
   <div class="cs-dialog">
@@ -741,13 +712,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 7 : Expérience Immersive =================================== -->
-<!-- Bouton déclencheur à mettre dans la grille :
-     <button id="openImmersiveExp" class="project">
-       <img class="project-image" src="Images/ImmersiveExp.png" alt="">
-       <span class="project-label">Expérience Immersive</span>
-     </button>                                                          -->
-
+<!-- === Overlay 7 : Expérience Immersive === -->
      <div id="cs-immersive-exp" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-immersive-title" tabindex="-1">
   <div class="cs-dialog">
@@ -808,13 +773,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 8 : Maquette UI/UX ======================================= -->
-<!-- Bouton déclencheur à mettre dans la grille :
-     <button id="openMaquette" class="project">
-       <img class="project-image" src="Images/Calypshome.png" alt="">
-       <span class="project-label">Maquette UI/UX</span>
-     </button> -->
-
+<!-- === Overlay 8 : Maquette UI/UX === -->
      <div id="cs-maquette-uiux" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-uiux-title" tabindex="-1">
   <div class="cs-dialog">
@@ -872,13 +831,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 9 : Multijoueur multiplateforme ============================= -->
-<!-- Bouton déclencheur à mettre dans la grille :
-     <button id="openMultijoueur" class="project">
-       <img class="project-image" src="Images/XRSHARE.png" alt="">
-       <span class="project-label">Multijoueur multiplateforme</span>
-     </button> -->
-
+<!-- === Overlay 9 : Multijoueur multiplateforme === -->
      <div id="cs-multijoueur" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-multi-title" tabindex="-1">
   <div class="cs-dialog">
@@ -940,13 +893,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 </div>
 
 
-<!-- === Overlay 10 : Ergonomie – hand‑tracking cockpit avion =============== -->
-<!-- Déclencheur à placer dans la grille :
-     <button id="openErgonomie" class="project">
-       <img class="project-image" src="Images/Ergonomie.png" alt="">
-       <span class="project-label">Ergonomie</span>
-     </button> -->
-
+<!-- === Overlay 10 : Ergonomie – hand‑tracking cockpit avion === -->
      <div id="cs-ergonomie" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-ergo-title" tabindex="-1">
   <div class="cs-dialog">
@@ -1008,14 +955,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 11 : Réalité augmentée – Renault ========================= -->
-<!-- 1. Placez ce fichier juste avant </body> dans index.html                   -->
-<!-- 2. Remplacez la vignette par le bouton déclencheur suivant :             -->
-<!--    <button id="openAR" class="project">                                 -->
-<!--      <img class="project-image" src="Images/AR.png" alt="">            -->
-<!--      <span class="project-label">Réalité Augmentée</span>                -->
-<!--    </button>                                                             -->
-
+<!-- === Overlay 11 : Réalité augmentée – Renault === -->
 <div id="cs-ar" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-ar-title" tabindex="-1">
   <div class="cs-dialog">
@@ -1075,14 +1015,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Overlay 12 : Expertise Design – récapitulatif compétences ========= -->
-<!-- 1. Insérez ce bloc juste avant </body> dans index.html                       -->
-<!-- 2. Transformez la vignette en bouton déclencheur :                          -->
-<!--    <button id="openExpertise" class="project">                           -->
-<!--      <img class="project-image" src="Images/Creativity.png" alt="">      -->
-<!--      <span class="project-label">Expertise design</span>                   -->
-<!--    </button>                                                                -->
-
+<!-- === Overlay 12 : Expertise Design – récapitulatif compétences === -->
 <div id="cs-expertise" class="cs-overlay" role="dialog"
      aria-modal="true" aria-labelledby="cs-expertise-title" tabindex="-1">
   <div class="cs-dialog">
@@ -1144,109 +1077,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </div>
 </div>
 
-<!-- === Script autonome pour cet overlay  --------------------------------- -->
-<script>
-(function () {
-  const btn = document.getElementById('openImmersive');
-  const ov  = document.getElementById('cs-immersive-exp');
-  if (!btn || !ov) return;
-
-  const closeBtn = ov.querySelector('.cs-close');
-  const open  = () => { ov.style.display = 'block'; document.body.style.overflow = 'hidden'; ov.focus(); };
-  const close = () => { ov.style.display = 'none';  document.body.style.overflow = '';      };
-
-  btn.addEventListener('click', open);
-  closeBtn.addEventListener('click', close);
-  ov.addEventListener('click', e => { if (e.target === ov) close(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && ov.style.display === 'block') close(); });
-})();
-</script>
-
-
-
-    <!-- === Styles & Script générique (réutilisable) === -->
-    <style>
-      .cs-overlay{
-    position:fixed;inset:0;background:rgba(0,0,0,.75);
-    backdrop-filter:blur(4px);display:none;overflow-y:auto;
-    z-index:2000;padding:60px 20px;
-  }
-  .cs-dialog{
-    background:#fff;border-radius:8px;max-width:1000px;
-    margin:0 auto;position:relative;padding:40px 20px;
-    display:flex;flex-direction:column;gap:32px;
-  }
-  .cs-close{
-  position:absolute;
-  top:16px;
-  right:20px;
-  width:40px;
-  height:40px;
-  border:none;
-  color: #f5f7fa;
-  border-radius:50%;
-  background:#4d4d4d;
-  cursor:pointer;
-  padding:0;                /* aucune marge interne */
-}
-
-  /* ↓ Taille réduite du visuel héros (desktop & tablette) */
-  .cs-hero{
-    width:100%;height:300px;               /* au lieu de 420 px */
-    overflow:hidden;border-radius:8px;margin:0;
-  }
-  .cs-hero img{width:100%;height:100%;object-fit:cover;}
-
-  .cs-section{display:flex;flex-direction:column;gap:16px;}
-  .cs-alt{background:var(--neutral-silver,#f5f7fa);
-          padding:40px 20px;border-radius:8px;}
-  .cs-list{max-width:800px;margin:0 auto;text-align:left;padding-left:20px;}
-  .cs-list.disc{list-style:disc;}
-  .cs-list.decimal{list-style:decimal;}
-
-  /* ---------- Mobile (≤ 480 px) ---------- */
-  @media screen and (max-width:480px){
-    .cs-dialog{padding:24px 16px;gap:24px;}
-    .cs-hero{height:220px;}                /* encore plus compact */
-    
-    .cs-section{gap:12px;}
-  }
-  
-
-    </style>
-    
-    <script>
-      (function(){
-        const maps=[
-          {btn:'openVisitesVR',ov:'cs-visites-virtuelles'},
-          {btn:'openPlan3D',ov:'cs-plan-to-3d'},
-          {btn:'openDemonstrateur',ov:'cs-demonstrateur'},
-          {btn:'openSystemes',ov:'cs-systemes-embarques'},
-          {btn:'openShowroomVR',ov:'cs-showroom-vr'},
-          {btn:'openVRInCar',ov:'cs-vr-cockpit'},
-          {btn:'openImmersiveExp',ov:'cs-immersive-exp'},
-          {btn:'openMaquette',ov:'cs-maquette-uiux'},
-          {btn:'openMultijoueur',ov:'cs-multijoueur'},
-          {btn:'openErgonomie',ov:'cs-ergonomie'},
-          {btn:'openAR',ov:'cs-ar'},
-          {btn:'openExpertise',ov:'cs-expertise'}
-                   
-        ];
-        maps.forEach(({btn,ov})=>{
-          const b=document.getElementById(btn);
-          const o=document.getElementById(ov);
-          if(!(b&&o))return;
-          const close=o.querySelector('.cs-close');
-          const open=()=>{o.style.display='block';document.body.style.overflow='hidden';o.focus();};
-          const shut=()=>{o.style.display='none';document.body.style.overflow='';};
-          b.addEventListener('click',open);
-          close.addEventListener('click',shut);
-          o.addEventListener('click',e=>{if(e.target===o)shut();});
-          document.addEventListener('keydown',e=>{if(e.key==='Escape'&&o.style.display==='block')shut();});
-        });
-      })();
-      </script>
-      
+<script src="./script.js"></script>
 
 </body>
 </html>
