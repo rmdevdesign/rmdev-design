@@ -320,6 +320,11 @@ img {
   position: relative;
   z-index: 1;
   border: 1px solid rgba(255,255,255,0.05); /* Bordure par défaut */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
 }
 
 /* Pseudo-élément pour la bordure dégradée */
@@ -359,7 +364,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .service-icon {
@@ -369,14 +374,14 @@ img {
 }
 
 .service-title {
-  font-size: 22px;
-  margin-bottom: 12px;
+  font-size: 22px; /* Taille originale conservée pour service card sur approach card */
+  margin-bottom: 0;
   color: var(--text-main);
 }
 
 .service-text {
   color: var(--text-secondary);
-  font-size: 15px;
+  font-size: 15px; /* Taille originale conservée pour service card sur approach card */
   line-height: 1.6;
 }
 
@@ -402,9 +407,16 @@ img {
 }
 
 .approach-container {
-  max-width: 900px;
+  max-width: 1200px; /* Élargi pour correspondre à services-grid */
   margin: 0 auto;
   text-align: center;
+}
+
+/* Ajout pour limiter la largeur du texte dans le container élargi */
+.approach-container .description {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-pic-container {
@@ -431,20 +443,21 @@ img {
 
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusté pour correspondre à services-grid */
   gap: 30px;
   margin-top: 50px;
 }
 
 .approach-card {
   background: var(--bg-card);
-  padding: 30px;
+  padding: 40px; /* Ajusté pour correspondre à service-card */
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s; /* Ajout transition background */
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center; /* Ajout text-align center */
   gap: 15px;
   position: relative;
   z-index: 1;
@@ -496,15 +509,15 @@ img {
 }
 
 .approach-title {
-  font-size: 18px;
+  font-size: 22px; /* Taille ajustée pour correspondre à service-title */
   color: var(--text-main);
   margin: 0;
 }
 
 .approach-text {
-  font-size: 14px;
+  font-size: 15px; /* Taille ajustée pour correspondre à service-text */
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6; /* Ajusté pour correspondre à service-text */
 }
 
 /* =========================
