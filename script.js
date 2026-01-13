@@ -103,4 +103,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // --- Scroll Reveal Animation ---
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        observer.unobserve(entry.target); // On arrête d'observer une fois révélé
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.15, // Déclenche quand 15% de l'élément est visible
+    rootMargin: "0px 0px -50px 0px" // Déclenche un peu avant le bas de l'écran
+  });
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // --- Parallax Effect Hero ---
+  const heroBg = document.getElementById('hero-bg');
+  if (heroBg) {
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      // On déplace l'image de fond à 50% de la vitesse du scroll
+      heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    });
+  }
+
 });

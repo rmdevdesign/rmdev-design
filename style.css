@@ -198,10 +198,12 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%; /* Plus grand pour permettre le mouvement parallaxe */
   object-fit: cover;
   z-index: -2;
   opacity: 0.6;
+  /* Will-change pour optimiser la performance */
+  will-change: transform;
 }
 
 .hero-overlay {
@@ -535,12 +537,8 @@ img {
   margin-bottom: 40px;
 }
 
-.clients2 .section-title {
-  opacity: 0.9;
-  background: none;
-  -webkit-text-fill-color: var(--text-main);
-  color: var(--text-main);
-}
+/* Suppression de la règle spécifique qui annulait le dégradé */
+/* .clients2 .section-title { ... } supprimé */
 
 .clients-logos {
   overflow: hidden;
@@ -1252,3 +1250,22 @@ img {
     font-size: 32px;
   }
 }
+
+/* =========================
+   Scroll Reveal Animation
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délai pour les éléments en grille (effet cascade) */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
