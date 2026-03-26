@@ -192,6 +192,20 @@ document.addEventListener('DOMContentLoaded', function() {
     revealObserver.observe(el);
   });
 
+  // Ensure elements already in viewport are visible on first load (mobile Safari can skip IO callbacks)
+  const revealVisibleInView = () => {
+    revealElements.forEach(el => {
+      if (el.classList.contains('reveal-visible')) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('reveal-visible');
+        revealObserver.unobserve(el);
+      }
+    });
+  };
+
+  window.addEventListener('load', revealVisibleInView);
+
   // --- Parallax Effect Hero ---
   const heroBg = document.getElementById('hero-bg');
   if (heroBg) {
