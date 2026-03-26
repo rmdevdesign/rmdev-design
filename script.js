@@ -51,20 +51,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Gestion des Overlays (Projets) ---
+  // --- Cartes Projets ---
+  const projects = [
+    { id: 'openImmersiveExp',  modal: 'cs-immersive-exp',      src: 'Images/ImmersiveExp.png',      alt: 'Sécurité VR',          name: 'Sécurité VR',          cat: 'Formation'            },
+    { id: 'openDemonstrateur', modal: 'cs-demonstrateur',       src: 'Images/Demonstrateur.png',     alt: 'Démonstrateur Moteur', name: 'Démonstrateur Moteur', cat: 'Unity HDRP'           },
+    { id: 'openSystemes',      modal: 'cs-systemes-embarques',  src: 'Images/Reno.webp',             alt: 'Systèmes Embarqués',   name: 'Systèmes Embarqués',   cat: 'Automobile'           },
+    { id: 'openVRInCar',       modal: 'cs-vr-cockpit',         src: 'Images/VRinCar.png',           alt: 'VR in Cockpit',        name: 'VR in Cockpit',        cat: 'Expérience Immersive' },
+    { id: 'openGoodSpeakVR',   modal: 'cs-goodspeakvr',        src: 'Vidéos/salle_reunion_vr.mp4',  alt: 'GoodSpeakVR',          name: 'GoodSpeakVR',          cat: 'Formation · IA & VR', video: true },
+    { id: 'openPlan3D',        modal: 'cs-plan-to-3d',         src: 'Images/3DPlan.webp',           alt: 'Plan to 3D',           name: 'Plan to 3D',           cat: 'Visualisation 3D'     },
+    { id: 'openMultijoueur',   modal: 'cs-multijoueur',        src: 'Images/XRSHARE.webp',          alt: 'XR Share',             name: 'XR Share',             cat: 'Multijoueur AR/VR'    },
+    { id: 'openVisitesVR',     modal: 'cs-visites-virtuelles', src: 'Images/VisitesVirtuelles.webp',alt: 'Visites Virtuelles',   name: 'Visites Virtuelles',   cat: 'Immobilier'           },
+    { id: 'openMaquette',      modal: 'cs-maquette-uiux',      src: 'Images/Calypshome.webp',       alt: 'App Domotique',        name: 'App Domotique',        cat: 'UI / UX Design'       },
+    { id: 'openErgonomie',     modal: 'cs-ergonomie',          src: 'Images/Ergonomie.png',         alt: 'Ergonomie Cockpit',    name: 'Ergonomie Cockpit',    cat: 'R&D'                  },
+    { id: 'openAR',            modal: 'cs-ar',                 src: 'Images/AR.webp',               alt: 'Réalité Augmentée',    name: 'Réalité Augmentée',    cat: 'Mobile'               },
+    { id: 'openShowroomVR',    modal: 'cs-showroom-vr',        src: 'Images/ShowroomVR.png',        alt: 'ShowRoom VR',          name: 'ShowRoom VR',          cat: 'Réalité Virtuelle'    },
+  ];
+
+  const grid = document.getElementById('projects-grid');
+  const delays = ['reveal', 'reveal reveal-delay-1', 'reveal reveal-delay-2'];
+
+  projects.forEach(({ id, src, alt, name, cat, video }, i) => {
+    const media = video
+      ? `<video autoplay muted loop playsinline><source src="${src}" type="video/mp4"></video>`
+      : `<img src="${src}" alt="${alt}">`;
+    const btn = document.createElement('button');
+    btn.id = id;
+    btn.className = `project-card-item ${delays[i % 3]}`;
+    btn.innerHTML = `
+      <div class="project-thumb">
+        ${media}
+        <div class="project-overlay"><span class="view-project">Voir le projet</span></div>
+      </div>
+      <div class="project-info">
+        <h3 class="project-name">${name}</h3>
+        <span class="project-cat">${cat}</span>
+      </div>`;
+    if (video) btn.querySelector('video').playbackRate = 0.75;
+    grid.appendChild(btn);
+  });
+
+  const cta = document.createElement('a');
+  cta.href = '#contact';
+  cta.className = 'project-card-item cta-card reveal reveal-delay-2';
+  cta.style.cssText = 'display:block;text-decoration:none;';
+  cta.innerHTML = `
+    <div class="project-thumb">
+      <img src="Images/Creativity.webp" alt="Votre Projet">
+      <div class="project-overlay"><span class="view-project">Me contacter</span></div>
+    </div>
+    <div class="project-info">
+      <h3 class="project-name">Votre Projet ?</h3>
+      <span class="project-cat">Ajoutez-le à cette liste</span>
+    </div>`;
+  grid.appendChild(cta);
+
+  // --- Gestion des Overlays ---
   const maps = [
-    {btn:'openVisitesVR', ov:'cs-visites-virtuelles'},
-    {btn:'openPlan3D', ov:'cs-plan-to-3d'},
-    {btn:'openDemonstrateur', ov:'cs-demonstrateur'},
-    {btn:'openSystemes', ov:'cs-systemes-embarques'},
-    {btn:'openShowroomVR', ov:'cs-showroom-vr'},
-    {btn:'openVRInCar', ov:'cs-vr-cockpit'},
-    {btn:'openImmersiveExp', ov:'cs-immersive-exp'},
-    {btn:'openMaquette', ov:'cs-maquette-uiux'},
-    {btn:'openMultijoueur', ov:'cs-multijoueur'},
-    {btn:'openErgonomie', ov:'cs-ergonomie'},
-    {btn:'openAR', ov:'cs-ar'},
-    {btn:'openExpertise', ov:'cs-expertise'}
+    ...projects.map(({ id, modal }) => ({ btn: id, ov: modal })),
+    { btn: 'openExpertise', ov: 'cs-expertise' },
   ];
 
   maps.forEach(({btn, ov}) => {
