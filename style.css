@@ -1339,15 +1339,15 @@ img {
   font-weight: 500;
   letter-spacing: 0.4px;
   color: var(--text-secondary);
-  background: rgba(139, 92, 246, 0.08);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.00);
+  border: 1px solid var(--brand-accent);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .cs-tag:hover {
   color: #fff;
-  background: rgba(139, 92, 246, 0.18);
-  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.0);
+  border-color: var(--brand-accent);
 }
 
 /* Animations */
