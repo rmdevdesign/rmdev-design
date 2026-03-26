@@ -19,6 +19,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Grain / noise texture sur toute la page */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
   color: var(--text-main);
@@ -193,6 +205,25 @@ img {
   overflow: hidden;
 }
 
+/* Texte display géant en fond du hero */
+.hero-display-text {
+  position: absolute;
+  bottom: -0.15em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-family-heading);
+  font-size: clamp(160px, 25vw, 340px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero-bg-image {
   position: absolute;
   top: 0;
@@ -240,6 +271,24 @@ img {
   color: var(--text-secondary);
   margin-bottom: 40px;
   font-weight: 300;
+}
+
+.typewriter-text {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.typewriter-text::after {
+  content: '|';
+  display: inline-block;
+  color: var(--brand-accent);
+  animation: blink 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .hero-actions {
@@ -443,9 +492,46 @@ img {
   border-color: var(--brand-accent);
 }
 
+.approach-list {
+  max-width: 760px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+
+.approach-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.approach-item:last-child {
+  border-bottom: none;
+}
+
+.approach-num {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+
+.approach-item-content {
+  flex: 1;
+  padding-top: 0;
+}
+
+/* Approche grid legacy — conservé pour rétrocompat */
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusté pour correspondre à services-grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
@@ -839,7 +925,7 @@ img {
   color: #fff;
   padding: 12px 24px;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -1054,6 +1140,10 @@ img {
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-display-text {
+    font-size: clamp(100px, 35vw, 160px);
+  }
   
   .logo2 {
     padding: 0 20px; /* Réduction du padding sur mobile */
@@ -1233,6 +1323,33 @@ img {
   font-weight: bold;
 }
 
+/* Badges tech dans les modales */
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 30px 40px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.cs-tag {
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--text-secondary);
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.cs-tag:hover {
+  color: #fff;
+  background: rgba(139, 92, 246, 0.18);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -1280,3 +1397,24 @@ img {
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
+
+/* =========================
+   Accessibilité : Reduced Motion
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .logos-wrapper {
+    animation-play-state: paused;
+  }
+  .hero-bg-image {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

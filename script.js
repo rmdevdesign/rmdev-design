@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
+
+  // --- Typewriter Hero ---
+  const typewriterEl = document.getElementById('typewriter');
+  if (typewriterEl) {
+    const words = ['Réalité Virtuelle', 'Unity & C#', 'UI / UX Design'];
+    let wi = 0, ci = 0, deleting = false;
+    const speed = { type: 75, delete: 40, pause: 1800 };
+
+    function tick() {
+      const word = words[wi];
+      typewriterEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+
+      if (!deleting && ci > word.length) {
+        setTimeout(() => { deleting = true; tick(); }, speed.pause);
+        return;
+      }
+      if (deleting && ci < 0) {
+        deleting = false;
+        ci = 0;
+        wi = (wi + 1) % words.length;
+      }
+      setTimeout(tick, deleting ? speed.delete : speed.type);
+    }
+    tick();
+  }
+
   // --- Gestion du Menu Burger (Mobile) ---
   const burgerMenu = document.getElementById('burger-menu');
   const mobileNav = document.getElementById('mobile-nav');
@@ -73,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
   projects.forEach(({ id, src, alt, name, cat, video }, i) => {
     const media = video
       ? `<video autoplay muted loop playsinline><source src="${src}" type="video/mp4"></video>`
-      : `<img src="${src}" alt="${alt}">`;
+      : `<img src="${src}" alt="${alt}" loading="lazy">`;
     const btn = document.createElement('button');
     btn.id = id;
     btn.className = `project-card-item ${delays[i % 3]}`;

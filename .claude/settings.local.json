@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:goodspeakvr.fr)"
+      "WebFetch(domain:goodspeakvr.fr)",
+      "Bash(python3:*)",
+      "Bash(node:*)"
     ]
   }
 }

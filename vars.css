@@ -10,7 +10,7 @@
   /* Text */
   --text-main: #ffffff;
   --text-secondary: #a1a1aa; /* Gris clair pour les sous-titres */
-  --text-muted: #71717a;     /* Gris plus foncé pour les détails */
+  --text-muted: #8f8f99;     /* Gris plus foncé pour les détails — contraste 4.6:1 sur bg-card */
 
   /* Brand / Accents */
   --brand-primary: #ffffff;
