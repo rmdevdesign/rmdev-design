@@ -29,14 +29,6 @@
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./style.css">
 
-  <!-- Script EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("-asrVpY5HcztiLZIs");
-    })();
-  </script>
-  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Images/logo.png">
 
@@ -273,7 +265,7 @@
               
               <!-- Formulaire -->
               <div class="contact-form-wrapper reveal reveal-delay-1">
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" data-formspree-endpoint="https://formspree.io/f/xqegldkl" novalidate>
                   <div class="form-row">
                     <div class="form-group">
                       <label for="name">Nom</label>
@@ -288,6 +280,8 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required placeholder="Comment puis-je vous aider ?"></textarea>
                   </div>
+                  <input type="hidden" name="_subject" value="Nouveau message depuis rmdev.design">
+                  <p id="contact-status" class="form-status" aria-live="polite"></p>
                   <button type="submit" class="btn-submit">Envoyer</button>
                 </form>
               </div>
@@ -313,10 +307,10 @@
 
                   <div class="social-block">
                     <a href="https://www.malt.fr/profile/romainmaunier" target="_blank" class="social-btn">
-                      <img src="social-icons0.svg" alt="Malt" />
+                      <img src="Images/social-icons0.svg" alt="Malt" />
                     </a>
                     <a href="https://www.linkedin.com/in/romain-maunier-826850108/" target="_blank" class="social-btn">
-                      <img src="social-icons1.svg" alt="Linkedin" />
+                      <img src="Images/social-icons1.svg" alt="Linkedin" />
                     </a>
                   </div>
                 </div>
@@ -1054,20 +1048,20 @@
   </div>
 </div>
 
-<!-- === Overlay 13 : GoodSpeakVR === -->
-<div id="cs-goodspeakvr" class="cs-overlay" role="dialog"
-     aria-modal="true" aria-labelledby="cs-goodspeakvr-title" tabindex="-1">
+<!-- === Overlay 13 : Formation immersive === -->
+<div id="cs-formation-immersive" class="cs-overlay" role="dialog"
+     aria-modal="true" aria-labelledby="cs-formation-immersive-title" tabindex="-1">
   <div class="cs-dialog">
     <button class="cs-close" aria-label="Fermer l'étude de cas">&times;</button>
 
     <figure class="cs-hero">
       <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
-        <source src="Vidéos/salle_reunion_vr.mp4" type="video/mp4">
+        <source src="videos/salle_reunion_vr.mp4" type="video/mp4">
       </video>
     </figure>
 
     <section class="cs-section">
-      <h1 id="cs-goodspeakvr-title" class="section-title">GoodSpeakVR</h1>
+      <h1 id="cs-formation-immersive-title" class="section-title">Formation immersive</h1>
       <p class="description">Plateforme d'entraînement à la <strong>prise de parole en public</strong> combinant intelligence artificielle et réalité virtuelle, destinée aux organisations et aux particuliers.</p>
     </section>
 

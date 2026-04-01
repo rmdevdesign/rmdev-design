@@ -46,32 +46,61 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Gestion du formulaire de contact (EmailJS) ---
+  // --- Gestion du formulaire de contact (Formspree) ---
   const contactForm = document.getElementById('contactForm');
+  const contactStatus = document.getElementById('contact-status');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
-      
-      const formData = new FormData(this);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-      };
 
-      // Utilisation de EmailJS
-      if (typeof emailjs !== 'undefined') {
-        emailjs.send('service_v0dat3b', 'template_3wmx9ge', data)
-          .then(function(response) {
-            alert('Message envoyé avec succès!');
-            contactForm.reset();
-          }, function(error) {
-            alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
-            console.error('Erreur:', error);
-          });
-      } else {
-        console.error('EmailJS non chargé.');
-        alert('Erreur de configuration du formulaire.');
+      const endpoint = contactForm.dataset.formspreeEndpoint;
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+
+      if (!endpoint || endpoint.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+        if (contactStatus) {
+          contactStatus.textContent = 'Le formulaire n est pas encore configure.';
+        }
+        console.error('Formspree endpoint missing.');
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+
+      if (contactStatus) {
+        contactStatus.textContent = 'Envoi en cours...';
+      }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Formspree request failed');
+        }
+
+        contactForm.reset();
+
+        if (contactStatus) {
+          contactStatus.textContent = 'Message envoyé. Je vous réponds rapidement.';
+        }
+      } catch (error) {
+        console.error('Erreur:', error);
+        if (contactStatus) {
+          contactStatus.textContent = 'Erreur. Vous pouvez aussi écrire a contact@rmdev.design.';
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
       }
     });
   }
@@ -82,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { id: 'openDemonstrateur', modal: 'cs-demonstrateur',       src: 'Images/Demonstrateur.png',     alt: 'Démonstrateur Moteur', name: 'Démonstrateur Moteur', cat: 'Unity HDRP'           },
     { id: 'openSystemes',      modal: 'cs-systemes-embarques',  src: 'Images/Reno.webp',             alt: 'Systèmes Embarqués',   name: 'Systèmes Embarqués',   cat: 'Automobile'           },
     { id: 'openVRInCar',       modal: 'cs-vr-cockpit',         src: 'Images/VRinCar.png',           alt: 'VR in Cockpit',        name: 'VR in Cockpit',        cat: 'Expérience Immersive' },
-    { id: 'openGoodSpeakVR',   modal: 'cs-goodspeakvr',        src: 'Vidéos/salle_reunion_vr.mp4',  alt: 'GoodSpeakVR',          name: 'GoodSpeakVR',          cat: 'Formation · IA & VR', video: true },
+    { id: 'openFormationImmersive', modal: 'cs-formation-immersive', src: 'videos/salle_reunion_vr.mp4', alt: 'Formation immersive', name: 'Formation immersive', cat: 'Formation · IA & VR', video: true },
     { id: 'openPlan3D',        modal: 'cs-plan-to-3d',         src: 'Images/3DPlan.webp',           alt: 'Plan to 3D',           name: 'Plan to 3D',           cat: 'Visualisation 3D'     },
     { id: 'openMultijoueur',   modal: 'cs-multijoueur',        src: 'Images/XRSHARE.webp',          alt: 'XR Share',             name: 'XR Share',             cat: 'Multijoueur AR/VR'    },
     { id: 'openVisitesVR',     modal: 'cs-visites-virtuelles', src: 'Images/VisitesVirtuelles.webp',alt: 'Visites Virtuelles',   name: 'Visites Virtuelles',   cat: 'Immobilier'           },
