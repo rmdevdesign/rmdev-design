@@ -600,6 +600,17 @@ img {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
 }
 
+.approach-section::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(1200px, 90%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
 .approach-container {
   max-width: 1200px; /* Élargi pour correspondre à services-grid */
   margin: 0 auto;
