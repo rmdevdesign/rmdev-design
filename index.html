@@ -2,17 +2,6 @@
 <html lang="fr">
 <head>
   
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2NSXGSP12"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y2NSXGSP12');
-</script>
-
-
   <meta charset="UTF-8">
   <!-- Optimisation pour Internet Explorer (anciennes versions) -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -281,6 +270,10 @@
                     <textarea id="message" name="message" required placeholder="Comment puis-je vous aider ?"></textarea>
                   </div>
                   <input type="hidden" name="_subject" value="Nouveau message depuis rmdev.design">
+                  <p class="form-legal">
+                    Les informations transmises via ce formulaire sont utilisées uniquement pour répondre à votre demande. En savoir plus dans la
+                    <a href="confidentialite.html">politique de confidentialité</a>.
+                  </p>
                   <p id="contact-status" class="form-status" aria-live="polite"></p>
                   <button type="submit" class="btn-submit">Envoyer</button>
                 </form>
@@ -326,7 +319,12 @@
           <div class="footer-bottom-content">
             <!-- Logo original pour le footer (comme le header) -->
             <img class="footer-logo" src="Images/RMDesignLogo.png" alt="RM Dev Design" />
-            <p class="copyright">© 2026 RM Dev.Design - Tous droits réservés</p>
+            <div class="footer-meta">
+              <p class="copyright">© 2026 RM Dev.Design - Tous droits réservés</p>
+              <div class="footer-links">
+                <a href="confidentialite.html">Confidentialité</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

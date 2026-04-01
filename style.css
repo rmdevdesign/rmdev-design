@@ -953,6 +953,19 @@ img {
   color: var(--text-secondary);
 }
 
+.form-legal {
+  margin: 4px 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.form-legal a {
+  color: var(--text-main);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Carte Infos (Style unifié avec Expertises) */
 .contact-info-wrapper {
   height: 100%;
@@ -1103,6 +1116,36 @@ img {
   color: var(--text-muted);
 }
 
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-links a,
+.footer-link-button {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.footer-links a:hover,
+.footer-link-button:hover {
+  color: var(--text-main);
+}
+
 /* =========================
    Responsive
 ========================= */
@@ -1177,6 +1220,7 @@ img {
     width: 100%;
     padding: 0 20px;
   }
+
 }
 
 @keyframes fadeInUp {

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
   // --- Typewriter Hero ---
   const typewriterEl = document.getElementById('typewriter');
   if (typewriterEl) {
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (!endpoint || endpoint.includes('REPLACE_WITH_YOUR_FORM_ID')) {
         if (contactStatus) {
-          contactStatus.textContent = 'Le formulaire n est pas encore configure.';
+          contactStatus.textContent = 'Le formulaire n’est pas encore configuré.';
         }
         console.error('Formspree endpoint missing.');
         return;
@@ -95,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } catch (error) {
         console.error('Erreur:', error);
         if (contactStatus) {
-          contactStatus.textContent = 'Erreur. Vous pouvez aussi écrire a contact@rmdev.design.';
+          contactStatus.textContent = 'Erreur. Vous pouvez aussi écrire à contact@rmdev.design.';
         }
       } finally {
         if (submitButton) {
