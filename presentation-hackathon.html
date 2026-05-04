@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./presentation.css">
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <title>RMDev.Design - Présentation Hackathon</title>
+  <meta name="description" content="Présentation horizontale de RMDev.Design pour animer un hackathon : cas d'usage, expertises, approche, réalisations et références.">
+</head>
+<body>
+  <div class="presentation-shell">
+    <header class="presentation-header">
+      <a href="#intro" class="presentation-logo" aria-label="Aller à l'introduction">
+        <img src="Images/RMDesignLogo.png" alt="RM Dev Design">
+      </a>
+      <nav class="presentation-nav" aria-label="Sections">
+        <a href="#intro">Présentation</a>
+        <a href="#cas-usage">Cas d'usage</a>
+        <a href="#expertises">Expertises</a>
+        <a href="#approche">Approche</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#references">Références</a>
+        <a href="#accompagnement">Hackathon</a>
+      </nav>
+      <div class="presentation-controls">
+        <button type="button" class="theme-btn" id="theme-toggle" aria-label="Basculer entre mode sombre et clair">Light</button>
+        <button type="button" class="nav-btn" data-direction="-1" aria-label="Section précédente">Prev</button>
+        <button type="button" class="nav-btn" data-direction="1" aria-label="Section suivante">Next</button>
+      </div>
+    </header>
+
+    <main class="slides-track" id="slides-track">
+      <section class="slide slide-intro" id="intro" data-title="Intro">
+        <div class="slide-layer"></div>
+        <div class="slide-content intro-layout">
+          <div class="intro-copy">
+            <span class="section-kicker">Présentation</span>
+            <h1>Designer, développeur<br>et animateur d'expériences <span>XR</span></h1>
+            <p class="lead">
+              J'aide à transformer une idée encore floue en prototype concret, démonstrateur crédible ou expérience immersive prête à être montrée.
+            </p>
+            <div class="intro-points">
+              <span>Design UI/UX</span>
+              <span>Prototypage interactif</span>
+              <span>Unity, VR, AR</span>
+              <span>Approche design + code</span>
+            </div>
+          </div>
+          <div class="intro-aside">
+            <div class="speaker-card">
+              <img src="Images/PP.png" alt="Romain Maunier" class="speaker-photo">
+              <p class="speaker-role">Romain Maunier</p>
+              <p class="speaker-meta">RMDev.Design</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="cas-usage" data-title="Cas d'usage">
+        <div class="slide-content">
+          <div class="slide-heading">
+            <span class="section-kicker">Cas d'usage</span>
+            <h2>Quand une idée doit devenir visible rapidement</h2>
+            <p>Les contextes où j'interviens le plus souvent sont ceux où il faut clarifier, embarquer et rendre crédible très vite.</p>
+          </div>
+          <div class="card-grid card-grid-3">
+            <article class="info-card">
+              <span class="card-tag">POC / Démo</span>
+              <h3>Montrer une vision en quelques jours</h3>
+              <p>Prototype, démonstrateur ou expérience showroom pour aider un public à comprendre immédiatement la promesse.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-tag">Produit / UX</span>
+              <h3>Aligner intention, usage et faisabilité</h3>
+              <p>Maquettes, parcours, écrans clés et versions testables pour sortir des discussions abstraites.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-tag">XR / Pédagogie</span>
+              <h3>Créer une expérience utile</h3>
+              <p>Formation, visualisation, présentation ou médiation avec un vrai objectif d'usage derrière l'effet immersif.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="expertises" data-title="Expertises">
+        <div class="slide-content">
+          <div class="slide-heading">
+            <span class="section-kicker">Expertises</span>
+            <h2>Trois briques pour faire exister un projet</h2>
+            <p>Je navigue entre design, prototype et immersion pour accélérer le passage de l'idée à une démonstration concrète.</p>
+          </div>
+          <div class="card-grid card-grid-featured">
+            <article class="info-card">
+              <img src="Images/IconDev.svg" alt="" aria-hidden="true" class="card-icon">
+              <h3>Prototypage & interaction</h3>
+              <p>Développer rapidement une version testable pour valider une logique, un usage ou une promesse produit.</p>
+            </article>
+            <article class="info-card">
+              <img src="Images/IconVR.svg" alt="" aria-hidden="true" class="card-icon">
+              <h3>Réalité virtuelle et augmentée</h3>
+              <p>Concevoir des expériences immersives pensées pour former, convaincre, expliquer ou faire découvrir.</p>
+            </article>
+            <article class="info-card">
+              <img src="Images/IconFigma.svg" alt="" aria-hidden="true" class="card-icon">
+              <h3>Design UI / UX</h3>
+              <p>Construire des interfaces crédibles et prêtes pour l'intégration en anticipant les contraintes de production.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="approche" data-title="Approche">
+        <div class="slide-content">
+          <div class="split-layout">
+            <div class="slide-heading slide-heading-left">
+              <span class="section-kicker">Approche</span>
+              <h2>Un seul fil conducteur du cadrage à l'exécution</h2>
+              <p>Le point fort de mon activité, c'est de faire avancer design, technique et démonstration dans le même mouvement.</p>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-item">
+                <span class="timeline-index">01</span>
+                <div>
+                  <h3>Aller vite sans improviser</h3>
+                  <p>Je cherche le niveau de fidélité juste pour rendre une idée compréhensible le plus tôt possible.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-index">02</span>
+                <div>
+                  <h3>Garder la cohérence design / code</h3>
+                  <p>Ce qui est montré n'est pas une promesse abstraite, c'est déjà une mise en forme exploitable.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-index">03</span>
+                <div>
+                  <h3>Concevoir pour être montré</h3>
+                  <p>Je pense souvent les projets comme des objets de démonstration, de test et de discussion.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="realisations" data-title="Réalisations">
+        <div class="slide-content">
+          <div class="slide-heading">
+            <span class="section-kicker">Réalisations</span>
+            <h2>Quelques formats de projets déjà menés</h2>
+            <p>Des exemples concrets de projets déjà réalisés.</p>
+          </div>
+          <div class="project-showcase">
+            <article class="project-panel">
+              <img src="Images/ImmersiveExp.png" alt="Sécurité VR">
+              <div>
+                <span class="card-tag">Formation</span>
+                <h3>Sécurité VR</h3>
+                <p>Expérience immersive pour faire comprendre des situations à risque et mieux ancrer les apprentissages.</p>
+              </div>
+            </article>
+            <article class="project-panel">
+              <img src="Images/Demonstrateur.png" alt="Démonstrateur moteur">
+              <div>
+                <span class="card-tag">Unity HDRP</span>
+                <h3>Démonstrateur moteur</h3>
+                <p>Prototype visuel pour expliquer plusieurs motorisations et les rendre lisibles dans un contexte salon.</p>
+              </div>
+            </article>
+            <article class="project-panel">
+              <img src="Images/XRSHARE.webp" alt="XR Share">
+              <div>
+                <span class="card-tag">AR / VR</span>
+                <h3>XR Share</h3>
+                <p>Expérience multijoueur pour collaborer, partager une scène et rendre une présentation plus interactive.</p>
+              </div>
+            </article>
+            <article class="project-panel">
+              <img src="Images/Calypshome.webp" alt="App domotique">
+              <div>
+                <span class="card-tag">UI / UX</span>
+                <h3>App domotique</h3>
+                <p>Travail d'interface et de parcours pour faire converger usage, compréhension et production.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="references" data-title="Références">
+        <div class="slide-content">
+          <div class="slide-heading">
+            <span class="section-kicker">Références</span>
+            <h2>Des sujets variés, un même rôle de passeur entre idée et prototype</h2>
+            <p>Industrie, immobilier, formation, mobilité, événementiel : le terrain change, mais la logique reste la même.</p>
+          </div>
+          <div class="logo-wall">
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoENSAM.svg" alt="ENSAM"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoCalypshome.svg" alt="Calypshome"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoDana.svg" alt="Dana"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoRenault.svg" alt="Renault"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoKline.svg" alt="K-Line"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoTotal.svg" alt="Total"></div></div>
+            <div class="logo-chip"><div class="logo-surface"><img src="Images/LogoLoreal.svg" alt="L'Oréal"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-hackathon" id="accompagnement" data-title="Hackathon">
+        <div class="slide-content">
+          <div class="slide-heading">
+            <span class="section-kicker">Hackathon</span>
+            <h2>Comment je vais vous accompagner</h2>
+            <p>Transformer une idée en démonstration crédible, testable et bien racontée.</p>
+          </div>
+          <div class="hackathon-grid">
+            <article class="hackathon-card hackathon-card-main">
+              <span class="card-tag">Mon rôle</span>
+              <h3>Vous aider à rendre votre projet tangible</h3>
+              <p>Choisir le bon format de prototype, rendre l'idée lisible et préparer une démonstration qui tient la route.</p>
+            </article>
+            <article class="hackathon-card">
+              <span class="hackathon-step">01</span>
+              <h3>Mise en situation & VR</h3>
+              <p>Voir quand l'immersion apporte vraiment quelque chose dans un usage, un apprentissage ou une démonstration.</p>
+            </article>
+            <article class="hackathon-card">
+              <span class="hackathon-step">02</span>
+              <h3>Choix techniques</h3>
+              <p>Arbitrer entre idées, contraintes, temps disponible et niveau de fidélité utile.</p>
+            </article>
+            <article class="hackathon-card">
+              <span class="hackathon-step">03</span>
+              <h3>Restitution</h3>
+              <p>Structurer la démo, entraîner le pitch et rendre la présentation plus claire et plus convaincante.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="slide-status" aria-hidden="true">
+      <span id="slide-index">01</span>
+      <span class="status-separator"></span>
+      <span id="slide-title">Intro</span>
+    </div>
+  </div>
+
+  <script src="./presentation.js"></script>
+</body>
+</html>
