@@ -8,6 +8,8 @@
   
   <!-- Rendre la page responsive sur mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Romain Maunier">
 
   <!-- Polices Google Fonts (Inter + Space Grotesk pour les titres) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,27 +36,82 @@
   <meta property="og:title" content="RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)" />
   <meta property="og:description" content="Designer et développeur, j'accompagne vos projets de l'idée jusqu'à la finalisation. Prototypage sur Figma, Unity, VR, UI/UX, plan to 3D, etc." />
   <meta property="og:image" content="https://rmdev.design/Images/logo.png" />
-  <meta property="og:url" content="https://rmdev.design" />
+  <meta property="og:image:alt" content="Logo RMDev.Design" />
+  <meta property="og:url" content="https://rmdev.design/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="RMDev.Design" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RMDev.Design – Designer & Développeur Freelance">
+  <meta name="twitter:description" content="Prototypage Unity, expériences XR et design UI/UX par Romain Maunier.">
+  <meta name="twitter:image" content="https://rmdev.design/Images/logo.png">
+  <meta name="twitter:image:alt" content="Logo RMDev.Design">
 
   <!-- Lien canonique pour éviter les duplications d'URL -->
-  <link rel="canonical" href="https://rmdev.design" />
+  <link rel="canonical" href="https://rmdev.design/" />
 
   <!-- Script de données structurées pour les IA (JSON-LD) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Romain Maunier",
-      "url": "https://rmdev.design",
-      "image": "https://rmdev.design/Images/PP.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/romain-maunier-826850108/",
-        "https://www.malt.fr/profile/romainmaunier"
-      ],
-      "jobTitle": "Designer & Développeur Freelance",
-      "description": "Designer et développeur freelance spécialisé en réalité virtuelle (VR), Unity, et design UI/UX. Je transforme vos idées en prototypes interactifs et en expériences immersives.",
-      "knowsAbout": ["Réalité Virtuelle (VR)", "Unity", "UI/UX Design", "Figma", "Prototypage", "Développement C#"]
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://rmdev.design/#website",
+          "url": "https://rmdev.design/",
+          "name": "RMDev.Design",
+          "inLanguage": "fr-FR",
+          "publisher": {
+            "@id": "https://rmdev.design/#business"
+          }
+        },
+        {
+          "@type": ["ProfessionalService", "Organization"],
+          "@id": "https://rmdev.design/#business",
+          "name": "RMDev.Design",
+          "url": "https://rmdev.design/",
+          "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+          "image": "https://rmdev.design/Images/backgroundstart.webp",
+          "email": "contact@rmdev.design",
+          "description": "Studio freelance spécialisé en prototypage interactif, développement Unity, expériences XR et design UI/UX.",
+          "areaServed": {
+            "@type": "Country",
+            "name": "France"
+          },
+          "founder": {
+            "@id": "https://rmdev.design/#person"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/romain-maunier-826850108/",
+            "https://www.malt.fr/profile/romainmaunier"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://rmdev.design/#person",
+          "name": "Romain Maunier",
+          "url": "https://rmdev.design/",
+          "image": "https://rmdev.design/Images/PP.png",
+          "jobTitle": "Designer et développeur freelance",
+          "worksFor": {
+            "@id": "https://rmdev.design/#business"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/romain-maunier-826850108/",
+            "https://www.malt.fr/profile/romainmaunier"
+          ],
+          "knowsAbout": [
+            "Prototypage interactif",
+            "Réalité virtuelle",
+            "Réalité augmentée",
+            "Unity",
+            "C#",
+            "UI/UX Design",
+            "Figma"
+          ]
+        }
+      ]
     }
   </script>
 

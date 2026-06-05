@@ -1,0 +1,21 @@
+# RMDev.Design
+
+> Portfolio professionnel de Romain Maunier, designer et developpeur freelance specialise en prototypage interactif, Unity, realite virtuelle, realite augmentee et design UI/UX.
+
+## Site principal
+
+- [RMDev.Design](https://rmdev.design/): expertises, cas d'usage, approche, realisations, references et contact.
+
+## Expertises
+
+- Prototypage interactif et demonstrateurs
+- Developpement Unity et C#
+- Realite virtuelle et augmentee
+- Design UI/UX et Figma
+- Visualisation 3D et experiences immersives
+
+## Contact et profils
+
+- Email: contact@rmdev.design
+- LinkedIn: https://www.linkedin.com/in/romain-maunier-826850108/
+- Malt: https://www.malt.fr/profile/romainmaunier

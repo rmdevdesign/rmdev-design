@@ -20,7 +20,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/VisitesVirtuelles.webp" alt="Visite VR immersive"></figure>
     <section class="cs-section">
-      <h1 id="cs-visites-title" class="section-title">Visites Virtuelles</h1>
+      <h2 id="cs-visites-title" class="section-title cs-project-title">Visites Virtuelles</h2>
       <p class="description">Création d’une <strong>visite VR</strong> et d’un walkthrough vidéo à partir de plans <strong>DWG</strong> – première signature d’achat sur plan obtenue en&nbsp;<strong>48 h</strong>.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -64,7 +64,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/3DPlan.webp" alt="Rendus 3D Plan to 3D"></figure>
     <section class="cs-section">
-      <h1 id="cs-plan3d-title" class="section-title">Plan to 3D</h1>
+      <h2 id="cs-plan3d-title" class="section-title cs-project-title">Plan to 3D</h2>
       <p class="description">Transformation rapide d’un <strong>plan 2D</strong> en maquette <strong>3D</strong> avec walkthrough vidéo pour valider l’aménagement intérieur.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -111,7 +111,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/Demonstrateur.png" alt="Démonstrateur motorisation véhicule"></figure>
     <section class="cs-section">
-      <h1 id="cs-demo-title" class="section-title">Démonstrateur</h1>
+      <h2 id="cs-demo-title" class="section-title cs-project-title">Démonstrateur</h2>
       <p class="description">Prototype <strong>Unity HDRP</strong> illustrant, de manière réaliste, plusieurs configurations de motorisation (thermique, hybride) sur un véhicule transparent roulant sur une route infinie.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -155,7 +155,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/Reno.webp" alt="Prototype systèmes embarqués"></figure>
     <section class="cs-section">
-      <h1 id="cs-sys-title" class="section-title">Systèmes Embarqués</h1>
+      <h2 id="cs-sys-title" class="section-title cs-project-title">Systèmes Embarqués</h2>
       <p class="description">Développement d’un <strong>prototype Unity</strong> interfaçant volant, pédales et autres commandes via <strong>bus CAN</strong>, avec visualisation UX/UI temps réel.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -193,7 +193,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/ShowroomVR.png" alt="ShowRoom VR portes"></figure>
     <section class="cs-section">
-      <h1 id="cs-show-title" class="section-title">ShowRoom VR</h1>
+      <h2 id="cs-show-title" class="section-title cs-project-title">ShowRoom VR</h2>
       <p class="description">Exposer la <strong>gamme complète de portes</strong> du client à l’échelle 1 dans un showroom virtuel immersif.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -237,7 +237,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/VRinCar.png" alt="Expérience VR in Cockpit – Renault Triber"></figure>
     <section class="cs-section">
-      <h1 id="cs-vr-title" class="section-title">VR in Cockpit</h1>
+      <h2 id="cs-vr-title" class="section-title cs-project-title">VR in Cockpit</h2>
       <p class="description">Expérience marketing <strong>Unity</strong> présentée au <strong>New Delhi Auto Show</strong> : visiter des sites emblématiques de l’Inde (Gateway of India, tempête de neige himalayenne, tigre du Bengale) <em>sans quitter le siège du Renault Triber</em>.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -281,7 +281,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/ImmersiveExp.png" alt="Démo VR sécurité nacelle élévatrice"></figure>
     <section class="cs-section">
-      <h1 id="cs-immersive-title" class="section-title">Expérience Immersive</h1>
+      <h2 id="cs-immersive-title" class="section-title cs-project-title">Expérience Immersive</h2>
       <p class="description">Démonstration sur salon des <strong>innovations de sécurité</strong> d’une nacelle élévatrice : l’utilisateur vérifie, en réalité virtuelle, la stabilité et les techniques de contrôle.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -324,7 +324,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/Calypshome.webp" alt="Maquettes UI/UX – app domotique"></figure>
     <section class="cs-section">
-      <h1 id="cs-uiux-title" class="section-title">Maquette UI / UX</h1>
+      <h2 id="cs-uiux-title" class="section-title cs-project-title">Maquette UI / UX</h2>
       <p class="description">De la page blanche au <strong>kit développeur</strong> : wireframes, maquettes&nbsp;Figma haute fidélité et assets marketing d’une application mobile pilotant volets, stores et BSO d’une maison connectée.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -364,7 +364,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/XRSHARE.webp" alt="Prototype VR/AR multijoueur à distance"></figure>
     <section class="cs-section">
-      <h1 id="cs-multi-title" class="section-title">Multijoueur Multiplateforme</h1>
+      <h2 id="cs-multi-title" class="section-title cs-project-title">Multijoueur Multiplateforme</h2>
       <p class="description">Application <strong>VR/AR</strong> de <strong>co‑créativité à distance</strong>, développée au LCPI : réunion virtuelle, tableau blanc 3D et revue de design temps réel, accessibles depuis casque VR, mobile ou PC.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -408,7 +408,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/Ergonomie.png" alt="Prototype Leap Motion dans un cockpit avion"></figure>
     <section class="cs-section">
-      <h1 id="cs-ergo-title" class="section-title">Ergonomie</h1>
+      <h2 id="cs-ergo-title" class="section-title cs-project-title">Ergonomie</h2>
       <p class="description">Maquette <strong>Unity + Leap Motion</strong> pour tester, en réalité virtuelle, la prise en main d’une <em>nouvelle commande produit</em> dans un cockpit d’avion avant toute fabrication physique.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -451,7 +451,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer l’étude de cas">&times;</button>
     <figure class="cs-hero"><img src="Images/AR.webp" alt="Application AR Renault sur tablette"></figure>
     <section class="cs-section">
-      <h1 id="cs-ar-title" class="section-title">Réalité Augmentée</h1>
+      <h2 id="cs-ar-title" class="section-title cs-project-title">Réalité Augmentée</h2>
       <p class="description">Application <strong>Unity + Vuforia</strong> sur tablette Android : filmer un véhicule Renault et faire apparaître des contenus augmentés (vue en coupe, intérieurs, animations d'ouverture).</p>
     </section>
     <section class="cs-section cs-alt">
@@ -487,7 +487,7 @@ window.rmdevOverlaysHtml = `
     <button class="cs-close" aria-label="Fermer la fiche expertise">&times;</button>
     <figure class="cs-hero"><img src="Images/Creativity.webp" alt="Collage représentant UI, VR et 3D"></figure>
     <section class="cs-section">
-      <h1 id="cs-expertise-title" class="section-title">Expertise Design</h1>
+      <h2 id="cs-expertise-title" class="section-title cs-project-title">Expertise Design</h2>
       <p class="description">7 ans d’expérience à la croisée du <strong>design produit</strong> et du <strong>développement interactif</strong> : de l’idéation à la mise en production, en AR/VR, mobile ou embarqué.</p>
     </section>
     <section class="cs-section cs-alt">
@@ -527,7 +527,7 @@ window.rmdevOverlaysHtml = `
       </video>
     </figure>
     <section class="cs-section">
-      <h1 id="cs-formation-immersive-title" class="section-title">Formation immersive</h1>
+      <h2 id="cs-formation-immersive-title" class="section-title cs-project-title">Formation immersive</h2>
       <p class="description">Plateforme d'entraînement à la <strong>prise de parole en public</strong> combinant intelligence artificielle et réalité virtuelle, destinée aux organisations et aux particuliers.</p>
     </section>
     <section class="cs-section cs-alt">
