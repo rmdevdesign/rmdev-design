@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const overlaysRoot = document.getElementById('project-overlays-root');
   if (overlaysRoot && window.rmdevOverlaysHtml) {
-    overlaysRoot.innerHTML = window.rmdevOverlaysHtml;
+    overlaysRoot.innerHTML = window.rmdevOverlaysHtml
+      .replace(/<img src=/g, '<img loading="lazy" decoding="async" data-src=')
+      .replace(/<source src=/g, '<source data-src=');
   }
 
   // --- Gestion du Menu Burger (Mobile) ---
@@ -10,18 +12,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (burgerMenu && mobileNav) {
+    const setMobileMenu = (isOpen) => {
+      mobileNav.classList.toggle('active', isOpen);
+      burgerMenu.classList.toggle('open', isOpen);
+      burgerMenu.setAttribute('aria-expanded', String(isOpen));
+      burgerMenu.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      mobileNav.setAttribute('aria-hidden', String(!isOpen));
+
+      if ('inert' in mobileNav) {
+        mobileNav.inert = !isOpen;
+      }
+    };
+
+    setMobileMenu(false);
+
     burgerMenu.addEventListener('click', function() {
-      mobileNav.classList.toggle('active');
-      // Animation simple du burger (optionnel, peut être amélioré en CSS)
-      this.classList.toggle('open');
+      setMobileMenu(!mobileNav.classList.contains('active'));
     });
 
-    // Fermer le menu quand on clique sur un lien
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        burgerMenu.classList.remove('open');
+        setMobileMenu(false);
       });
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mobileNav.classList.contains('active')) {
+        setMobileMenu(false);
+        burgerMenu.focus();
+      }
     });
   }
 
@@ -34,6 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const endpoint = contactForm.dataset.formspreeEndpoint;
       const submitButton = contactForm.querySelector('button[type="submit"]');
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        if (contactStatus) {
+          contactStatus.textContent = 'Merci de compléter les champs obligatoires.';
+        }
+        return;
+      }
 
       if (!endpoint || endpoint.includes('REPLACE_WITH_YOUR_FORM_ID')) {
         if (contactStatus) {
@@ -89,26 +116,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const grid = document.getElementById('projects-grid');
   const delays = ['reveal', 'reveal reveal-delay-1', 'reveal reveal-delay-2'];
+  const deferredVideos = [];
 
-  projects.forEach(({ id, src, alt, name, cat, video }, i) => {
+  projects.forEach(({ id, src, alt, name, cat, video, poster, proof, width, height, url }, i) => {
     const media = video
-      ? `<video autoplay muted loop playsinline><source src="${src}" type="video/mp4"></video>`
-      : `<img src="${src}" alt="${alt}" loading="lazy">`;
-    const btn = document.createElement('button');
-    btn.id = id;
-    btn.className = `project-card-item ${delays[i % 3]}`;
-    btn.innerHTML = `
+      ? `<video muted loop playsinline preload="none" poster="${poster || ''}" aria-label="${alt}"><source data-src="${src}" type="video/mp4"></video>`
+      : `<img src="${src}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async">`;
+    const card = document.createElement(url ? 'a' : 'button');
+    if (url) {
+      card.href = url;
+    } else {
+      card.type = 'button';
+      card.id = id;
+    }
+    card.className = `project-card-item ${delays[i % 3]}`;
+    card.innerHTML = `
       <div class="project-thumb">
         ${media}
-        <div class="project-overlay"><span class="view-project">Voir le projet</span></div>
+        <div class="project-overlay"><span class="view-project">${url ? 'Lire le cas client' : 'Voir le projet'}</span></div>
       </div>
       <div class="project-info">
         <h3 class="project-name">${name}</h3>
         <span class="project-cat">${cat}</span>
+        ${proof ? `<span class="project-proof">${proof}</span>` : ''}
       </div>`;
-    if (video) btn.querySelector('video').playbackRate = 0.75;
-    grid.appendChild(btn);
+    if (video) {
+      const projectVideo = card.querySelector('video');
+      projectVideo.playbackRate = 0.75;
+      deferredVideos.push(projectVideo);
+    }
+    grid.appendChild(card);
   });
+
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const video = entry.target;
+        const source = video.querySelector('source[data-src]');
+        if (source) {
+          source.src = source.dataset.src;
+          source.removeAttribute('data-src');
+          video.load();
+        }
+        video.play().catch(() => {});
+        videoObserver.unobserve(video);
+      });
+    }, { rootMargin: '250px 0px' });
+
+    deferredVideos.forEach(video => videoObserver.observe(video));
+  } else {
+    deferredVideos.forEach(video => {
+      const source = video.querySelector('source[data-src]');
+      if (source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        video.load();
+      }
+    });
+  }
 
   const cta = document.createElement('a');
   cta.href = '#contact';
@@ -116,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cta.style.cssText = 'display:block;text-decoration:none;';
   cta.innerHTML = `
     <div class="project-thumb">
-      <img src="Images/Creativity.webp" alt="Votre Projet">
+      <img src="Images/optimized/Creativity-card.webp" width="960" height="476" loading="lazy" decoding="async" alt="Votre Projet">
       <div class="project-overlay"><span class="view-project">Me contacter</span></div>
     </div>
     <div class="project-info">
@@ -126,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   grid.appendChild(cta);
 
   // --- Gestion des Overlays ---
-  const maps = projects.map(({ id, modal }) => ({ btn: id, ov: modal }));
+  const maps = projects.filter(project => !project.url).map(({ id, modal }) => ({ btn: id, ov: modal }));
 
   maps.forEach(({btn, ov}) => {
     const b = document.getElementById(btn);
@@ -136,30 +203,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const closeBtn = o.querySelector('.cs-close');
     let closeTimeoutId = null;
+    let triggerElement = null;
+
+    const hydrateOverlayMedia = () => {
+      o.querySelectorAll('[data-src]').forEach(media => {
+        media.src = media.dataset.src;
+        media.removeAttribute('data-src');
+      });
+      o.querySelectorAll('video').forEach(video => {
+        video.load();
+        video.play().catch(() => {});
+      });
+    };
+
+    const getFocusableElements = () => Array.from(o.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    ));
     
     const open = () => {
       if (closeTimeoutId) {
         window.clearTimeout(closeTimeoutId);
         closeTimeoutId = null;
       }
+      triggerElement = document.activeElement;
+      hydrateOverlayMedia();
       o.classList.remove('is-closing');
       o.style.display = 'block';
-      // Force le scroll en haut à l'ouverture
-      o.scrollTop = 0; 
+      o.scrollTop = 0;
       document.body.style.overflow = 'hidden';
-      o.focus();
+      (closeBtn || o).focus();
     };
     
     const shut = () => {
       if (o.style.display !== 'block' || o.classList.contains('is-closing')) return;
 
       o.classList.add('is-closing');
+      o.querySelectorAll('video').forEach(video => video.pause());
       document.body.style.overflow = '';
 
       closeTimeoutId = window.setTimeout(() => {
         o.style.display = 'none';
         o.classList.remove('is-closing');
         closeTimeoutId = null;
+        if (triggerElement) {
+          triggerElement.focus();
+        }
       }, 240);
     };
 
@@ -173,8 +261,31 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.target === o) shut();
     });
     
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && o.style.display === 'block') shut();
+    o.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        shut();
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = getFocusableElements();
+      if (!focusableElements.length) {
+        e.preventDefault();
+        o.focus();
+        return;
+      }
+
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     });
   });
 

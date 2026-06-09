@@ -43,6 +43,15 @@ a {
   transition: color 0.2s ease;
 }
 
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 4px;
+}
+
 ul {
   list-style: none;
 }
@@ -85,7 +94,8 @@ img {
 
 .header-menu-default {
   display: flex;
-  gap: 40px;
+  gap: 28px;
+  align-items: center;
 }
 
 /* Burger Menu (Mobile) */
@@ -142,11 +152,16 @@ img {
   
   /* Animation Slide Down */
   transform: translateY(-100%); /* Caché complètement en haut */
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
 }
 
 .mobile-nav.active {
   transform: translateY(0); /* Visible */
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .mobile-nav-link {
@@ -188,6 +203,28 @@ img {
 
 .label:hover::after {
   width: 100%;
+}
+
+.nav-cta {
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-full);
+  color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+}
+
+.nav-cta::after {
+  display: none;
+}
+
+.nav-cta:hover {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.45);
+}
+
+.mobile-nav-cta {
+  background: var(--brand-gradient);
+  font-weight: 700;
 }
 
 /* =========================
@@ -519,6 +556,8 @@ img {
   align-items: center;
   text-align: center;
   gap: 15px;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* Pseudo-élément pour la bordure dégradée */
@@ -562,8 +601,10 @@ img {
 }
 
 .service-icon {
-  width: 36px;
-  height: 36px;
+  width: auto;
+  height: auto;
+  max-width: 36px;
+  max-height: 36px;
   filter: invert(1);
 }
 
@@ -579,6 +620,74 @@ img {
   line-height: 1.6;
 }
 
+.service-link {
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--brand-accent);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.service-link::after {
+  content: " →";
+}
+
+.service-link:hover {
+  color: #ffffff;
+}
+
+.conversion-band {
+  width: min(1120px, 90%);
+  margin: 0 auto 100px;
+  padding: 42px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.conversion-band h2 {
+  max-width: 680px;
+  margin-bottom: 10px;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.12;
+}
+
+.conversion-band p {
+  max-width: 720px;
+  color: var(--text-secondary);
+}
+
+.conversion-link {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  color: var(--text-main);
+  border-bottom: 1px solid rgba(34,211,238,0.65);
+  font-weight: 700;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.conversion-link span {
+  color: var(--brand-accent);
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.conversion-link:hover {
+  color: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+
+.conversion-link:hover span {
+  transform: translateX(4px);
+}
+
 /* =========================
    Approach Section (REFONTE PREMIUM)
 ========================= */
@@ -590,14 +699,7 @@ img {
 
 /* Séparateur subtil */
 .approach-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  display: none;
 }
 
 .approach-section::after {
@@ -924,11 +1026,15 @@ img {
   flex-direction: column;
   align-items: flex-start; /* Alignement gauche */
   justify-content: flex-end;
+  min-height: 158px;
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
 
 .project-name {
+  display: flex;
+  align-items: flex-end;
+  min-height: 2.35em;
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 4px;
@@ -945,6 +1051,23 @@ img {
   background: none;
   -webkit-text-fill-color: initial;
   transition: color 0.3s;
+}
+
+.project-proof {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin-top: 10px;
+  margin-left: -10px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-full);
+  background: rgba(8,10,14,0.55);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  backdrop-filter: blur(8px);
 }
 
 /* Bouton "Voir" (caché par défaut ou discret) */
@@ -976,6 +1099,99 @@ img {
   grid-column: 1 / -1;
   aspect-ratio: unset;
   height: 200px;
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq-section {
+  padding: 100px 5%;
+  background: var(--bg-main);
+  position: relative;
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1200px, 90%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-intro {
+  max-width: 700px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 22px 60px 22px 24px;
+  color: var(--text-main);
+  font-family: var(--font-family-heading);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  color: var(--brand-accent);
+  font-family: var(--font-family-main);
+  font-size: 26px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  padding: 0 24px 24px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.faq-cta {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.faq-cta p {
+  color: var(--text-secondary);
 }
 
 /* =========================
@@ -1280,7 +1496,8 @@ img {
 }
 
 .footer-logo {
-  height: 40px;
+  width: min(294px, calc(100% - 40px));
+  height: auto;
   /* Logo original (couleur) : pas de filtre, comme demandé */
   opacity: 1;
 }
@@ -1337,6 +1554,11 @@ img {
     grid-template-columns: 1fr; /* Une seule colonne sur mobile */
     gap: 30px;
   }
+
+  .conversion-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
   
   .form-row {
     grid-template-columns: 1fr; /* Champs nom/email l'un sous l'autre */
@@ -1348,6 +1570,7 @@ img {
   .services,
   .approach-section,
   .projects,
+  .faq-section,
   .contact-section {
     padding: 72px 20px;
   }
@@ -1487,8 +1710,49 @@ img {
     padding: 0;
   }
 
+  .conversion-band {
+    width: calc(100% - 40px);
+    margin-bottom: 72px;
+    padding: 32px 0;
+    gap: 24px;
+  }
+
+  .conversion-link {
+    width: fit-content;
+  }
+
+  .faq-intro {
+    margin-bottom: 30px;
+  }
+
+  .faq-item summary {
+    padding: 20px 52px 20px 20px;
+    font-size: 17px;
+  }
+
+  .faq-item summary::after {
+    right: 20px;
+  }
+
+  .faq-item p {
+    padding: 0 20px 20px;
+    font-size: 15px;
+  }
+
+  .faq-cta {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .projects .project-info {
     padding: 18px;
+    min-height: 144px;
   }
 
   .project-name {
@@ -1507,6 +1771,17 @@ img {
     bottom: 18px;
   }
 
+}
+
+@media (max-width: 560px) {
+  .logo {
+    min-width: 0;
+  }
+
+  .logoRMDevDesign {
+    width: min(190px, 52vw);
+    height: auto;
+  }
 }
 
 @keyframes fadeInUp {
@@ -1769,6 +2044,12 @@ img {
 /* =========================
    Accessibilité : Reduced Motion
 ========================= */
+@media (max-height: 780px) {
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     transition: none;

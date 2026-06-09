@@ -8,11 +8,27 @@
 
 ## Expertises
 
-- Prototypage interactif et demonstrateurs
+- [Prototypage interactif et POC](https://rmdev.design/prototypage-interactif.html): prototypes testables, demonstrateurs et validation de concepts.
+- [Developpement VR et Unity](https://rmdev.design/developpement-vr-unity.html): experiences immersives pour la formation, la visualisation et les showrooms.
+- [Design UI/UX et Figma](https://rmdev.design/design-ui-ux-figma.html): parcours, interfaces, prototypes cliquables et preparation de l'integration.
 - Developpement Unity et C#
 - Realite virtuelle et augmentee
-- Design UI/UX et Figma
 - Visualisation 3D et experiences immersives
+
+## Cas clients
+
+- [Formation securite VR](https://rmdev.design/cas-client-securite-vr.html): experience industrielle utilisee plus de 800 fois pendant un salon.
+- [Demonstrateur de motorisation](https://rmdev.design/cas-client-demonstrateur-motorisation.html): visualisation interactive d'une chaine de traction hybride sous Unity HDRP.
+- [Systemes embarques](https://rmdev.design/cas-client-systemes-embarques.html): prototype Unity connecte au bus CAN dans un programme R&D de 24 mois.
+- [Formation immersive](https://rmdev.design/cas-client-formation-immersive.html): entrainement a la prise de parole en VR avec analyse par IA.
+- [Plan to 3D](https://rmdev.design/cas-client-plan-3d.html): transformation d'un plan technique en visualisation 3D livree en 48 heures.
+- [XR Share](https://rmdev.design/cas-client-xr-share.html): collaboration multiplateforme entre VR, AR, mobile et PC.
+- [Visite VR immobiliere](https://rmdev.design/cas-client-visite-vr-immobilier.html): transformation de plans DWG en visite Meta Quest 2 livree en 48 heures.
+- [VR in Cockpit](https://rmdev.design/cas-client-vr-cockpit.html): experience automobile Unity HDRP utilisee par plus de 1 200 visiteurs en cinq jours.
+- [Application domotique UI/UX](https://rmdev.design/cas-client-ui-ux-domotique.html): architecture, design system et plus de 100 ecrans Figma livres.
+- [Ergonomie cockpit](https://rmdev.design/cas-client-ergonomie-cockpit.html): validation en VR de la position des commandes avant fabrication.
+- [Realite augmentee automobile](https://rmdev.design/cas-client-realite-augmentee-automobile.html): application tablette utilisee plus de 500 fois pendant un salon.
+- [Showroom VR](https://rmdev.design/cas-client-showroom-vr.html): plus de 50 references presentees sans stock physique.
 
 ## Contact et profils
 
