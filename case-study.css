@@ -130,6 +130,12 @@
 
 .case-list {
   padding-left: 22px;
+  list-style: disc;
+}
+
+.case-list li::marker {
+  color: var(--brand-accent);
+  font-size: 1.15em;
 }
 
 .case-list li + li {
