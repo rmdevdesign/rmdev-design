@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const overlaysRoot = document.getElementById('project-overlays-root');
-  if (overlaysRoot && window.rmdevOverlaysHtml) {
-    overlaysRoot.innerHTML = window.rmdevOverlaysHtml
-      .replace(/<img src=/g, '<img loading="lazy" decoding="async" data-src=')
-      .replace(/<source src=/g, '<source data-src=');
-  }
-
   // --- Gestion du Menu Burger (Mobile) ---
   const burgerMenu = document.getElementById('burger-menu');
   const mobileNav = document.getElementById('mobile-nav');
@@ -191,103 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="project-cat">Ajoutez-le à cette liste</span>
     </div>`;
   grid.appendChild(cta);
-
-  // --- Gestion des Overlays ---
-  const maps = projects.filter(project => !project.url).map(({ id, modal }) => ({ btn: id, ov: modal }));
-
-  maps.forEach(({btn, ov}) => {
-    const b = document.getElementById(btn);
-    const o = document.getElementById(ov);
-    
-    if (!b || !o) return;
-
-    const closeBtn = o.querySelector('.cs-close');
-    let closeTimeoutId = null;
-    let triggerElement = null;
-
-    const hydrateOverlayMedia = () => {
-      o.querySelectorAll('[data-src]').forEach(media => {
-        media.src = media.dataset.src;
-        media.removeAttribute('data-src');
-      });
-      o.querySelectorAll('video').forEach(video => {
-        video.load();
-        video.play().catch(() => {});
-      });
-    };
-
-    const getFocusableElements = () => Array.from(o.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    ));
-    
-    const open = () => {
-      if (closeTimeoutId) {
-        window.clearTimeout(closeTimeoutId);
-        closeTimeoutId = null;
-      }
-      triggerElement = document.activeElement;
-      hydrateOverlayMedia();
-      o.classList.remove('is-closing');
-      o.style.display = 'block';
-      o.scrollTop = 0;
-      document.body.style.overflow = 'hidden';
-      (closeBtn || o).focus();
-    };
-    
-    const shut = () => {
-      if (o.style.display !== 'block' || o.classList.contains('is-closing')) return;
-
-      o.classList.add('is-closing');
-      o.querySelectorAll('video').forEach(video => video.pause());
-      document.body.style.overflow = '';
-
-      closeTimeoutId = window.setTimeout(() => {
-        o.style.display = 'none';
-        o.classList.remove('is-closing');
-        closeTimeoutId = null;
-        if (triggerElement) {
-          triggerElement.focus();
-        }
-      }, 240);
-    };
-
-    b.addEventListener('click', open);
-    
-    if (closeBtn) {
-      closeBtn.addEventListener('click', shut);
-    }
-    
-    o.addEventListener('click', e => {
-      if (e.target === o) shut();
-    });
-    
-    o.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        shut();
-        return;
-      }
-
-      if (e.key !== 'Tab') return;
-
-      const focusableElements = getFocusableElements();
-      if (!focusableElements.length) {
-        e.preventDefault();
-        o.focus();
-        return;
-      }
-
-      const first = focusableElements[0];
-      const last = focusableElements[focusableElements.length - 1];
-
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    });
-  });
 
   // --- Scroll Reveal Animation ---
   const revealElements = document.querySelectorAll('.reveal');
