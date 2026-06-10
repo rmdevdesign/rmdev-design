@@ -176,12 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
   cta.style.cssText = 'display:block;text-decoration:none;';
   cta.innerHTML = `
     <div class="project-thumb">
-      <img src="Images/optimized/Creativity-card.webp" width="960" height="476" loading="lazy" decoding="async" alt="Votre Projet">
-      <div class="project-overlay"><span class="view-project">Me contacter</span></div>
+      <img src="Images/optimized/Creativity-card.webp" width="960" height="476" loading="lazy" decoding="async" alt="Collage de projets interactifs">
+      <div class="project-overlay"><span class="view-project">Cadrer le besoin</span></div>
     </div>
     <div class="project-info">
-      <h3 class="project-name">Votre Projet ?</h3>
-      <span class="project-cat">Ajoutez-le à cette liste</span>
+      <h3 class="project-name">Un projet à rendre concret ?</h3>
+      <span class="project-cat">Partons de votre contexte</span>
     </div>`;
   grid.appendChild(cta);
 
@@ -218,15 +218,5 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   window.addEventListener('load', revealVisibleInView);
-
-  // --- Parallax Effect Hero ---
-  const heroBg = document.getElementById('hero-bg');
-  if (heroBg) {
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.pageYOffset;
-      // On déplace l'image de fond à 50% de la vitesse du scroll
-      heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-    });
-  }
 
 });

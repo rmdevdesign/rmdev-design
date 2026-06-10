@@ -19,21 +19,20 @@
   <!-- CSS principal -->
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="preload" as="image" href="Images/optimized/backgroundstart-mobile.webp" media="(max-width: 768px)">
-  <link rel="preload" as="image" href="Images/optimized/backgroundstart-1920.webp" imagesrcset="Images/optimized/backgroundstart-960.webp 960w, Images/optimized/backgroundstart-1920.webp 1920w, Images/optimized/backgroundstart-3840.webp 3840w" imagesizes="100vw" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="Images/optimized/3DPlan-hero.webp">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Images/logo.png">
 
   <!-- Titre de la page -->
-  <title>RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)</title>
+  <title>RMDev.Design – Prototypes interactifs, Unity, XR et UI/UX</title>
 
   <!-- Meta Description (≈ 150–160 caractères) -->
-  <meta name="description" content="Designer et développeur freelance à Paris : prototypes interactifs, expériences VR sous Unity et interfaces UI/UX sur Figma.">
+  <meta name="description" content="Je transforme une idée technique en prototype testable : Unity, XR, visualisation 3D et interfaces UI/UX, à Paris et à distance.">
   
   <!-- Balises Open Graph (pour un affichage optimisé sur les réseaux) -->
-  <meta property="og:title" content="RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)" />
-  <meta property="og:description" content="Prototypes interactifs, expériences VR sous Unity et interfaces UI/UX sur Figma, à Paris et à distance." />
+  <meta property="og:title" content="RMDev.Design – Rendre un projet technique visible et testable" />
+  <meta property="og:description" content="Prototypes interactifs, expériences Unity et XR, visualisation 3D et interfaces UI/UX." />
   <meta property="og:image" content="https://rmdev.design/Images/optimized/backgroundstart-1920.webp" />
   <meta property="og:image:alt" content="Aperçu des projets RMDev.Design" />
   <meta property="og:url" content="https://rmdev.design/" />
@@ -42,8 +41,8 @@
   <meta property="og:site_name" content="RMDev.Design" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RMDev.Design – Designer & Développeur Freelance">
-  <meta name="twitter:description" content="Prototypage Unity, expériences XR et design UI/UX par Romain Maunier.">
+  <meta name="twitter:title" content="RMDev.Design – Rendre un projet technique visible et testable">
+  <meta name="twitter:description" content="Prototypes interactifs, expériences Unity et XR, visualisation 3D et interfaces UI/UX.">
   <meta name="twitter:image" content="https://rmdev.design/Images/optimized/backgroundstart-1920.webp">
   <meta name="twitter:image:alt" content="Aperçu des projets RMDev.Design">
 
@@ -128,20 +127,18 @@
     <div class="main-wrapper">
       <div class="site-header">
         <div class="logo">
-          <a href="#" class="icon">
+          <a href="index.html" class="icon">
             <!-- Logo original (couleur) pour le header -->
             <img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design Logo" />
           </a>
         </div>
         <div class="site-nav">
           <nav class="header-menu-default">
-            <a href="#besoins" class="label">Cas d'usage</a>
-            <a href="#services" class="label">Expertises</a>
-            <a href="#approche" class="label">Approche</a>
             <a href="#projets" class="label">Réalisations</a>
-            <a href="#references" class="label">Références</a>
-            <a href="#faq" class="label">FAQ</a>
-            <a href="#contact" class="label nav-cta">Discuter du projet</a>
+            <a href="#besoins" class="label">Besoins</a>
+            <a href="#approche" class="label">Méthode</a>
+            <a href="#services" class="label">Expertises</a>
+            <a href="#contact" class="label nav-cta">Cadrer un projet</a>
           </nav>
           <!-- Icône Burger pour le menu mobile -->
           <button class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false">
@@ -153,209 +150,140 @@
       </div>
       <!-- Menu Mobile -->
       <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-        <a href="#besoins" class="mobile-nav-link">Cas d'usage</a>
-        <a href="#services" class="mobile-nav-link">Expertises</a>
-        <a href="#approche" class="mobile-nav-link">Approche</a>
         <a href="#projets" class="mobile-nav-link">Réalisations</a>
-        <a href="#references" class="mobile-nav-link">Références</a>
-        <a href="#faq" class="mobile-nav-link">FAQ</a>
-        <a href="#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a>
+        <a href="#besoins" class="mobile-nav-link">Besoins</a>
+        <a href="#approche" class="mobile-nav-link">Méthode</a>
+        <a href="#services" class="mobile-nav-link">Expertises</a>
+        <a href="#contact" class="mobile-nav-link mobile-nav-cta">Cadrer un projet</a>
       </div>
 
 
       <div class="home">
-        <!-- Hero Section Modernisée -->
-        <div class="hero">
-          <div class="hero-overlay"></div>
-          <div class="hero-display-text" aria-hidden="true">XR</div>
-          <div class="hero-content">
-            <span class="hero-eyebrow reveal">Designer & développeur freelance</span>
-            <h1 class="hero-title reveal reveal-delay-1">Prototypes, interfaces et <span class="highlight">expériences XR</span></h1>
-            <p class="hero-subtitle reveal reveal-delay-2">À Paris et à distance, je transforme un besoin en prototype concret pour le tester, le présenter ou lancer la suite avec plus de certitude.</p>
-            <div class="hero-actions">
-              <a href="#contact" class="btn-primary">Parler de votre projet</a>
-              <a href="#projets" class="btn-secondary">Voir des cas concrets</a>
+        <section class="showcase-hero" aria-labelledby="hero-title">
+          <div class="showcase-hero-copy">
+            <span class="hero-eyebrow reveal">Romain Maunier · designer & développeur freelance</span>
+            <h1 class="showcase-title reveal reveal-delay-1" id="hero-title">Je rends vos projets techniques <span class="highlight">concrets.</span></h1>
+            <p class="showcase-lead reveal reveal-delay-2">Prototype Unity, expérience XR ou interface Figma : je conçois ce qu’il faut pour expliquer une idée, la tester et la présenter.</p>
+            <div class="hero-actions reveal reveal-delay-2">
+              <a href="#projets" class="btn-primary">Voir les réalisations</a>
+              <a href="#contact" class="btn-secondary">Cadrer votre besoin</a>
+            </div>
+            <div class="showcase-facts reveal reveal-delay-3" aria-label="Repères">
+              <span><strong>Design + code</strong> dans la même mission</span>
+              <span><strong>Paris</strong> et travail à distance</span>
             </div>
           </div>
-          <picture>
-            <source media="(max-width: 768px)" srcset="Images/optimized/backgroundstart-mobile.webp">
-            <img
-              src="Images/optimized/backgroundstart-1920.webp"
-              srcset="Images/optimized/backgroundstart-960.webp 960w, Images/optimized/backgroundstart-1920.webp 1920w, Images/optimized/backgroundstart-3840.webp 3840w"
-              sizes="100vw"
-              width="3840"
-              height="1016"
-              alt=""
-              aria-hidden="true"
-              fetchpriority="high"
-              class="hero-bg-image"
-              id="hero-bg">
-          </picture>
-          <a href="#besoins" class="hero-scroll-indicator" aria-label="Explorer la suite">Explorer</a>
-        </div>
-
-        <section class="use-cases" id="besoins">
-          <div class="use-cases-header reveal">
-            <span class="section-kicker">Cas d'usage</span>
-            <h2 class="section-title">Quand il faut rendre une idée immédiatement tangible</h2>
-            <p class="description">
-              J'interviens quand une maquette ne suffit plus, mais qu'un produit final serait trop long, trop coûteux ou trop risqué à lancer tout de suite.
-            </p>
+          <div class="showcase-stage reveal reveal-delay-1" role="group" aria-label="Aperçu de trois réalisations">
+            <div class="stage-card stage-card--main">
+              <img src="Images/optimized/3DPlan-hero.webp" width="1920" height="1080" fetchpriority="high" alt="Visualisation intérieure réalisée à partir d'un plan technique">
+              <span class="stage-label"><small>Plan technique → visualisation</small>Livré en 48 h</span>
+            </div>
+            <div class="stage-card stage-card--top">
+              <img src="Images/optimized/Calypshome-card.webp" width="960" height="807" alt="Interface mobile de maison connectée">
+              <span class="stage-label"><small>UI/UX domotique</small>100+ écrans Figma</span>
+            </div>
+            <div class="stage-card stage-card--bottom">
+              <img src="Images/optimized/VRinCar-card.webp" width="960" height="560" alt="Expérience automobile en réalité virtuelle">
+              <span class="stage-label"><small>Expérience VR automobile</small>1 200+ visiteurs</span>
+            </div>
           </div>
-          <div class="use-cases-grid">
-            <article class="use-case-card reveal reveal-delay-1">
-              <span class="use-case-tag">POC / Démo</span>
-              <h3>Montrer vite une vision crédible</h3>
-              <p>Prototype interactif, démonstrateur salon, app de présentation ou expérience showroom pour convaincre un client, un partenaire ou une direction.</p>
-            </article>
-            <article class="use-case-card reveal reveal-delay-2">
-              <span class="use-case-tag">Produit / UX</span>
-              <h3>Aligner design et faisabilité</h3>
-              <p>Maquettes Figma, écrans clés, logique de navigation et version testable pour valider les parcours avant d'engager une équipe plus large.</p>
-            </article>
-            <article class="use-case-card reveal reveal-delay-3">
-              <span class="use-case-tag">XR / Formation</span>
-              <h3>Créer une expérience utile, pas juste spectaculaire</h3>
-              <p>VR, AR ou Unity pour la formation, la pédagogie, la visualisation ou l'événementiel avec un vrai objectif d'usage derrière l'effet waouh.</p>
-            </article>
+          <a href="#besoins" class="showcase-scroll">Découvrir mon approche <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section class="projects all-projects" id="projets">
+          <div class="projects-header reveal">
+            <span class="section-kicker">Réalisations</span>
+            <h2 class="section-title">Des projets conçus pour être utilisés, testés ou présentés</h2>
+            <p class="description">Chaque cas détaille le besoin de départ, le travail réalisé et le résultat observable.</p>
+          </div>
+          <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <section class="problem-paths" id="besoins">
+          <div class="editorial-heading reveal">
+            <span class="section-kicker">Votre point de départ</span>
+            <h2>Vous n’avez pas besoin de choisir une technologie avant de me contacter.</h2>
+          </div>
+          <div class="problem-paths-list">
+            <a class="problem-path reveal" href="#contact">
+              <span class="problem-number">01</span>
+              <span><strong>« J’ai une idée, mais rien de montrable. »</strong><small>Prototype, démonstrateur ou parcours testable.</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="problem-path reveal reveal-delay-1" href="#contact">
+              <span class="problem-number">02</span>
+              <span><strong>« Mon produit est difficile à expliquer. »</strong><small>Visualisation 3D, expérience interactive ou support de présentation.</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="problem-path reveal reveal-delay-2" href="#contact">
+              <span class="problem-number">03</span>
+              <span><strong>« Je dois tester avant de développer davantage. »</strong><small>Maquette Figma, POC fonctionnel ou prototype XR.</small></span>
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </section>
 
-
-        <div class="services" id="services">
-          <div class="community2 reveal">
-            <span class="section-kicker">Expertises</span>
-            <h2 class="section-title">Design, prototype et XR</h2>
-            <p class="description">
-              Trois briques pour cadrer un projet, le rendre crédible rapidement et le faire exister de manière concrète.
-            </p>
+        <section class="personal-approach" id="approche">
+          <div class="personal-portrait reveal">
+            <img src="Images/optimized/profile-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Romain Maunier">
+            <span>Votre interlocuteur, du premier échange à la livraison.</span>
           </div>
-          <div class="services-grid">
-            <a class="service-card service-card--featured reveal reveal-delay-1" href="prototypage-interactif.html">
-              <div class="icon-wrapper">
-                <img class="service-icon" src="Images/IconDev.svg" width="42" height="73" alt="" aria-hidden="true" />
-              </div>
-              <h3 class="service-title">Prototypage & Interaction</h3>
-              <p class="service-text">
-                Passez de l'idée au produit testable rapidement. Je développe des prototypes sur mesure pour valider vos concepts sans les coûts d'une agence.
-              </p>
-              <span class="service-link">Voir l'expertise</span>
-            </a>
-            
-            <a class="service-card reveal reveal-delay-2" href="developpement-vr-unity.html">
-              <div class="icon-wrapper">
-                <img class="service-icon" src="Images/IconVR.svg" width="99" height="99" alt="" aria-hidden="true" />
-              </div>
-              <h3 class="service-title">Réalité Virtuelle (VR)</h3>
-              <p class="service-text">
-                Créez des expériences immersives optimisées pour la formation, le showrooming ou l'événementiel, adaptées à vos cas d'usage.
-              </p>
-              <span class="service-link">Voir l'expertise</span>
-            </a>
+          <div class="personal-copy reveal reveal-delay-1">
+            <span class="section-kicker">Ma façon de travailler</span>
+            <h2>Je conçois ce que je développe, et je développe ce que nous avons validé.</h2>
+            <p>Mon profil hybride évite la rupture entre une intention visuelle et sa réalisation technique. Vous échangez directement avec la personne qui cadre, dessine, prototype et assemble le livrable.</p>
+            <div class="personal-steps">
+              <div><span>01</span><strong>Cadrer la décision</strong><p>Ce que le prototype doit permettre de comprendre, tester ou obtenir.</p></div>
+              <div><span>02</span><strong>Montrer tôt</strong><p>Une première version concrète avant d’investir dans la finition.</p></div>
+              <div><span>03</span><strong>Livrer utile</strong><p>Un support adapté au vrai contexte : test, salon, réunion ou développement.</p></div>
+            </div>
+          </div>
+        </section>
 
-            <a class="service-card service-card--wide reveal reveal-delay-3" href="design-ui-ux-figma.html">
-              <div class="icon-wrapper">
-                <img class="service-icon" src="Images/IconFigma.svg" width="42" height="73" alt="" aria-hidden="true" />
-              </div>
-              <h3 class="service-title">Design UI / UX</h3>
-              <p class="service-text">
-                Des interfaces pensées pour le code. Je conçois sur Figma en anticipant les contraintes techniques pour une intégration sans friction.
-              </p>
-              <span class="service-link">Voir l'expertise</span>
+        <section class="capabilities" id="services">
+          <div class="editorial-heading reveal">
+            <span class="section-kicker">Expertises mobilisables</span>
+            <h2>Trois disciplines, combinées selon le problème.</h2>
+          </div>
+          <div class="capability-links">
+            <a href="prototypage-interactif.html" class="capability-link reveal">
+              <span>Prototype & interaction</span><small>POC, démonstrateur, application testable</small><b aria-hidden="true">↗</b>
+            </a>
+            <a href="developpement-vr-unity.html" class="capability-link reveal reveal-delay-1">
+              <span>Unity & expériences XR</span><small>VR, AR, 3D temps réel, événementiel</small><b aria-hidden="true">↗</b>
+            </a>
+            <a href="design-ui-ux-figma.html" class="capability-link reveal reveal-delay-2">
+              <span>Design UI/UX</span><small>Parcours, interfaces, design system, passation</small><b aria-hidden="true">↗</b>
             </a>
           </div>
-        </div>
+        </section>
 
-        <aside class="conversion-band reveal" aria-label="Prise de contact">
+        <aside class="brief-offer reveal" aria-label="Offre de cadrage">
           <div>
-            <span class="section-kicker">Une question ou un projet ?</span>
-            <h2>Parlons simplement de ce que vous cherchez à réaliser.</h2>
-            <p>Je vous réponds directement pour voir si mon profil correspond à votre besoin et quelle pourrait être la suite.</p>
+            <span class="section-kicker">Premier échange · 30 minutes</span>
+            <h2>Partons de ce que vous devez rendre visible.</h2>
+            <p>Vous apportez le contexte, les éléments disponibles et l’échéance. Je vous aide à identifier le scénario à montrer et le niveau de prototype pertinent.</p>
           </div>
-          <a href="#contact" class="conversion-link">Échanger avec moi <span aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn-primary">Cadrer le projet</a>
         </aside>
 
-        <!-- NOUVELLE SECTION : L'APPROCHE HYBRIDE (Refonte HTML) -->
-        <div class="approach-section" id="approche">
-          <div class="approach-container">
-            <div class="approach-intro reveal">
-              <span class="section-kicker">Approche</span>
-              <h2 class="section-title">Un seul interlocuteur, du cadrage à l'exécution</h2>
-            </div>
-            <div class="profile-pic-container reveal reveal-delay-1">
-              <img src="Images/optimized/profile-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Romain Maunier" class="profile-pic">
-            </div>
-            <p class="description reveal reveal-delay-1">
-              Design, faisabilité technique et exécution avancent ensemble, sans friction entre maquette, prototype et livraison.
-            </p>
-            
-            <div class="approach-list">
-              <div class="approach-item reveal reveal-delay-1">
-                <div class="icon-wrapper"><img class="service-icon" src="Images/fast.svg" width="48" height="48" alt="" aria-hidden="true"/></div>
-                <div class="approach-item-content">
-                  <span class="approach-num" aria-hidden="true">01</span>
-                  <h3 class="approach-title">Rapidité d'exécution</h3>
-                  <p class="approach-text">Des itérations plus courtes grâce à une vision globale du projet.</p>
-                </div>
-              </div>
-              <div class="approach-item reveal reveal-delay-2">
-                <div class="icon-wrapper"><img class="service-icon" src="Images/fidelity.svg" width="96" height="91" alt="" aria-hidden="true"/></div>
-                <div class="approach-item-content">
-                  <span class="approach-num" aria-hidden="true">02</span>
-                  <h3 class="approach-title">Fidélité du design</h3>
-                  <p class="approach-text">Ce qui est validé en maquette est exactement ce qui est développé.</p>
-                </div>
-              </div>
-              <div class="approach-item reveal reveal-delay-3">
-                <div class="icon-wrapper"><img class="service-icon" src="Images/interlocutor.svg" width="22" height="22" alt="" aria-hidden="true"/></div>
-                <div class="approach-item-content">
-                  <span class="approach-num" aria-hidden="true">03</span>
-                  <h3 class="approach-title">Interlocuteur unique</h3>
-                  <p class="approach-text">Une communication fluide et directe, sans perte d'information.</p>
-                </div>
-              </div>
-            </div>
-
+        <section class="mission-contexts" id="references">
+          <div class="editorial-heading reveal">
+            <span class="section-kicker">Contextes rencontrés</span>
+            <h2>Des métiers différents, avec des contraintes très concrètes.</h2>
+            <p>Expliquer une technologie, former sans risque, présenter un espace ou tester une interface avant développement.</p>
           </div>
-        </div>
-
-        <div class="projects" id="projets">
-          <div class="projects-header reveal">
-            <span class="section-kicker">Réalisations</span>
-            <h2 class="section-title">Des cas concrets, pensés pour être montrés</h2>
-            <p class="description">
-              Une sélection de projets où il fallait clarifier une idée, embarquer des parties prenantes ou rendre un concept immédiatement lisible.
-            </p>
-          </div>
-          <div class="projects-grid" id="projects-grid"></div>
-        </div>
-
-        <div class="clients" id="references">
-          <div class="clients-content">
-            <div class="clients2 reveal">
-              <span class="section-kicker">Références</span>
-              <h2 class="section-title">Ils me font confiance</h2>
-            </div>
-            <div class="clients-logos reveal">
-              <div class="logos-wrapper">
-                <div class="logo2"><img class="logo-img" src="Images/LogoENSAM.svg" width="2293" height="546" alt="ENSAM" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoCalypshome.svg" width="2381" height="440" alt="Calypshome" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoDana.svg" width="416" height="219" alt="Dana" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoRenault.svg" width="500" height="438" alt="Renault" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" width="2491" height="405" alt="K-Line" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" width="1739" height="1266" alt="Total" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" width="800" height="145" alt="L'Oréal" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoENSAM.svg" width="2293" height="546" alt="ENSAM" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoCalypshome.svg" width="2381" height="440" alt="Calypshome" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoDana.svg" width="416" height="219" alt="Dana" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoRenault.svg" width="500" height="438" alt="Renault" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" width="2491" height="405" alt="K-Line" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" width="1739" height="1266" alt="Total" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" width="800" height="145" alt="L'Oréal" /></div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <ul class="context-list reveal reveal-delay-1" aria-label="Secteurs et contextes de mission">
+            <li>Industrie</li>
+            <li>Automobile</li>
+            <li>Immobilier</li>
+            <li>Domotique</li>
+            <li>Formation</li>
+            <li>Recherche</li>
+            <li>Événementiel</li>
+            <li>Sécurité</li>
+          </ul>
+        </section>
 
         <section class="faq-section" id="faq">
           <div class="faq-container">
@@ -402,10 +330,10 @@
           <div class="contact-container">
             
             <div class="contact-header reveal">
-              <span class="section-kicker">Contact</span>
-              <h2 class="section-title">Vous avez une idée, un besoin flou ou une démo à sortir vite ?</h2>
+              <span class="section-kicker">Cadrage initial · 30 minutes</span>
+              <h2 class="section-title">Qu’est-ce que votre projet doit permettre de montrer ou de tester ?</h2>
               <p class="description">
-                Expliquez-moi le contexte, l'objectif et le niveau de maturité du projet. Je reviens vers vous avec une réponse claire et actionnable.
+                Envoyez-moi le contexte, les éléments déjà disponibles et l’échéance. Je vous réponds directement pour identifier un premier périmètre réaliste.
               </p>
             </div>
 
@@ -467,7 +395,7 @@
                   </div>
 
                   <div class="contact-points">
-                    <span>Réponse rapide</span>
+                    <span>Échange direct</span>
                     <span>Interlocuteur unique</span>
                     <span>Vision design + code</span>
                   </div>
