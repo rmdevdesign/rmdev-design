@@ -1,0 +1,91 @@
+/* =========================
+   Signature commune à toutes les pages
+   (sélection, progression, halo curseur, spotlight, magnétisme)
+========================= */
+
+/* Sélection de texte aux couleurs de la marque */
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #fff;
+}
+
+/* Barre de progression de lecture (injectée en JS) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--brand-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+/* Halo lumineux qui suit le curseur (injecté en JS, desktop uniquement) */
+.cursor-glow {
+  position: fixed;
+  top: -260px;
+  left: -260px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.07) 0%, rgba(129, 140, 248, 0.05) 35%, transparent 70%);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/* Spotlight : lueur qui suit la souris sur les cartes (--mx/--my posés en JS) */
+.faq-item,
+.contact-form-wrapper,
+.content-card,
+.related-link,
+.case-next,
+.expertise-cta {
+  position: relative;
+}
+
+.use-case-card::after,
+.service-card::after,
+.faq-item::after,
+.contact-form-wrapper::after,
+.contact-info-card::after,
+.content-card::after,
+.related-link::after,
+.case-next::after,
+.expertise-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(34, 211, 238, 0.08), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.use-case-card:hover::after,
+.service-card:hover::after,
+.faq-item:hover::after,
+.contact-form-wrapper:hover::after,
+.contact-info-card:hover::after,
+.content-card:hover::after,
+.related-link:hover::after,
+.case-next:hover::after,
+.expertise-cta:hover::after {
+  opacity: 1;
+}
+
+/* Boutons magnétiques : retour fluide quand le curseur s'éloigne */
+.button-primary,
+.button-secondary {
+  transition: transform 0.2s ease;
+}
+
+.nav-contact {
+  transition: color 0.3s, background 0.3s, border-color 0.3s, transform 0.2s ease;
+}
+

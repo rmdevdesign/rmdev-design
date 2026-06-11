@@ -219,14 +219,89 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('load', revealVisibleInView);
 
-  // --- Parallax Effect Hero ---
+  // --- Effets "spatiaux" propres à la home ---
+  // (progression, halo curseur, magnétisme et spotlight : voir signature.js)
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Parallax Effect Hero (desktop : sur mobile l'image est animée en panoramique CSS) ---
   const heroBg = document.getElementById('hero-bg');
-  if (heroBg) {
+  if (heroBg && !reducedMotion) {
     window.addEventListener('scroll', function() {
       const scrollPosition = window.pageYOffset;
       // On déplace l'image de fond à 50% de la vitesse du scroll
       heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-    });
+    }, { passive: true });
+  }
+
+  if (finePointer && !reducedMotion) {
+    // Profondeur du hero : le contenu s'incline, le "XR" géant contre-balance
+    const hero = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+    const heroDisplay = document.querySelector('.hero-display-text');
+    if (hero && heroContent) {
+      let heroRaf = null;
+      hero.addEventListener('mousemove', e => {
+        if (heroRaf) return;
+        heroRaf = requestAnimationFrame(() => {
+          const rect = hero.getBoundingClientRect();
+          const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+          heroContent.style.transform = `rotateX(${(-ny * 2.5).toFixed(2)}deg) rotateY(${(nx * 2.5).toFixed(2)}deg)`;
+          if (heroDisplay) {
+            heroDisplay.style.transform = `translate(calc(-50% + ${(-nx * 26).toFixed(1)}px), ${(-ny * 14).toFixed(1)}px)`;
+          }
+          heroRaf = null;
+        });
+      }, { passive: true });
+      hero.addEventListener('mouseleave', () => {
+        heroContent.style.transform = '';
+        if (heroDisplay) {
+          heroDisplay.style.transform = '';
+        }
+      });
+    }
+
+  }
+
+  // Compteurs animés des chiffres clés
+  const statNums = document.querySelectorAll('.stat-num');
+  if (statNums.length) {
+    const formatStat = el => value => {
+      el.textContent = value.toLocaleString('fr-FR') + (el.dataset.suffix || '');
+    };
+    const runCounter = el => {
+      const target = parseInt(el.dataset.count, 10);
+      const render = formatStat(el);
+      if (reducedMotion) {
+        render(target);
+        return;
+      }
+      const duration = 1400;
+      const start = performance.now();
+      const step = now => {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        render(Math.round(target * eased));
+        if (t < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window) {
+      const statObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
+      statNums.forEach(el => statObserver.observe(el));
+    } else {
+      statNums.forEach(runCounter);
+    }
   }
 
 });

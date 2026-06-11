@@ -254,10 +254,12 @@ img {
   line-height: 1;
   white-space: nowrap;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.035);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
   user-select: none;
   pointer-events: none;
   z-index: 0;
+  will-change: transform;
+  transition: transform 0.4s ease-out;
 }
 
 .hero-bg-image {
@@ -289,7 +291,6 @@ img {
   width: min(760px, 100%);
   padding: 110px 20px 70px;
   z-index: 1;
-  animation: fadeInUp 1s ease-out;
   text-align: center;
 }
 
@@ -319,7 +320,9 @@ img {
 }
 
 .hero-title {
-  max-width: 9ch;
+  /* Assez large pour que "expériences" (~10ch) ne déborde jamais de la boîte :
+     Safari rogne le texte en dégradé (background-clip) qui dépasse du bloc */
+  max-width: 11ch;
   margin-left: auto;
   margin-right: auto;
   font-size: clamp(48px, 6.8vw, 74px);
@@ -333,6 +336,10 @@ img {
   background: var(--brand-gradient); /* Dégradé violet/bleu */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Le letter-spacing négatif du titre fait déborder le dernier glyphe
+     de la boîte du span : on étend la zone peinte sans bouger la mise en page */
+  padding-inline: 0.1em;
+  margin-inline: -0.1em;
 }
 
 .hero-subtitle {
@@ -362,6 +369,8 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: none;
   box-shadow: 0 18px 45px rgba(34, 211, 238, 0.16);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn-primary:hover {
@@ -377,6 +386,8 @@ img {
   border-radius: var(--radius-full);
   font-weight: 500;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn-secondary:hover {
@@ -639,7 +650,7 @@ img {
 
 .conversion-band {
   width: min(1120px, 90%);
-  margin: 0 auto 100px;
+  margin: 0 auto;
   padding: 42px 0;
   border-top: 1px solid rgba(255,255,255,0.1);
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -697,9 +708,18 @@ img {
   position: relative;
 }
 
-/* Séparateur subtil */
+/* Grille "blueprint" en fond, clin d'œil au prototypage */
 .approach-section::before {
-  display: none;
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 42%, #000 20%, transparent 72%);
+  mask-image: radial-gradient(ellipse 60% 55% at 50% 42%, #000 20%, transparent 72%);
 }
 
 .approach-section::after {
@@ -1108,17 +1128,6 @@ img {
   padding: 100px 5%;
   background: var(--bg-main);
   position: relative;
-}
-
-.faq-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: min(1200px, 90%);
-  height: 1px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
 }
 
 .faq-container {
@@ -1612,9 +1621,23 @@ img {
     padding: 30px 0 100px;
   }
   
-  /* CORRECTION IMAGE HERO MOBILE : Calée à gauche */
+  /* IMAGE HERO MOBILE : même visuel qu'en desktop, en panoramique lent.
+     width:auto + height fixe = l'image garde son ratio et déborde à droite,
+     l'animation la fait glisser sur la zone colorée du collage. */
   .hero-bg-image {
-    object-position: left center;
+    width: auto;
+    max-width: none;
+    height: 120%;
+    opacity: 0.55;
+    filter: saturate(1.15);
+    animation: hero-pan 45s ease-in-out infinite alternate;
+  }
+
+  /* Badge hero : éviter le débordement sur petits écrans */
+  .hero-eyebrow {
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    padding: 7px 12px;
   }
   
   .projects-grid {
@@ -1712,7 +1735,6 @@ img {
 
   .conversion-band {
     width: calc(100% - 40px);
-    margin-bottom: 72px;
     padding: 32px 0;
     gap: 24px;
   }
@@ -1784,14 +1806,18 @@ img {
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Panoramique du hero mobile : démarre au centre du collage puis glisse
+   vers la zone colorée de gauche, en aller-retour
+   (les premiers et derniers ~25% de l'image sont des zones grises) */
+@keyframes hero-pan {
+  from { transform: translateX(calc(-50% + 50vw)); }
+  to { transform: translateX(-22%); }
+}
+
+/* Sans animation (reduced motion) : image fixe, centrée sur le collage */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .hero-bg-image {
+    transform: translateX(calc(-50% + 50vw));
   }
 }
 
@@ -1842,3 +1868,116 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================
+   Signature "spatiale" (profondeur, lumière, mouvement)
+========================= */
+
+/* Sélection, barre de progression, halo curseur, spotlight et magnétisme :
+   voir signature.css (partagé avec les pages annexes) */
+
+/* Profondeur 3D du hero pilotée par la souris */
+.hero {
+  perspective: 1000px;
+}
+
+.hero-content {
+  will-change: transform;
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
+}
+
+/* Dégradé du titre qui respire */
+.highlight {
+  background-size: 200% auto;
+  animation: gradient-pan 5s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-pan {
+  from { background-position: 0% center; }
+  to { background-position: 100% center; }
+}
+
+/* Point lumineux du badge hero qui pulse */
+.hero-eyebrow::before {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 18px rgba(34, 211, 238, 0.65); }
+  50% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.25); }
+}
+
+/* Chiffres clés animés (section Réalisations) */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 64px);
+  margin-top: 38px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 120px;
+}
+
+.stat-num {
+  font-family: var(--font-family-heading);
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Boutons magnétiques : retour fluide quand le curseur s'éloigne */
+.nav-cta {
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.conversion-link {
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+
+/* Anneaux "HUD" autour de la photo de profil */
+.profile-pic-container::before,
+.profile-pic-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.profile-pic-container::before {
+  inset: -12px;
+  border: 1px dashed rgba(34, 211, 238, 0.35);
+  animation: ring-spin 40s linear infinite;
+}
+
+.profile-pic-container::after {
+  inset: -24px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+@keyframes ring-spin {
+  to { transform: rotate(360deg); }
+}
+

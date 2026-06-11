@@ -70,7 +70,7 @@
 
 .case-back-link::before {
   content: "\2190";
-  color: var(--accent);
+  color: var(--brand-accent);
   font-size: 19px;
   line-height: 1;
 }
@@ -101,7 +101,7 @@
 }
 
 .case-section {
-  padding: 96px 0;
+  padding: 100px 0;
 }
 
 .case-section + .case-section {
@@ -162,7 +162,7 @@
 .case-download {
   width: min(1120px, calc(100% - 44px));
   min-height: 360px;
-  margin: 0 auto 96px;
+  margin: 0 auto 100px;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-lg);
   background: var(--bg-card);
@@ -237,7 +237,7 @@
 }
 
 .case-download-form input[type="email"]:focus {
-  border-color: var(--accent);
+  border-color: var(--brand-accent);
   outline: 2px solid rgba(34,211,238,0.18);
   outline-offset: 1px;
 }
@@ -279,7 +279,7 @@
 }
 
 .case-next {
-  margin-bottom: 96px;
+  margin-bottom: 100px;
   padding: 42px;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);

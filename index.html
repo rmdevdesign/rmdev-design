@@ -19,7 +19,8 @@
   <!-- CSS principal -->
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="preload" as="image" href="Images/optimized/backgroundstart-mobile.webp" media="(max-width: 768px)">
+  <link rel="stylesheet" href="./signature.css">
+  <link rel="preload" as="image" href="Images/optimized/backgroundstart-1920.webp" media="(max-width: 768px)">
   <link rel="preload" as="image" href="Images/optimized/backgroundstart-1920.webp" imagesrcset="Images/optimized/backgroundstart-960.webp 960w, Images/optimized/backgroundstart-1920.webp 1920w, Images/optimized/backgroundstart-3840.webp 3840w" imagesizes="100vw" media="(min-width: 769px)">
 
   <!-- Favicon -->
@@ -172,13 +173,13 @@
             <span class="hero-eyebrow reveal">Designer & développeur freelance</span>
             <h1 class="hero-title reveal reveal-delay-1">Prototypes, interfaces et <span class="highlight">expériences XR</span></h1>
             <p class="hero-subtitle reveal reveal-delay-2">À Paris et à distance, je transforme un besoin en prototype concret pour le tester, le présenter ou lancer la suite avec plus de certitude.</p>
-            <div class="hero-actions">
+            <div class="hero-actions reveal reveal-delay-3">
               <a href="#contact" class="btn-primary">Parler de votre projet</a>
               <a href="#projets" class="btn-secondary">Voir des cas concrets</a>
             </div>
           </div>
           <picture>
-            <source media="(max-width: 768px)" srcset="Images/optimized/backgroundstart-mobile.webp">
+            <source media="(max-width: 768px)" srcset="Images/optimized/backgroundstart-1920.webp">
             <img
               src="Images/optimized/backgroundstart-1920.webp"
               srcset="Images/optimized/backgroundstart-960.webp 960w, Images/optimized/backgroundstart-1920.webp 1920w, Images/optimized/backgroundstart-3840.webp 3840w"
@@ -326,6 +327,24 @@
             <p class="description">
               Une sélection de projets où il fallait clarifier une idée, embarquer des parties prenantes ou rendre un concept immédiatement lisible.
             </p>
+            <div class="stats-row" aria-label="Quelques chiffres issus des cas clients">
+              <div class="stat">
+                <span class="stat-num" data-count="800" data-suffix="+">0</span>
+                <span class="stat-label">démonstrations animées</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+                <span class="stat-label">visiteurs en salon</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-count="100" data-suffix="+">0</span>
+                <span class="stat-label">écrans Figma livrés</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-count="12" data-suffix="">0</span>
+                <span class="stat-label">cas clients documentés</span>
+              </div>
+            </div>
           </div>
           <div class="projects-grid" id="projects-grid"></div>
         </div>
@@ -505,11 +524,13 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </div>
-  
+
 <script src="./projects-data.js"></script>
 <script src="./script.js"></script>
+<script src="./signature.js"></script>
 
 </body>
 </html>

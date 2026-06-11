@@ -21,7 +21,7 @@
 - [Demonstrateur de motorisation](https://rmdev.design/cas-client-demonstrateur-motorisation.html): visualisation interactive d'une chaine de traction hybride sous Unity HDRP.
 - [Systemes embarques](https://rmdev.design/cas-client-systemes-embarques.html): prototype Unity connecte au bus CAN dans un programme R&D de 24 mois.
 - [Formation immersive](https://rmdev.design/cas-client-formation-immersive.html): entrainement a la prise de parole en VR avec analyse par IA.
-- [Plan to 3D](https://rmdev.design/cas-client-plan-3d.html): transformation d'un plan technique en visualisation 3D livree en 48 heures.
+- [Visualisation 3D immobiliere](https://rmdev.design/cas-client-plan-3d.html): transformation d'un plan 2D en visualisation 3D immobiliere livree en 48 heures.
 - [XR Share](https://rmdev.design/cas-client-xr-share.html): collaboration multiplateforme entre VR, AR, mobile et PC.
 - [Visite VR immobiliere](https://rmdev.design/cas-client-visite-vr-immobilier.html): transformation de plans DWG en visite Meta Quest 2 livree en 48 heures.
 - [VR in Cockpit](https://rmdev.design/cas-client-vr-cockpit.html): experience automobile Unity HDRP utilisee par plus de 1 200 visiteurs en cinq jours.
