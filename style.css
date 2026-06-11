@@ -310,7 +310,22 @@ img {
   text-transform: uppercase;
 }
 
-.hero-eyebrow::before {
+/* Point lumineux du badge : vrai bouton (easter egg "mode blueprint"),
+   zone de clic 20px compensée pour garder le badge visuellement identique */
+.hero-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: -6px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-dot::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -1899,7 +1914,7 @@ img {
 }
 
 /* Point lumineux du badge hero qui pulse */
-.hero-eyebrow::before {
+.hero-dot::before {
   animation: pulse-dot 2.4s ease-in-out infinite;
 }
 

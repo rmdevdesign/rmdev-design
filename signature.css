@@ -89,3 +89,98 @@
   transition: color 0.3s, background 0.3s, border-color 0.3s, transform 0.2s ease;
 }
 
+/* =========================
+   Easter egg : mode "Blueprint"
+   (clic sur le point lumineux du badge hero — Échap pour sortir)
+========================= */
+
+/* Tampon "non validé" */
+html.blueprint-mode::after {
+  content: "PROTOTYPE v0.4 — NON VALIDÉ";
+  position: fixed;
+  top: 96px;
+  right: -34px;
+  z-index: 10000;
+  transform: rotate(8deg);
+  padding: 8px 44px;
+  border: 2px dashed rgba(34, 211, 238, 0.8);
+  background: rgba(15, 17, 21, 0.85);
+  color: #22d3ee;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  pointer-events: none;
+}
+
+/* Grille blueprint sur toute la page (remplace le grain) */
+html.blueprint-mode body::after {
+  opacity: 1;
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Visuels en "placeholder" */
+html.blueprint-mode img,
+html.blueprint-mode video {
+  filter: grayscale(1) brightness(0.65) contrast(1.1);
+  opacity: 0.45;
+}
+
+/* Cartes et blocs : fil de fer */
+html.blueprint-mode .use-case-card,
+html.blueprint-mode .service-card,
+html.blueprint-mode .project-card-item,
+html.blueprint-mode .faq-item,
+html.blueprint-mode .contact-form-wrapper,
+html.blueprint-mode .contact-info-card,
+html.blueprint-mode .content-card,
+html.blueprint-mode .related-link,
+html.blueprint-mode .case-next,
+html.blueprint-mode .expertise-cta,
+html.blueprint-mode .case-download,
+html.blueprint-mode .process-step {
+  background: rgba(34, 211, 238, 0.03) !important;
+  border: 1px dashed rgba(34, 211, 238, 0.45) !important;
+  box-shadow: none !important;
+}
+
+/* Titres en dégradé → cyan plat */
+html.blueprint-mode h1,
+html.blueprint-mode h2,
+html.blueprint-mode h3,
+html.blueprint-mode .highlight,
+html.blueprint-mode .stat-num,
+html.blueprint-mode .approach-num {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: #aee9f5 !important;
+}
+
+/* Boutons : contour en pointillés */
+html.blueprint-mode .btn-primary,
+html.blueprint-mode .btn-secondary,
+html.blueprint-mode .btn-submit,
+html.blueprint-mode .button-primary,
+html.blueprint-mode .button-secondary,
+html.blueprint-mode .nav-cta,
+html.blueprint-mode .nav-contact {
+  background: transparent !important;
+  border: 1px dashed rgba(34, 211, 238, 0.7) !important;
+  box-shadow: none !important;
+  color: #22d3ee !important;
+}
+
+/* Kickers et tags en mono, façon annotation technique */
+html.blueprint-mode .section-kicker,
+html.blueprint-mode .eyebrow,
+html.blueprint-mode .use-case-tag,
+html.blueprint-mode .case-tag,
+html.blueprint-mode .project-proof {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+

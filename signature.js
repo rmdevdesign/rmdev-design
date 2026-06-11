@@ -63,6 +63,43 @@
       });
     }
 
+    // --- Easter egg : mode "Blueprint" ---
+    // Déclencheur : le point lumineux du badge hero. Persiste entre les pages.
+    const BLUEPRINT_KEY = 'rmdev-blueprint';
+    const blueprintOn = () => document.documentElement.classList.contains('blueprint-mode');
+    const setBlueprint = on => {
+      document.documentElement.classList.toggle('blueprint-mode', on);
+      try {
+        localStorage.setItem(BLUEPRINT_KEY, on ? '1' : '0');
+      } catch (e) { /* navigation privée */ }
+      if (on) {
+        console.log('%cMode blueprint activé — Échap pour revenir à la version validée.', 'color:#22d3ee');
+      }
+    };
+    try {
+      if (localStorage.getItem(BLUEPRINT_KEY) === '1') {
+        document.documentElement.classList.add('blueprint-mode');
+      }
+    } catch (e) { /* navigation privée */ }
+    const heroDot = document.querySelector('.hero-dot');
+    if (heroDot) {
+      heroDot.addEventListener('click', () => setBlueprint(!blueprintOn()));
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && blueprintOn()) {
+        setBlueprint(false);
+      }
+    });
+
+    // --- Message console pour les curieux ---
+    console.log(
+      '%c RMDev.Design %c Designer & développeur freelance — VR · Unity · UI/UX ',
+      'background:linear-gradient(120deg,#22d3ee,#818cf8);color:#0f1115;font-weight:700;padding:6px 10px;border-radius:6px 0 0 6px;',
+      'background:#181a1e;color:#a1a1aa;padding:6px 10px;border-radius:0 6px 6px 0;'
+    );
+    console.log('Tu inspectes le code ? Bon réflexe. Parlons-en → contact@rmdev.design');
+    console.log('Psst : sur la page d\'accueil, clique sur le point lumineux du badge, en haut.');
+
     // Spotlight : position de la souris exposée en variables CSS sur les cartes
     if (finePointer) {
       const spotlightSelector = '.use-case-card, .service-card, .faq-item, .contact-form-wrapper, .contact-info-card, .content-card, .related-link, .case-next, .expertise-cta';
