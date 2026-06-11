@@ -155,6 +155,39 @@ h3 {
   display: none;
 }
 
+/* Bouton retour (cas clients et pages expertises) */
+.case-back-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-bottom: 22px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: var(--radius-full);
+  background: rgba(8,10,14,0.72);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.case-back-link::before {
+  content: "\2190";
+  color: var(--brand-accent);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.case-back-link:hover,
+.case-back-link:focus-visible {
+  border-color: rgba(34,211,238,0.7);
+  background: rgba(16,24,32,0.9);
+  transform: translateX(-3px);
+}
+
 .breadcrumb a {
   color: var(--text-secondary);
 }

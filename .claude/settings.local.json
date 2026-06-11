@@ -29,7 +29,8 @@
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=/tmp/dbg-hero2.png --window-size=1027,900 --hide-scrollbars --virtual-time-budget=5000 http://localhost:8742/)",
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --screenshot=/tmp/dbg-hero1440.png --window-size=1440,900 --hide-scrollbars --virtual-time-budget=5000 http://localhost:8742/)",
       "Bash(sips -c 600 760 --cropOffset 150 130 /tmp/dbg-hero2.png --out /tmp/dbg-hero2-crop.png)",
-      "Bash(sips -c 620 900 --cropOffset 140 270 /tmp/dbg-hero1440.png --out /tmp/dbg-hero1440-crop.png)"
+      "Bash(sips -c 620 900 --cropOffset 140 270 /tmp/dbg-hero1440.png --out /tmp/dbg-hero1440-crop.png)",
+      "Bash(curl -s https://rmdev.design/cas-client-plan-3d.html)"
     ]
   }
 }
