@@ -185,14 +185,14 @@ body::before {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(9, 11, 15, 0.4), rgba(9, 11, 15, 0.8)),
-    url("Images/backgroundstart.webp") center / cover no-repeat;
+    url("Images/optimized/backgroundstart-1920.webp") center / cover no-repeat;
   opacity: 0.34;
 }
 
 body[data-theme="light"] .slide-layer {
   background:
     linear-gradient(180deg, rgba(244, 247, 251, 0.44), rgba(244, 247, 251, 0.58)),
-    url("Images/backgroundstart.webp") center / cover no-repeat;
+    url("Images/optimized/backgroundstart-1920.webp") center / cover no-repeat;
   opacity: 0.82;
 }
 

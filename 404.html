@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Page introuvable | RMDev.Design</title>
+  <meta name="theme-color" content="#0f1115">
+  <link rel="icon" type="image/png" href="/Images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/vars.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-family-main);
+      line-height: 1.6;
+      text-align: center;
+      padding: 24px;
+    }
+    .notfound-code {
+      font-family: var(--font-family-heading);
+      font-size: clamp(96px, 20vw, 180px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-inline: 0.1em;
+      margin-inline: -0.1em;
+    }
+    h1 {
+      font-family: var(--font-family-heading);
+      font-size: clamp(22px, 4vw, 32px);
+      margin: 18px 0 10px;
+    }
+    p { color: var(--text-secondary); max-width: 440px; margin: 0 auto 28px; }
+    .notfound-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--brand-gradient);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .notfound-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.35);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="notfound-code" aria-hidden="true">404</div>
+    <h1>Cette page n'existe pas (ou plus)</h1>
+    <p>Le prototype de cette page n'a jamais été validé. Retournez à l'accueil pour retrouver les projets, les expertises et le contact.</p>
+    <a class="notfound-home" href="/">Retour à l'accueil</a>
+  </main>
+</body>
+</html>

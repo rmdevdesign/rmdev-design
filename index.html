@@ -3,18 +3,17 @@
 <head>
   
   <meta charset="UTF-8">
-  <!-- Optimisation pour Internet Explorer (anciennes versions) -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <!-- Rendre la page responsive sur mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1115">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Romain Maunier">
 
   <!-- Polices Google Fonts (Inter + Space Grotesk pour les titres) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   
   <!-- CSS principal -->
   <link rel="stylesheet" href="./vars.css">
@@ -35,7 +34,10 @@
   <!-- Balises Open Graph (pour un affichage optimisé sur les réseaux) -->
   <meta property="og:title" content="RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)" />
   <meta property="og:description" content="Prototypes interactifs, expériences VR sous Unity et interfaces UI/UX sur Figma, à Paris et à distance." />
-  <meta property="og:image" content="https://rmdev.design/Images/optimized/backgroundstart-1920.webp" />
+  <meta property="og:image" content="https://rmdev.design/Images/optimized/social-home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:alt" content="Aperçu des projets RMDev.Design" />
   <meta property="og:url" content="https://rmdev.design/" />
   <meta property="og:type" content="website" />
@@ -45,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RMDev.Design – Designer & Développeur Freelance">
   <meta name="twitter:description" content="Prototypage Unity, expériences XR et design UI/UX par Romain Maunier.">
-  <meta name="twitter:image" content="https://rmdev.design/Images/optimized/backgroundstart-1920.webp">
+  <meta name="twitter:image" content="https://rmdev.design/Images/optimized/social-home.jpg">
   <meta name="twitter:image:alt" content="Aperçu des projets RMDev.Design">
 
   <!-- Lien canonique pour éviter les duplications d'URL -->
@@ -72,7 +74,7 @@
           "name": "RMDev.Design",
           "url": "https://rmdev.design/",
           "logo": "https://rmdev.design/Images/RMDesignLogo.png",
-          "image": "https://rmdev.design/Images/backgroundstart.webp",
+          "image": "https://rmdev.design/Images/optimized/social-home.jpg",
           "email": "contact@rmdev.design",
           "description": "Studio freelance spécialisé en prototypage interactif, développement Unity, expériences XR et design UI/UX.",
           "areaServed": [
@@ -98,7 +100,7 @@
           "@id": "https://rmdev.design/#person",
           "name": "Romain Maunier",
           "url": "https://rmdev.design/",
-          "image": "https://rmdev.design/Images/PP.png",
+          "image": "https://rmdev.design/Images/optimized/profile-320.webp",
           "jobTitle": "Designer et développeur freelance",
           "worksFor": {
             "@id": "https://rmdev.design/#business"
@@ -364,13 +366,14 @@
                 <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" width="2491" height="405" alt="K-Line" /></div>
                 <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" width="1739" height="1266" alt="Total" /></div>
                 <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" width="800" height="145" alt="L'Oréal" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoENSAM.svg" width="2293" height="546" alt="ENSAM" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoCalypshome.svg" width="2381" height="440" alt="Calypshome" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoDana.svg" width="416" height="219" alt="Dana" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoRenault.svg" width="500" height="438" alt="Renault" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoKline.svg" width="2491" height="405" alt="K-Line" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoTotal.svg" width="1739" height="1266" alt="Total" /></div>
-                <div class="logo2"><img class="logo-img" src="Images/LogoLoreal.svg" width="800" height="145" alt="L'Oréal" /></div>
+                <!-- Second jeu : duplication purement visuelle pour la boucle infinie -->
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoENSAM.svg" width="2293" height="546" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoCalypshome.svg" width="2381" height="440" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoDana.svg" width="416" height="219" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoRenault.svg" width="500" height="438" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoKline.svg" width="2491" height="405" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoTotal.svg" width="1739" height="1266" alt="" /></div>
+                <div class="logo2" aria-hidden="true"><img class="logo-img" src="Images/LogoLoreal.svg" width="800" height="145" alt="" /></div>
               </div>
             </div>
           </div>
@@ -449,6 +452,7 @@
                     <textarea id="message" name="message" required placeholder="Contexte, besoin, échéance, support visé, niveau d'avancement..."></textarea>
                   </div>
                   <input type="hidden" name="_subject" value="Nouveau message depuis rmdev.design">
+                  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Ne pas remplir" style="position:absolute;left:-9999px">
                   <p class="form-legal">
                     Les informations transmises via ce formulaire sont utilisées uniquement pour répondre à votre demande. En savoir plus dans la
                     <a href="confidentialite.html">politique de confidentialité</a>.
