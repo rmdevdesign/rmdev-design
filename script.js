@@ -168,7 +168,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
   }
 
-  // Les chiffres clés restent stables dans le HTML et dans le DOM rendu.
-
+  // Compteurs animés des chiffres clés
+  const statNums = document.querySelectorAll('.stat-num');
+  if (statNums.length) {
+    const formatStat = el => value => {
+      el.textContent = value.toLocaleString('fr-FR') + (el.dataset.suffix || '');
+    };
+    const runCounter = el => {
+      const target = parseInt(el.dataset.count, 10);
+      const render = formatStat(el);
+      if (reducedMotion) {
+        render(target);
+        return;
+      }
+      const duration = 1400;
+      const start = performance.now();
+      const step = now => {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        render(Math.round(target * eased));
+        if (t < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window) {
+      const statObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
+      statNums.forEach(el => statObserver.observe(el));
+    } else {
+      statNums.forEach(runCounter);
+    }
+  }
 
 });
