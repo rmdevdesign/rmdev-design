@@ -45,7 +45,7 @@
 - [Réalité augmentée automobile](https://rmdev.design/cas-client-realite-augmentee-automobile.html): application tablette utilisée plus de 500 fois pendant un salon.
 - [Showroom VR](https://rmdev.design/cas-client-showroom-vr.html): plus de 50 références présentées sans stock physique.
 - [Float and Serious](https://rmdev.design/cas-client-float-and-serious.html): outils VR (mise en situation, configurateur 3D, entraînement à la restitution) pour un hackathon étudiant à CentraleSupélec.
-- [Rendus 3D produits](https://rmdev.design/cas-client-rendus-3d-produits.html): plus de 300 pièces modélisées et rendues sous Blender pour un site e-commerce.
+- [Rendus 3D produits](https://rmdev.design/cas-client-rendus-3d-produits.html): plus de 300 pièces rendues sous Blender pour un catalogue industriel, modèles fournis ou modélisés, rendu propre et répétable.
 - [Flight Control](https://rmdev.design/cas-client-flight-control.html): interface web 3D pilotée par les données d'un capteur externe, pour des travaux dirigés étudiants.
 
 ## Guides
