@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0f1115"><meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Interface 3D d'instruments de vol pour TD | RM Dev Design</title>
+  <meta name="description" content="Une interface web en 3D pour intégrer les données d'un capteur externe sur le comportement d'un avion : horizon artificiel, tangage, altitude et cap.">
+  <link rel="canonical" href="https://rmdev.design/cas-client-flight-control.html">
+  <meta property="og:title" content="Flight Control : des capteurs externes pilotent un avion en 3D">
+  <meta property="og:description" content="Une interface pédagogique en 3D pour des travaux dirigés étudiants : données de capteurs externes, horizon artificiel, tangage et cap en temps réel.">
+  <meta property="og:image" content="https://rmdev.design/Images/optimized/social-flight-control.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Interface 3D d'un avion A320 avec horizon artificiel, manche et indicateurs de vol">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flight Control : des capteurs externes pilotent un avion en 3D">
+  <meta name="twitter:description" content="Une interface pédagogique en 3D pour des travaux dirigés étudiants : données de capteurs externes, horizon artificiel, tangage et cap en temps réel.">
+  <meta name="twitter:image" content="https://rmdev.design/Images/optimized/social-flight-control.jpg">
+  <meta name="twitter:image:alt" content="Interface 3D d'un avion A320 avec horizon artificiel, manche et indicateurs de vol"><meta property="og:url" content="https://rmdev.design/cas-client-flight-control.html"><meta property="og:type" content="article"><meta property="og:site_name" content="RMDev.Design">
+  <link rel="icon" type="image/png" href="Images/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vars.css"><link rel="stylesheet" href="expertise.css"><link rel="stylesheet" href="case-study.css">
+  <link rel="stylesheet" href="signature.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Des données de capteurs externes pour piloter un avion en 3D",
+      "datePublished": "2026-10-08",
+      "dateModified": "2026-10-08",
+      "image": "https://rmdev.design/Images/FlightControl.webp",
+      "author": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "mainEntityOfPage": "https://rmdev.design/cas-client-flight-control.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/cas-client-flight-control.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Réalisations",
+          "item": "https://rmdev.design/realisations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Flight Control",
+          "item": "https://rmdev.design/cas-client-flight-control.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="stylesheet" href="header.css">
+</head>
+<body>
+  <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="index.html#references" class="mobile-nav-link">Références</a>
+<a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
+  <main>
+    <section class="case-hero" style="--case-image: url('Images/FlightControl.webp')"><div class="case-hero-inner"><a class="case-back-link" href="realisations.html">Retour aux réalisations</a><p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="realisations.html">Réalisations</a><span>/</span>Flight Control</p><span class="eyebrow">Pédagogie · Web 3D · Capteurs</span><h1>Des données de capteurs externes pour piloter un avion en 3D</h1><p class="case-lead">Une interface pour travaux dirigés étudiants : intégrer les données d'un capteur externe pour piloter en temps réel un horizon artificiel, le tangage, l'altitude et le cap d'un avion en 3D, directement dans le navigateur.</p><p class="case-result">Résultat : interface temps réel accessible sans installation</p></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>Le contexte</h2><div class="case-copy"><p>Ce projet s'inscrit dans un cadre de travaux dirigés (TD) pour des étudiants. L'objectif : leur faire intégrer les données d'un capteur externe dans une interface 3D, pour observer en temps réel le comportement d'un avion.</p></div></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>Le défi</h2><div class="case-copy"><ul class="case-list"><li>Recevoir et interpréter en temps réel les données d'une carte à capteurs externe (roulis, tangage, cap).</li><li>Piloter un modèle 3D d'avion et un horizon artificiel cohérents avec ces données.</li><li>Rendre l'interface accessible directement dans un navigateur, sans installation, pour un usage en TD.</li><li>Garder une lecture claire des valeurs numériques en complément de la scène 3D.</li></ul></div></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>La réalisation</h2><div class="case-copy"><p>L'interface reçoit les données d'un capteur externe et les retranscrit sur un modèle 3D d'avion ainsi qu'un horizon artificiel fidèle aux instruments réels (tangage, roulis, cap). L'ensemble tourne directement dans le navigateur, sans installation, pour être utilisable en salle de TD. Une démonstration est disponible <a href="https://rmdevdesign.github.io/MicroBit/Flight%20Control/">en ligne</a>.</p><div class="case-tags"><span class="case-tag">Three.js</span><span class="case-tag">Web 3D</span><span class="case-tag">Capteurs externes</span><span class="case-tag">Pédagogie</span></div></div></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>Les choix qui rendent le dispositif exploitable</h2><div class="case-copy"><h3>Des données capteurs en temps réel</h3><p>Les valeurs de roulis, tangage et cap mesurées par le capteur externe sont transmises à l'interface pour piloter le modèle 3D et l'horizon artificiel sans latence perceptible.</p><h3>Un horizon artificiel fidèle aux instruments réels</h3><p>Le repère visuel reprend la logique d'un horizon artificiel d'avion, pour que les étudiants retrouvent un instrument qu'ils pourront croiser en conditions réelles.</p><h3>Une interface accessible sans installation</h3><p>Hébergée en ligne et exécutée dans le navigateur, l'interface évite toute installation en salle de TD et reste utilisable sur un poste standard.</p></div></div></section>
+    <aside class="case-next"><div><span class="eyebrow">Un capteur ou une donnée à visualiser en 3D ?</span><h2>Donnons vie à vos données dans le navigateur.</h2><p>Je peux concevoir une interface 3D pour exploiter des données de capteurs, en pédagogie ou en entreprise.</p></div><a class="button-primary" href="index.html#contact">Parlons de votre interface</a></aside>
+  </main>
+  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="configurateur-3d-web.html">Configurateurs 3D web</a><a href="realisations.html">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
+  <script src="signature.js" defer></script>
+<script src="header.js" defer></script>
+</body>
+</html>
