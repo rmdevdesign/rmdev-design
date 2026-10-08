@@ -64,169 +64,6 @@ img {
 /* =========================
    Header (Dark Glassmorphism)
 ========================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 1000;
-  background: rgba(15, 17, 21, 0.85); /* Fond noir semi-transparent */
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  transition: all 0.3s ease;
-}
-
-.logoRMDevDesign {
-  height: 40px;
-  width: auto;
-  /* Logo original (couleur) : pas de filtre */
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-}
-
-.header-menu-default {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-
-/* Burger Menu (Mobile) */
-.burger-menu {
-  display: none; /* Caché sur desktop */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1002;
-}
-
-.burger-menu span {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* Animation Burger */
-.burger-menu.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-.burger-menu.open span:nth-child(2) {
-  opacity: 0;
-}
-.burger-menu.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Menu Mobile (Dropdown Compact) */
-.mobile-nav {
-  position: fixed;
-  top: 0; /* Commence tout en haut */
-  left: 0;
-  width: 100%;
-  /* Même fond que le header pour la continuité */
-  background: rgba(15, 17, 21, 0.95); 
-  backdrop-filter: blur(12px);
-  z-index: 999; /* Derrière le header (1000) */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px; /* Espace pour ne pas être caché par le header */
-  padding-bottom: 30px;
-  gap: 25px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  
-  /* Animation Slide Down */
-  transform: translateY(-100%); /* Caché complètement en haut */
-  visibility: hidden;
-  pointer-events: none;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
-}
-
-.mobile-nav.active {
-  transform: translateY(0); /* Visible */
-  visibility: visible;
-  pointer-events: auto;
-  transition-delay: 0s;
-}
-
-.mobile-nav-link {
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  font-family: var(--font-family-main);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
-
-.mobile-nav-link:active {
-  background: rgba(255,255,255,0.1);
-}
-
-.label {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  position: relative;
-  transition: color 0.3s;
-}
-
-.label:hover {
-  color: var(--text-main);
-}
-
-.label::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--brand-gradient); /* Dégradé violet/bleu */
-  transition: width 0.3s ease;
-}
-
-.label:hover::after {
-  width: 100%;
-}
-
-.nav-cta {
-  padding: 10px 18px;
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-full);
-  color: var(--text-main);
-  background: rgba(255,255,255,0.05);
-}
-
-.nav-cta::after {
-  display: none;
-}
-
-.nav-cta:hover {
-  background: rgba(34, 211, 238, 0.1);
-  border-color: rgba(34, 211, 238, 0.45);
-}
-
-.mobile-nav-cta {
-  background: var(--brand-gradient);
-  font-weight: 700;
-}
-
 /* =========================
    Hero Section
 ========================= */
@@ -377,7 +214,7 @@ img {
 
 .btn-primary {
   background: var(--brand-gradient); /* Dégradé violet/bleu */
-  color: #fff;
+  color: #0f1115;
   padding: 15px 30px;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -562,7 +399,7 @@ img {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -579,8 +416,8 @@ img {
   border: 1px solid rgba(255,255,255,0.05); /* Bordure par défaut */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 15px;
   color: inherit;
   cursor: pointer;
@@ -823,7 +660,7 @@ img {
   padding-top: 0;
 }
 
-/* Approche grid legacy — conservé pour rétrocompat */
+/* Approche grid legacy : conservé pour rétrocompat */
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -916,6 +753,14 @@ img {
 .clients2 {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.clients2 .description {
+  max-width: 680px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  line-height: 1.7;
+  text-wrap: pretty;
 }
 
 /* Suppression de la règle spécifique qui annulait le dégradé */
@@ -1129,7 +974,7 @@ img {
   color: var(--brand-accent); /* La catégorie s'allume en violet */
 }
 
-/* Carte CTA "Votre Projet" — pleine largeur */
+/* Carte CTA "Votre Projet" : pleine largeur */
 .cta-card {
   grid-column: 1 / -1;
   aspect-ratio: unset;
@@ -1839,7 +1684,7 @@ img {
 /* =========================
    Scroll Reveal Animation
 ========================= */
-.reveal {
+.reveal-pending {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
@@ -1996,3 +1841,31 @@ img {
   to { transform: rotate(360deg); }
 }
 
+
+/* Content remains visible until its animation observer is ready. */
+.description a { color: var(--brand-accent); text-decoration: underline; text-underline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .reveal-pending { opacity: 1; transform: none; } }
+
+.nojs-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 110px 20px 20px; }
+.nojs-nav a { color: var(--brand-accent); text-decoration: underline; }
+
+.btn-primary:hover { color: #0f1115; }
+
+
+/* Four expertise cards form two balanced rows; stack on small screens. */
+.services-grid .service-card { min-width: 0; }
+.services-grid .service-title { font-size: clamp(22px, 2vw, 28px); line-height: 1.2; }
+.services-grid .service-text { max-width: 48ch; }
+@media (min-width: 769px) {
+  .hero-title { max-width: 18ch; line-height: 1.03; }
+}
+
+.services-paths { max-width: 1200px; margin: 32px auto 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1); }
+.services-paths > span { display: block; color: var(--text-secondary); font-size: 14px; margin-bottom: 14px; }
+.services-paths > div { display: flex; flex-wrap: wrap; gap: 12px; }
+.services-paths a { padding: 10px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius-full); font-size: 14px; font-weight: 500; }
+.services-paths a:hover, .services-paths a:focus-visible { color: var(--brand-accent); border-color: var(--brand-accent); }
+
+/* Keep the XR shortcuts close to the following contact section. */
+.services { padding-bottom: 32px; }
+@media (max-width: 768px) { .services { padding-bottom: 24px; } }

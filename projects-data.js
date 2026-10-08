@@ -1,7 +1,7 @@
 window.rmdevProjects = [
   { url: 'cas-client-securite-vr.html', src: 'Images/optimized/ImmersiveExp-card.webp', width: 960, height: 438, alt: 'Sécurité VR', name: 'Sécurité VR', cat: 'Formation', proof: '800+ démonstrations' },
   { url: 'cas-client-demonstrateur-motorisation.html', src: 'Images/optimized/Demonstrateur-card.webp', width: 960, height: 402, alt: 'Démonstrateur Moteur', name: 'Démonstrateur Moteur', cat: 'Unity HDRP', proof: 'Prototype livré dans les délais' },
-  { url: 'cas-client-systemes-embarques.html', src: 'Images/optimized/Reno-card.webp', width: 960, height: 540, alt: 'Systèmes Embarqués', name: 'Systèmes Embarqués', cat: 'Automobile', proof: 'Programme R&D de 24 mois' },
+  { url: 'cas-client-systemes-embarques.html', src: 'Images/optimized/Reno-card.webp', width: 960, height: 540, alt: 'Systèmes Embarqués', name: 'Systèmes Embarqués', cat: 'Automobile', proof: 'Prototype automobile Unity' },
   { url: 'cas-client-vr-cockpit.html', src: 'Images/optimized/VRinCar-card.webp', width: 960, height: 560, alt: 'VR in Cockpit', name: 'VR in Cockpit', cat: 'Expérience Immersive', proof: '1 200+ visiteurs' },
   { url: 'cas-client-formation-immersive.html', src: 'videos/salle_reunion_vr.mp4', alt: 'Formation immersive', name: 'Formation immersive', cat: 'Formation · IA & VR', video: true, poster: 'Images/optimized/formation-immersive-poster.webp', proof: 'Déploiement B2B' },
   { url: 'cas-client-plan-3d.html', src: 'Images/optimized/3DPlan-card.webp', width: 960, height: 540, alt: 'Visualisation 3D immobilière', name: 'Visualisation 3D immobilière', cat: 'Immobilier · Plan 2D → 3D', proof: 'Livré en 48 h' },

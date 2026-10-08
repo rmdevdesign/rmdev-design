@@ -26,21 +26,153 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="vars.css"><link rel="stylesheet" href="expertise.css"><link rel="stylesheet" href="case-study.css">
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"VR in Cockpit : expérience automobile au New Delhi Auto Show","image":"https://rmdev.design/Images/VRinCar.png","author":{"@type":"Person","name":"Romain Maunier"},"publisher":{"@type":"Organization","name":"RMDev.Design"},"mainEntityOfPage":"https://rmdev.design/cas-client-vr-cockpit.html"}
-  </script>
   <link rel="stylesheet" href="signature.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "VR in Cockpit : expérience automobile au New Delhi Auto Show",
+      "image": "https://rmdev.design/Images/VRinCar.png",
+      "author": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "mainEntityOfPage": "https://rmdev.design/cas-client-vr-cockpit.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/cas-client-vr-cockpit.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Réalisations",
+          "item": "https://rmdev.design/realisations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Faire voyager les visiteurs sans quitter le véhicule",
+          "item": "https://rmdev.design/cas-client-vr-cockpit.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <header class="expertise-header"><a class="expertise-logo" href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" alt="RMDev.Design"></a><nav class="expertise-nav" aria-label="Navigation principale"><a href="index.html#besoins">Cas d'usage</a><a href="index.html#services">Expertises</a><a href="index.html#projets">Réalisations</a><a href="index.html#faq">FAQ</a><a class="nav-contact" href="index.html#contact">Discuter du projet</a></nav></header>
+  <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="index.html#references" class="mobile-nav-link">Références</a>
+<a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
   <main>
-    <section class="case-hero" style="--case-image: url('Images/VRinCar.png')"><div class="case-hero-inner"><a class="case-back-link" href="index.html#projets">Retour aux réalisations</a><p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="index.html#projets">Réalisations</a><span>/</span>VR in Cockpit</p><span class="eyebrow">Automobile · Unity HDRP · Salon</span><h1>Faire voyager les visiteurs sans quitter le véhicule</h1><p class="case-lead">Une expérience marketing immersive pour présenter le Renault Triber dans trois environnements emblématiques de l'Inde, directement depuis son habitacle.</p><p class="case-result">Résultat : 1 200+ visiteurs en cinq jours</p></div></section>
+    <section class="case-hero" style="--case-image: url('Images/VRinCar.png')"><div class="case-hero-inner"><a class="case-back-link" href="realisations.html">Retour aux réalisations</a><p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="realisations.html">Réalisations</a><span>/</span>VR in Cockpit</p><span class="eyebrow">Automobile · Unity HDRP · Salon</span><h1>Faire voyager les visiteurs sans quitter le véhicule</h1><p class="case-lead">Une expérience marketing immersive pour présenter le Renault Triber dans trois environnements emblématiques de l'Inde, directement depuis son habitacle.</p><p class="case-result">Résultat : 1 200+ visiteurs en cinq jours</p></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>Le contexte</h2><div class="case-copy"><p>Pour le lancement du Triber sur le marché indien, l'expérience devait attirer les visiteurs sur le stand, générer des échanges et faire ressentir le confort du véhicule dans des environnements impossibles à reproduire physiquement.</p></div></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>Le défi</h2><div class="case-copy"><ul class="case-list"><li>Créer trois scènes variées : ville, montagne enneigée et jungle.</li><li>Convertir les données SolidWorks vers Unity HDRP sans perdre les détails du véhicule.</li><li>Maintenir 60 FPS en PC VR avec éclairage, neige et effets de particules.</li><li>Garantir une boucle autonome stable pendant huit heures de salon par jour.</li></ul></div></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>La réalisation</h2><div class="case-copy"><p>Les modèles du Triber ont été préparés puis intégrés à l'échelle 1:1 dans Unity HDRP. Une logique de démonstration à lancement unique permettait aux équipes du stand d'enchaîner les sessions avec un minimum de manipulation.</p><div class="case-tags"><span class="case-tag">Unity</span><span class="case-tag">HDRP</span><span class="case-tag">SolidWorks</span><span class="case-tag">FBX</span><span class="case-tag">PC VR</span></div></div></div></section>
-    <aside class="case-next"><div><span class="eyebrow">Un produit à faire vivre ?</span><h2>Créons une démonstration mémorable.</h2><p>L'expérience peut être pensée pour un salon, un showroom ou une présentation client.</p></div><a class="button-primary" href="index.html#contact">Parlons de l'expérience</a></aside>
+    <!-- TODO_CONTENT: valider le rôle exact, les responsabilités partagées et les sources des résultats de cas-client-vr-cockpit.html. -->
+<section class="case-section"><div class="case-section-heading"><h2>Les choix qui rendent le dispositif exploitable</h2><div class="case-copy"><h3>Trois environnements, un même point de départ</h3><p>Ville, montagne enneigée et jungle sont présentées depuis l’habitacle. Le véhicule reste le repère commun de la démonstration.</p><h3>Préparer les données avant le rendu</h3><p>Les modèles SolidWorks sont convertis et intégrés à l’échelle dans Unity HDRP. La conservation des détails doit composer avec le budget de rendu PC VR.</p><h3>Réduire les manipulations sur le stand</h3><p>La logique de lancement unique permet d’enchaîner les sessions. La stabilité en exploitation fait partie du travail, au même titre que les scènes.</p></div></div></section><aside class="case-next"><div><span class="eyebrow">Un produit à faire vivre ?</span><h2>Créons une démonstration mémorable.</h2><p>L'expérience peut être pensée pour un salon, un showroom ou une présentation client.</p></div><a class="button-primary" href="index.html#contact">Parlons de l'expérience</a></aside>
   </main>
-  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="developpement-vr-unity.html">VR & Unity</a><a href="index.html#projets">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
+  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="developpement-vr-unity.html">VR & Unity</a><a href="realisations.html">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
   <script src="signature.js" defer></script>
+<script src="header.js" defer></script>
 </body>
 </html>

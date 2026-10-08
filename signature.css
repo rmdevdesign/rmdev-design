@@ -91,12 +91,12 @@
 
 /* =========================
    Easter egg : mode "Blueprint"
-   (clic sur le point lumineux du badge hero — Échap pour sortir)
+   (clic sur le point lumineux du badge hero : Échap pour sortir)
 ========================= */
 
 /* Tampon "non validé" */
 html.blueprint-mode::after {
-  content: "PROTOTYPE v0.4 — NON VALIDÉ";
+  content: "PROTOTYPE v0.4 : NON VALIDÉ";
   position: fixed;
   top: 96px;
   right: -34px;

@@ -26,21 +26,153 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="vars.css"><link rel="stylesheet" href="expertise.css"><link rel="stylesheet" href="case-study.css">
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Design UI/UX d'une application mobile domotique","image":"https://rmdev.design/Images/Calypshome.webp","author":{"@type":"Person","name":"Romain Maunier"},"publisher":{"@type":"Organization","name":"RMDev.Design"},"mainEntityOfPage":"https://rmdev.design/cas-client-ui-ux-domotique.html"}
-  </script>
   <link rel="stylesheet" href="signature.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Design UI/UX d'une application mobile domotique",
+      "image": "https://rmdev.design/Images/Calypshome.webp",
+      "author": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "mainEntityOfPage": "https://rmdev.design/cas-client-ui-ux-domotique.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/cas-client-ui-ux-domotique.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Réalisations",
+          "item": "https://rmdev.design/realisations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Structurer une maison connectée dans une interface simple",
+          "item": "https://rmdev.design/cas-client-ui-ux-domotique.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <header class="expertise-header"><a class="expertise-logo" href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" alt="RMDev.Design"></a><nav class="expertise-nav" aria-label="Navigation principale"><a href="index.html#besoins">Cas d'usage</a><a href="index.html#services">Expertises</a><a href="index.html#projets">Réalisations</a><a href="index.html#faq">FAQ</a><a class="nav-contact" href="index.html#contact">Discuter du projet</a></nav></header>
+  <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="index.html#references" class="mobile-nav-link">Références</a>
+<a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
   <main>
-    <section class="case-hero" style="--case-image: url('Images/optimized/Calypshome-hero.webp')"><div class="case-hero-inner"><a class="case-back-link" href="index.html#projets">Retour aux réalisations</a><p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="index.html#projets">Réalisations</a><span>/</span>Application domotique</p><span class="eyebrow">UI/UX · Figma · Design system</span><h1>Structurer une maison connectée dans une interface simple</h1><p class="case-lead">Conception complète d'une application mobile pilotant volets, stores et brise-soleil orientables, depuis le cahier des charges jusqu'au kit développeur.</p><p class="case-result">Résultat : plus de 100 écrans Figma livrés</p></div></section>
+    <section class="case-hero" style="--case-image: url('Images/optimized/Calypshome-hero.webp')"><div class="case-hero-inner"><a class="case-back-link" href="realisations.html">Retour aux réalisations</a><p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="realisations.html">Réalisations</a><span>/</span>Application domotique</p><span class="eyebrow">UI/UX · Figma · Design system</span><h1>Structurer une maison connectée dans une interface simple</h1><p class="case-lead">Conception complète d'une application mobile pilotant volets, stores et brise-soleil orientables, depuis le cahier des charges jusqu'au kit développeur.</p><p class="case-result">Résultat : plus de 100 écrans Figma livrés</p></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>Le contexte</h2><div class="case-copy"><p>Le produit devait réunir plusieurs familles d'équipements dans une expérience cohérente, compréhensible aussi bien pour un usage quotidien que pour la configuration initiale.</p><p>La mission couvrait l'architecture fonctionnelle, l'interface et la préparation de la passation aux développeurs.</p></div></div></section>
-    <section class="case-section"><div class="case-section-heading"><h2>La démarche</h2><div class="case-copy"><ul class="case-list"><li>Atelier de cadrage, personas et parcours utilisateurs.</li><li>Wireframes basse fidélité pour valider les flux.</li><li>Maquettes haute fidélité et design system Figma.</li><li>Création de plus de 40 pictogrammes dédiés.</li><li>Export DevMode, documentation PDF et visuels pour les stores.</li></ul></div></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>Mon rôle et la livraison</h2><div class="case-copy"><p>Ma mission portait sur l’UI/UX et la livraison des maquettes, composants et éléments de passation à l’équipe de développement. L’équipe de développement a ensuite pris le relais à partir des livrables Figma.</p></div></div></section><section class="case-section"><div class="case-section-heading"><h2>La démarche</h2><div class="case-copy"><ul class="case-list"><li>Atelier de cadrage, personas et parcours utilisateurs.</li><li>Wireframes basse fidélité pour valider les flux.</li><li>Maquettes haute fidélité et design system Figma.</li><li>Création de plus de 40 pictogrammes dédiés.</li><li>Export DevMode, documentation PDF et visuels pour les stores.</li></ul></div></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>La livraison</h2><div class="case-copy"><p>Plus de 100 écrans ont été remis avec les composants, variantes et états nécessaires à l'intégration. L'application issue de ce travail est disponible sur les stores.</p><div class="case-tags"><span class="case-tag">Figma</span><span class="case-tag">Design system</span><span class="case-tag">Wireframes</span><span class="case-tag">DevMode</span><span class="case-tag">Mobile</span></div></div></div></section>
-    <aside class="case-next"><div><span class="eyebrow">Une interface devenue complexe ?</span><h2>Mettons le parcours à plat.</h2><p>Un échange suffit pour identifier les écrans, états et décisions à traiter en priorité.</p></div><a class="button-primary" href="index.html#contact">Parlons de votre interface</a></aside>
+    <!-- TODO_CONTENT: conserver les sources des résultats chiffrés du projet domotique. -->
+<section class="case-section"><div class="case-section-heading"><h2>De la validation des parcours à la passation</h2><div class="case-copy"><h3>Valider les flux avant les écrans détaillés</h3><p>Le cadrage, les personas et les wireframes servent à structurer les actions avant les maquettes haute fidélité.</p><h3>Traiter les états et les variantes</h3><p>Le design system regroupe les composants nécessaires aux différentes familles d’équipements, avec leurs variantes et leurs états.</p><h3>Livrer de quoi intégrer</h3><p>Les écrans Figma sont accompagnés de DevMode, d’une documentation PDF et de ressources dédiées. Le livrable dépasse la seule maquette visuelle.</p></div></div></section><aside class="case-next"><div><span class="eyebrow">Une interface devenue complexe ?</span><h2>Mettons le parcours à plat.</h2><p>Un échange suffit pour identifier les écrans, états et décisions à traiter en priorité.</p></div><a class="button-primary" href="index.html#contact">Parlons de votre interface</a></aside>
   </main>
-  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="design-ui-ux-figma.html">UI/UX</a><a href="index.html#projets">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
+  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="design-ui-ux-figma.html">UI/UX</a><a href="realisations.html">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
   <script src="signature.js" defer></script>
+<script src="header.js" defer></script>
 </body>
 </html>

@@ -6,12 +6,22 @@
   <meta name="robots" content="noindex">
   <title>Page introuvable | RMDev.Design</title>
   <meta name="theme-color" content="#0f1115">
-  <link rel="icon" type="image/png" href="/Images/logo.png">
+  <link rel="icon" type="image/png" href="Images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/vars.css">
   <style>
+    /* Standalone error page: styling also works at missing nested URLs. */
+    :root {
+      --bg-main: #0f1115;
+      --text-main: #ffffff;
+      --text-secondary: #a1a1aa;
+      --brand-accent: #22d3ee;
+      --brand-gradient: linear-gradient(120deg, #22d3ee 0%, #818cf8 100%);
+      --font-family-main: 'DM Sans', sans-serif;
+      --font-family-heading: 'Bricolage Grotesque', sans-serif;
+      --radius-full: 9999px;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       min-height: 100svh;
@@ -57,6 +67,9 @@
       white-space: nowrap;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+    a:focus-visible { outline: 2px solid var(--brand-accent); outline-offset: 5px; }
+    .notfound-links { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .notfound-links a { color: var(--brand-accent); text-underline-offset: 4px; }
     .notfound-home:hover {
       transform: translateY(-2px);
       box-shadow: 0 0 20px rgba(34, 211, 238, 0.35);
@@ -68,7 +81,8 @@
     <div class="notfound-code" aria-hidden="true">404</div>
     <h1>Cette page n'existe pas (ou plus)</h1>
     <p>Le prototype de cette page n'a jamais été validé. Retournez à l'accueil pour retrouver les projets, les expertises et le contact.</p>
-    <a class="notfound-home" href="/">Retour à l'accueil</a>
+    <a class="notfound-home" href="https://rmdev.design/">Retour à l'accueil</a>
+    <nav class="notfound-links" aria-label="Retrouver une page"><a href="https://rmdev.design/developpement-vr-unity.html">Unity XR freelance</a><a href="https://rmdev.design/realisations.html">Réalisations</a><a href="https://rmdev.design/#contact">Présenter votre projet</a></nav>
   </main>
 </body>
 </html>

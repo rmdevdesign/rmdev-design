@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0f1115"><meta name="robots" content="index, follow, max-image-preview:large">
+<title>Déployer et tester une application Meta Quest 3 | RM Dev Design</title><meta name="description" content="Guide pour préparer les versions de test d’une application Unity sur Quest 3 : installation, testeurs, recette et livraison, avec les sources officielles Meta."><link rel="canonical" href="https://rmdev.design/guides/deployer-application-meta-quest-3.html">
+<meta property="og:title" content="Déployer et tester une application Meta Quest 3 | RM Dev Design"><meta property="og:description" content="Guide pour préparer les versions de test d’une application Unity sur Quest 3 : installation, testeurs, recette et livraison, avec les sources officielles Meta."><meta property="og:url" content="https://rmdev.design/guides/deployer-application-meta-quest-3.html"><meta property="og:type" content="article"><meta property="og:image" content="https://rmdev.design/Images/optimized/social-vr-unity.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="RM Dev Design">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Déployer et tester une application Meta Quest 3 | RM Dev Design"><meta name="twitter:description" content="Guide pour préparer les versions de test d’une application Unity sur Quest 3 : installation, testeurs, recette et livraison, avec les sources officielles Meta."><meta name="twitter:image" content="https://rmdev.design/Images/optimized/social-vr-unity.jpg">
+<link rel="icon" href="../Images/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../vars.css"><link rel="stylesheet" href="../expertise.css"><link rel="stylesheet" href="../signature.css"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rmdev.design/guides/deployer-application-meta-quest-3.html#article",
+      "name": "Comment déployer et tester une application professionnelle sur Meta Quest 3 ?",
+      "url": "https://rmdev.design/guides/deployer-application-meta-quest-3.html",
+      "headline": "Comment déployer et tester une application professionnelle sur Meta Quest 3 ?",
+      "author": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "dateModified": "2026-10-08",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/guides/deployer-application-meta-quest-3.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Comment déployer et tester une application professionnelle sur Meta Quest 3 ?",
+          "item": "https://rmdev.design/guides/deployer-application-meta-quest-3.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="stylesheet" href="../header.css">
+</head><body>
+<!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="../index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="../Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="../index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="../index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="../developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="../developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="../realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="../demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="../prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="../design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="../configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="../index.html#approche" class="label">Approche</a>
+<a href="../index.html#projets" class="label">Réalisations</a>
+<a href="../index.html#references" class="label">Références</a>
+<a href="../index.html#faq" class="label">FAQ</a>
+<a href="../index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="../index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="../index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="../developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="../developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="../realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="../demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="../prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="../design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="../configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="../index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="../index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="../index.html#references" class="mobile-nav-link">Références</a>
+<a href="../index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="../index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="../index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="../index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="../developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="../developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="../realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="../demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="../prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="../design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="../configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="../index.html#approche" class="label">Approche</a>
+<a href="../index.html#projets" class="label">Réalisations</a>
+<a href="../index.html#references" class="label">Références</a>
+<a href="../index.html#faq" class="label">FAQ</a>
+<a href="../index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end --><main>
+<section class="expertise-hero" style="--hero-image: url('../Images/optimized/social-vr-unity.jpg')"><div class="hero-inner"><p class="breadcrumb"><a href="../index.html">Accueil</a><span>/</span>Comment déployer et tester une application professionnelle sur Meta Quest 3 ?</p><span class="eyebrow">RM Dev Design · Romain Maunier</span><h1>Comment déployer et tester une application professionnelle sur Meta Quest 3 ?</h1><p class="hero-lead">Le mode de diffusion doit être choisi avant la livraison : un casque de développement, un groupe de testeurs et un parc d’entreprise ne demandent pas la même organisation. Ce guide de RM Dev Design aide à préparer une recette Unity XR et à identifier les vérifications nécessaires.</p><div class="hero-actions"><a class="button-primary" href="../index.html#contact">Préparer votre prototype Quest 3</a><a class="button-secondary" href="../realisations.html">Voir les réalisations</a></div></div></section>
+<p class="editorial-copy">Mis à jour le <time datetime="2026-10-08">8 octobre 2026</time>. Les procédures et conditions Meta sont à vérifier avant chaque déploiement.</p><section class="content-section"><div class="section-heading"><h2>Peut-on tester sans publication grand public ?</h2></div><p class="editorial-copy">Oui. Meta propose des canaux permettant de distribuer une version à une audience limitée, avec des canaux privés sur invitation. Ces versions restent soumises aux exigences de packaging de la plateforme. Cette possibilité de test doit être distinguée du déploiement durable d’un parc d’entreprise. <a href="https://developers.meta.com/vr/resources/publish-release-channels/">Source : canaux de distribution Meta</a>.</p></section><section class="content-section"><div class="section-heading"><h2>1. Définir qui installe et qui teste</h2></div><p class="editorial-copy">Identifier le responsable du parc, les casques cibles, les comptes des testeurs et le besoin d’accès réseau. Prévoir aussi qui remet le casque dans son état initial et qui valide le résultat. Une procédure claire évite de confondre un problème d’installation avec un problème d’usage.</p></section><section class="content-section"><div class="section-heading"><h2>2. Préparer le casque de développement</h2></div><p class="editorial-copy">Pour les essais locaux, suivre la procédure officielle Meta de configuration du casque et des outils de développement. Vérifier les prérequis du compte, l’activation du mode développeur et la connexion USB. <a href="https://developers.meta.com/vr/documentation/unity/unity-env-device-setup/">Source : préparer un casque Meta pour le développement</a>.</p></section><section class="content-section"><div class="section-heading"><h2>3. Identifier chaque version</h2></div><p class="editorial-copy">Conserver une référence de version, la cible matérielle, les fonctionnalités incluses et les limites connues. Tester d’abord l’installation sur un casque représentatif, puis documenter les étapes pour les autres testeurs. La gestion des signatures et des accès doit être attribuée avant la livraison.</p></section><section class="content-section"><div class="section-heading"><h2>4. Organiser la diffusion aux testeurs</h2></div><p class="editorial-copy">Selon le projet, un canal de test Meta peut réunir une audience invitée. Vérifier dans le dashboard les règles en vigueur, les conditions d’accès et la version attribuée au groupe. Ne pas promettre une installation universelle sans connaître les comptes, les casques et le contexte de gestion.</p></section><section class="content-section"><div class="section-heading"><h2>5. Faire une recette sur le matériel final</h2></div><div class="card-grid"><article class="content-card"><h3>Installation et lancement</h3><p>Tester un démarrage après redémarrage du casque et vérifier que les contenus attendus sont présents.</p></article><article class="content-card"><h3>Parcours et interruptions</h3><p>Exécuter les scénarios, retirer puis remettre le casque, vérifier les interactions et la reprise de session.</p></article><article class="content-card"><h3>Retour et livraison</h3><p>Noter la version, le casque, les étapes et les observations. Livrer les consignes, les limites connues et le contact de suivi.</p></article></div></section><section class="content-section"><div class="section-heading"><h2>Préparer un salon ou un usage récurrent</h2></div><p class="editorial-copy">Une session de recette doit reproduire la durée et les manipulations prévues. Vérifier la recharge, la remise à zéro, les consignes pour l’accompagnateur et les contenus nécessaires hors réseau. Définir avec le responsable du parc la diffusion des versions, les accès et les mises à jour facilite ensuite l’exploitation.</p></section><aside class="expertise-cta"><div><h2>Un besoin à rendre concret ?</h2><p>Présentez l’objectif, le matériel, les contenus disponibles et l’échéance. Le premier échange sert à cadrer un livrable et les conditions de validation.</p></div><a class="button-primary" href="../index.html#contact">Préparer votre prototype Quest 3</a></aside>
+<section class="related-section"><h2>Pour approfondir votre projet</h2><div class="related-links"><a class="related-link" href="../developpement-meta-quest-3.html">Développement Quest 3 →</a><a class="related-link" href="../demonstrateur-vr-industriel.html">Préparer un démonstrateur →</a><a class="related-link" href="quest-3-ou-pc-vr.html">Quest autonome ou PC VR →</a></div></section></main><footer class="expertise-footer">
+    <div class="expertise-footer-inner">
+      <a href="../index.html"><img src="../Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" decoding="async" alt="RMDev.Design"></a>
+      <div class="expertise-footer-links">
+        <span>© 2026 RMDev.Design</span>
+        <a href="../prototypage-interactif.html">Prototypage</a>
+        <a href="../design-ui-ux-figma.html">UI/UX</a>
+        <a href="../realisations.html">Réalisations</a><a href="../a-propos-romain-maunier.html">À propos</a><a href="../index.html#contact">Contact</a>
+        <a href="../confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer><script src="../signature.js" defer></script><script src="../header.js" defer></script>
+</body></html>

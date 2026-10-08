@@ -20,22 +20,139 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="vars.css">
   <link rel="stylesheet" href="expertise.css">
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","name":"Prototypage interactif et POC","serviceType":"Conception de prototypes interactifs, POC et démonstrateurs","provider":{"@type":"ProfessionalService","name":"RMDev.Design","url":"https://rmdev.design/"},"areaServed":"France","url":"https://rmdev.design/prototypage-interactif.html"}
-  </script>
   <link rel="stylesheet" href="signature.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Prototypage interactif et POC",
+      "serviceType": "Conception de prototypes interactifs, POC et démonstrateurs",
+      "provider": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "areaServed": "France",
+      "url": "https://rmdev.design/prototypage-interactif.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/prototypage-interactif.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rendre une idée testable avant d'engager le produit final",
+          "item": "https://rmdev.design/prototypage-interactif.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<meta name="twitter:title" content="Prototypage interactif & POC freelance | RMDev.Design">
+<meta name="twitter:description" content="Rendez une idée testable et présentable avec un prototype adapté à votre objectif.">
+<meta name="twitter:image" content="https://rmdev.design/Images/optimized/social-prototypage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <header class="expertise-header">
-    <a class="expertise-logo" href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" alt="RMDev.Design"></a>
-    <nav class="expertise-nav" aria-label="Navigation principale">
-      <a href="index.html#besoins">Cas d'usage</a>
-      <a href="index.html#services">Expertises</a>
-      <a href="index.html#projets">Réalisations</a>
-      <a href="index.html#faq">FAQ</a>
-      <a class="nav-contact" href="index.html#contact">Discuter du projet</a>
-    </nav>
-  </header>
+  <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="index.html#references" class="mobile-nav-link">Références</a>
+<a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
   <main>
     <section class="expertise-hero" style="--hero-image: url('Images/optimized/Demonstrateur-hero.webp')">
       <div class="hero-inner">
@@ -45,7 +162,7 @@
         <p class="hero-lead">Je conçois des prototypes interactifs et des démonstrateurs pour valider un usage, aligner les décideurs ou présenter une vision crédible sans lancer trop tôt un développement complet.</p>
         <div class="hero-actions">
           <a class="button-primary" href="index.html#contact">Parlons de votre idée</a>
-          <a class="button-secondary" href="index.html#projets">Voir les réalisations</a>
+          <a class="button-secondary" href="realisations.html">Voir les réalisations</a>
         </div>
       </div>
     </section>
@@ -95,11 +212,12 @@
       <a class="button-primary" href="index.html#contact">Mettons l'idée à l'épreuve</a>
     </aside>
 
-    <section class="related-section">
+    <section class="content-section"><div class="section-heading"><h2>Des projets et expertises pour prolonger le cadrage</h2></div><div class="related-links"><a class="related-link" href="developpement-vr-unity.html">Prototypage Unity XR →</a><a class="related-link" href="demonstrateur-vr-industriel.html">Démonstrateur industriel →</a><a class="related-link" href="realisations.html">Réalisations documentées →</a></div></section><section class="related-section">
       <h2>Expertises complémentaires</h2>
-      <div class="related-links">
-        <a class="related-link" href="developpement-vr-unity.html">Développement VR & Unity →</a>
-        <a class="related-link" href="design-ui-ux-figma.html">Design UI/UX & Figma →</a>
+      <div class="related-links related-card-grid">
+        <a class="related-link related-card" href="configurateur-3d-web.html"><span class="related-card-title">Configurateurs 3D web</span><span class="related-card-description">Viewer Three.js, interface React et backend pour votre catalogue produit.</span><span class="related-card-action">Découvrir l’expertise →</span></a>
+        <a class="related-link related-card" href="developpement-vr-unity.html"><span class="related-card-title">Unity & XR</span><span class="related-card-description">Applications immersives pour la formation, les showrooms et les démonstrations.</span><span class="related-card-action">Découvrir l’expertise →</span></a>
+        <a class="related-link related-card" href="design-ui-ux-figma.html"><span class="related-card-title">Design UI/UX</span><span class="related-card-description">Parcours, maquettes Figma et composants prêts à transmettre aux développeurs.</span><span class="related-card-action">Découvrir l’expertise →</span></a>
       </div>
     </section>
   </main>
@@ -116,5 +234,6 @@
     </div>
   </footer>
   <script src="signature.js" defer></script>
+<script src="header.js" defer></script>
 </body>
 </html>

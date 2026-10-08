@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  
+
   <meta charset="UTF-8">
 
   <!-- Rendre la page responsive sur mobile -->
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-  
+
   <!-- CSS principal -->
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./style.css">
@@ -26,11 +26,11 @@
   <link rel="icon" type="image/png" href="Images/logo.png">
 
   <!-- Titre de la page -->
-  <title>RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)</title>
+  <title>Designer & développeur Unity XR freelance à Paris | RM Dev Design</title>
 
   <!-- Meta Description (≈ 150–160 caractères) -->
-  <meta name="description" content="Designer et développeur freelance à Paris : prototypes interactifs, expériences VR sous Unity et interfaces UI/UX sur Figma.">
-  
+  <meta name="description" content="Romain Maunier, freelance Unity XR à Paris et à distance : prototypes VR/MR professionnels, démonstrateurs interactifs et interfaces UI/UX sur Figma.">
+
   <!-- Balises Open Graph (pour un affichage optimisé sur les réseaux) -->
   <meta property="og:title" content="RMDev.Design – Designer & Développeur Freelance (VR, UI/UX, Unity)" />
   <meta property="og:description" content="Prototypes interactifs, expériences VR sous Unity et interfaces UI/UX sur Figma, à Paris et à distance." />
@@ -54,127 +54,120 @@
   <link rel="canonical" href="https://rmdev.design/" />
 
   <!-- Script de données structurées pour les IA (JSON-LD) -->
-  <script type="application/ld+json">
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
         {
-          "@type": "WebSite",
-          "@id": "https://rmdev.design/#website",
-          "url": "https://rmdev.design/",
-          "name": "RMDev.Design",
-          "inLanguage": "fr-FR",
-          "publisher": {
-            "@id": "https://rmdev.design/#business"
-          }
+          "@type": "Country",
+          "name": "France"
         },
         {
-          "@type": ["ProfessionalService", "Organization"],
-          "@id": "https://rmdev.design/#business",
-          "name": "RMDev.Design",
-          "url": "https://rmdev.design/",
-          "logo": "https://rmdev.design/Images/RMDesignLogo.png",
-          "image": "https://rmdev.design/Images/optimized/social-home.jpg",
-          "email": "contact@rmdev.design",
-          "description": "Studio freelance spécialisé en prototypage interactif, développement Unity, expériences XR et design UI/UX.",
-          "areaServed": [
-            {
-              "@type": "Country",
-              "name": "France"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Île-de-France"
-            }
-          ],
-          "founder": {
-            "@id": "https://rmdev.design/#person"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/romain-maunier-826850108/",
-            "https://www.malt.fr/profile/romainmaunier"
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://rmdev.design/#person",
-          "name": "Romain Maunier",
-          "url": "https://rmdev.design/",
-          "image": "https://rmdev.design/Images/optimized/profile-320.webp",
-          "jobTitle": "Designer et développeur freelance",
-          "worksFor": {
-            "@id": "https://rmdev.design/#business"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/romain-maunier-826850108/",
-            "https://www.malt.fr/profile/romainmaunier"
-          ],
-          "knowsAbout": [
-            "Prototypage interactif",
-            "Réalité virtuelle",
-            "Réalité augmentée",
-            "Unity",
-            "C#",
-            "UI/UX Design",
-            "Figma"
-          ]
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
         }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
       ]
     }
-  </script>
-
-  
+  ]
+}</script>
+<link rel="stylesheet" href="header.css">
 </head>
 <body>
-  
+
   <div class="landing-page">
     <div class="main-wrapper">
-      <div class="site-header">
-        <div class="logo">
-          <a href="#" class="icon">
-            <!-- Logo original (couleur) pour le header -->
-            <img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design Logo" />
-          </a>
-        </div>
-        <div class="site-nav">
-          <nav class="header-menu-default">
-            <a href="#besoins" class="label">Cas d'usage</a>
-            <a href="#services" class="label">Expertises</a>
-            <a href="#approche" class="label">Approche</a>
-            <a href="#projets" class="label">Réalisations</a>
-            <a href="#references" class="label">Références</a>
-            <a href="#faq" class="label">FAQ</a>
-            <a href="#contact" class="label nav-cta">Discuter du projet</a>
-          </nav>
-          <!-- Icône Burger pour le menu mobile -->
-          <button class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-      <!-- Menu Mobile -->
-      <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-        <a href="#besoins" class="mobile-nav-link">Cas d'usage</a>
-        <a href="#services" class="mobile-nav-link">Expertises</a>
-        <a href="#approche" class="mobile-nav-link">Approche</a>
-        <a href="#projets" class="mobile-nav-link">Réalisations</a>
-        <a href="#references" class="mobile-nav-link">Références</a>
-        <a href="#faq" class="mobile-nav-link">FAQ</a>
-        <a href="#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a>
-      </div>
-
-
-      <div class="home">
+      <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="#approche" class="label">Approche</a>
+<a href="#projets" class="label">Réalisations</a>
+<a href="#references" class="label">Références</a>
+<a href="#faq" class="label">FAQ</a>
+<a href="#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="#approche" class="mobile-nav-link">Approche</a>
+<a href="#projets" class="mobile-nav-link">Réalisations</a>
+<a href="#references" class="mobile-nav-link">Références</a>
+<a href="#faq" class="mobile-nav-link">FAQ</a>
+<a href="#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="#approche" class="label">Approche</a>
+<a href="#projets" class="label">Réalisations</a>
+<a href="#references" class="label">Références</a>
+<a href="#faq" class="label">FAQ</a>
+<a href="#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
+<main class="home">
         <!-- Hero Section Modernisée -->
         <div class="hero">
           <div class="hero-overlay"></div>
           <div class="hero-display-text" aria-hidden="true">XR</div>
           <div class="hero-content">
-            <span class="hero-eyebrow reveal"><button type="button" class="hero-dot" aria-label="Basculer le mode blueprint"></button>Designer & développeur freelance</span>
-            <h1 class="hero-title reveal reveal-delay-1">Prototypes, interfaces et <span class="highlight">expériences XR</span></h1>
-            <p class="hero-subtitle reveal reveal-delay-2">À Paris et à distance, je transforme un besoin en prototype concret pour le tester, le présenter ou lancer la suite avec plus de certitude.</p>
+            <span class="hero-eyebrow reveal"><button type="button" class="hero-dot" aria-label="Basculer le mode blueprint"></button>Romain Maunier · Paris & distance</span>
+            <h1 class="hero-title reveal reveal-delay-1">Designer & développeur <span class="highlight">Unity / XR freelance</span></h1>
+            <p class="hero-subtitle reveal reveal-delay-2">Des prototypes interactifs, interfaces et expériences immersives pour tester une idée et la rendre concrète.</p>
             <div class="hero-actions reveal reveal-delay-3">
               <a href="#contact" class="btn-primary">Parler de votre projet</a>
               <a href="#projets" class="btn-secondary">Voir des cas concrets</a>
@@ -228,45 +221,56 @@
         <div class="services" id="services">
           <div class="community2 reveal">
             <span class="section-kicker">Expertises</span>
-            <h2 class="section-title">Design, prototype et XR</h2>
+            <h2 class="section-title">Du prototype à l’expérience interactive</h2>
             <p class="description">
-              Trois briques pour cadrer un projet, le rendre crédible rapidement et le faire exister de manière concrète.
+              Quatre expertises complémentaires, selon ce que votre projet doit permettre de tester, montrer ou utiliser.
             </p>
           </div>
           <div class="services-grid">
-            <a class="service-card service-card--featured reveal reveal-delay-1" href="prototypage-interactif.html">
+            <a class="service-card reveal" href="prototypage-interactif.html">
               <div class="icon-wrapper">
                 <img class="service-icon" src="Images/IconDev.svg" width="42" height="73" alt="" aria-hidden="true" />
               </div>
               <h3 class="service-title">Prototypage & Interaction</h3>
               <p class="service-text">
-                Passez de l'idée au produit testable rapidement. Je développe des prototypes sur mesure pour valider vos concepts sans les coûts d'une agence.
-              </p>
-              <span class="service-link">Voir l'expertise</span>
-            </a>
-            
-            <a class="service-card reveal reveal-delay-2" href="developpement-vr-unity.html">
-              <div class="icon-wrapper">
-                <img class="service-icon" src="Images/IconVR.svg" width="99" height="99" alt="" aria-hidden="true" />
-              </div>
-              <h3 class="service-title">Réalité Virtuelle (VR)</h3>
-              <p class="service-text">
-                Créez des expériences immersives optimisées pour la formation, le showrooming ou l'événementiel, adaptées à vos cas d'usage.
+                Valider un concept, des interactions ou un parcours avec un prototype sur mesure, avant la production.
               </p>
               <span class="service-link">Voir l'expertise</span>
             </a>
 
-            <a class="service-card service-card--wide reveal reveal-delay-3" href="design-ui-ux-figma.html">
+            <a class="service-card reveal reveal-delay-1" href="developpement-vr-unity.html">
               <div class="icon-wrapper">
-                <img class="service-icon" src="Images/IconFigma.svg" width="42" height="73" alt="" aria-hidden="true" />
+                <img class="service-icon" src="Images/IconVR.svg" width="99" height="99" alt="" aria-hidden="true" />
               </div>
-              <h3 class="service-title">Design UI / UX</h3>
+              <h3 class="service-title">Unity & XR</h3>
               <p class="service-text">
-                Des interfaces pensées pour le code. Je conçois sur Figma en anticipant les contraintes techniques pour une intégration sans friction.
+                Applications Unity VR/MR pour la formation, les showrooms et les démonstrations. Toutes mes applications VR tournent sur Quest 3.
               </p>
               <span class="service-link">Voir l'expertise</span>
             </a>
+
+            <a class="service-card reveal reveal-delay-2" href="design-ui-ux-figma.html">
+              <div class="icon-wrapper">
+                <img class="service-icon" src="Images/IconFigma.svg" width="42" height="73" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="service-title">Design UI/UX</h3>
+              <p class="service-text">
+                Parcours, maquettes Figma et composants conçus avec les contraintes de développement, du test à l’intégration.
+              </p>
+              <span class="service-link">Voir l'expertise</span>
+            </a>
+
+            <a class="service-card reveal reveal-delay-3" href="configurateur-3d-web.html">
+              <div class="icon-wrapper"><img class="service-icon" src="Images/IconDev.svg" width="48" height="48" alt="" aria-hidden="true"></div>
+              <h3 class="service-title">Configurateurs 3D web</h3>
+              <p class="service-text">Viewer Three.js, interface React et backend : des configurateurs en ligne développés de A à Z.</p>
+              <span class="service-link">Voir l’expertise</span>
+            </a>
           </div>
+          <nav class="services-paths" aria-label="Expertises Unity et XR">
+            <span>Explorer Unity & XR</span>
+            <div><a href="developpement-vr-unity.html">Unity & XR</a><a href="developpement-meta-quest-3.html">Applications Quest 3</a><a href="realite-mixte-entreprise.html">Réalité mixte</a><a href="demonstrateur-vr-industriel.html">Démonstrateur industriel</a></div>
+          </nav>
         </div>
 
         <aside class="conversion-band reveal" aria-label="Prise de contact">
@@ -289,9 +293,9 @@
               <img src="Images/optimized/profile-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Romain Maunier" class="profile-pic">
             </div>
             <p class="description reveal reveal-delay-1">
-              Design, faisabilité technique et exécution avancent ensemble, sans friction entre maquette, prototype et livraison.
+              Avec RM Dev Design, j’associe design et développement, du cadrage à la livraison. <a href="a-propos-romain-maunier.html">Mon profil et mon approche</a>.
             </p>
-            
+
             <div class="approach-list">
               <div class="approach-item reveal reveal-delay-1">
                 <div class="icon-wrapper"><img class="service-icon" src="Images/fast.svg" width="48" height="48" alt="" aria-hidden="true"/></div>
@@ -331,24 +335,38 @@
             </p>
             <div class="stats-row" aria-label="Quelques chiffres issus des cas clients">
               <div class="stat">
-                <span class="stat-num" data-count="800" data-suffix="+">0</span>
+                <span class="stat-num" data-count="800" data-suffix="+">800+</span>
                 <span class="stat-label">démonstrations animées</span>
               </div>
               <div class="stat">
-                <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+                <span class="stat-num" data-count="1200" data-suffix="+">1 200+</span>
                 <span class="stat-label">visiteurs en salon</span>
               </div>
               <div class="stat">
-                <span class="stat-num" data-count="100" data-suffix="+">0</span>
+                <span class="stat-num" data-count="100" data-suffix="+">100+</span>
                 <span class="stat-label">écrans Figma livrés</span>
               </div>
               <div class="stat">
-                <span class="stat-num" data-count="12" data-suffix="">0</span>
+                <span class="stat-num" data-count="12" data-suffix="">12</span>
                 <span class="stat-label">cas clients documentés</span>
               </div>
             </div>
           </div>
-          <div class="projects-grid" id="projects-grid"></div>
+          <div class="projects-grid" id="projects-grid">
+<a class="project-card-item reveal reveal-delay-0" href="cas-client-securite-vr.html"><div class="project-thumb"><img src="Images/optimized/ImmersiveExp-card.webp" alt="Une machine industrielle complexe transformée en scénario de formation VR, avec un environnement réaliste et une utilisation continue sur salon." width="960" height="438" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Sécurité VR</h3><span class="project-cat">Formation</span><span class="project-proof">800+ démonstrations</span></div></a>
+<a class="project-card-item reveal reveal-delay-1" href="cas-client-demonstrateur-motorisation.html"><div class="project-thumb"><img src="Images/optimized/Demonstrateur-card.webp" alt="Un démonstrateur interactif pour expliquer une chaîne de traction hybride, ses flux d&#x27;énergie et son comportement dans différentes situations de conduite." width="960" height="402" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Démonstrateur Moteur</h3><span class="project-cat">Unity HDRP</span><span class="project-proof">Prototype livré dans les délais</span></div></a>
+<a class="project-card-item reveal reveal-delay-2" href="cas-client-systemes-embarques.html"><div class="project-thumb"><img src="Images/optimized/Reno-card.webp" alt="Une application Unity autour d’un simulateur de conduite pour explorer les interactions dans un cockpit." width="960" height="540" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Systèmes Embarqués</h3><span class="project-cat">Automobile</span><span class="project-proof">Prototype automobile Unity</span></div></a>
+<a class="project-card-item reveal reveal-delay-0" href="cas-client-vr-cockpit.html"><div class="project-thumb"><img src="Images/optimized/VRinCar-card.webp" alt="Une expérience marketing immersive pour présenter le Renault Triber dans trois environnements emblématiques de l&#x27;Inde, directement depuis son habitacle." width="960" height="560" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">VR in Cockpit</h3><span class="project-cat">Expérience Immersive</span><span class="project-proof">1 200+ visiteurs</span></div></a>
+<a class="project-card-item reveal reveal-delay-1" href="cas-client-formation-immersive.html"><div class="project-thumb"><video muted loop playsinline preload="none" poster="Images/optimized/formation-immersive-poster.webp" aria-label="Salle de réunion virtuelle pour la formation à la prise de parole"><source data-src="videos/salle_reunion_vr.mp4" type="video/mp4"></video><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Formation immersive</h3><span class="project-cat">Formation · IA & VR</span><span class="project-proof">Déploiement B2B</span></div></a>
+<a class="project-card-item reveal reveal-delay-2" href="cas-client-plan-3d.html"><div class="project-thumb"><img src="Images/optimized/3DPlan-card.webp" alt="Une modélisation 3D, une visite temps réel et des visuels haute définition pour valider rapidement les volumes et présenter le projet." width="960" height="540" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Visualisation 3D immobilière</h3><span class="project-cat">Immobilier · Plan 2D → 3D</span><span class="project-proof">Livré en 48 h</span></div></a>
+<a class="project-card-item reveal reveal-delay-0" href="cas-client-xr-share.html"><div class="project-thumb"><img src="Images/optimized/XRSHARE-card.webp" alt="Un prototype de co-créativité à distance réunissant des participants en réalité virtuelle, en réalité augmentée et sur écran classique." width="960" height="749" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">XR Share</h3><span class="project-cat">Multijoueur AR/VR</span><span class="project-proof">Prototype VR · AR · PC</span></div></a>
+<a class="project-card-item reveal reveal-delay-1" href="cas-client-visite-vr-immobilier.html"><div class="project-thumb"><img src="Images/optimized/VisitesVirtuelles-card.webp" alt="Transformation de plans DWG en appartement visitable à l&#x27;échelle, avec une application compatible Meta Quest 3 et un walkthrough vidéo 4K." width="960" height="644" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Visites Virtuelles</h3><span class="project-cat">Immobilier</span><span class="project-proof">Signature confirmée après la démo</span></div></a>
+<a class="project-card-item reveal reveal-delay-2" href="cas-client-ui-ux-domotique.html"><div class="project-thumb"><img src="Images/optimized/Calypshome-card.webp" alt="Conception complète d&#x27;une application mobile pilotant volets, stores et brise-soleil orientables, depuis le cahier des charges jusqu&#x27;au kit développeur." width="960" height="807" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">App Domotique</h3><span class="project-cat">UI / UX Design</span><span class="project-proof">+100 écrans Figma</span></div></a>
+<a class="project-card-item reveal reveal-delay-0" href="cas-client-ergonomie-cockpit.html"><div class="project-thumb"><img src="Images/optimized/Ergonomie-card.webp" alt="Une maquette virtuelle à l&#x27;échelle pour tester la position des commandes, les zones de confort et les amplitudes de mouvement." width="960" height="776" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Ergonomie Cockpit</h3><span class="project-cat">R&D</span><span class="project-proof">Layout validé en VR</span></div></a>
+<a class="project-card-item reveal reveal-delay-1" href="cas-client-realite-augmentee-automobile.html"><div class="project-thumb"><img src="Images/optimized/AR-card.webp" alt="Une application de réalité augmentée conçue pour guider les visiteurs autour d&#x27;un véhicule et expliquer ses équipements invisibles." width="960" height="480" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">Réalité Augmentée</h3><span class="project-cat">Mobile</span><span class="project-proof">500+ démonstrations</span></div></a>
+<a class="project-card-item reveal reveal-delay-2" href="cas-client-showroom-vr.html"><div class="project-thumb"><img src="Images/optimized/ShowroomVR-card.webp" alt="Un showroom virtuel pour parcourir, comparer et configurer plus de 50 références de portes dans un espace qui tient dans un casque." width="960" height="564" loading="lazy" decoding="async"><div class="project-overlay"><span class="view-project">Lire le cas client</span></div></div><div class="project-info"><h3 class="project-name">ShowRoom VR</h3><span class="project-cat">Réalité Virtuelle</span><span class="project-proof">Gamme présentée sans stock</span></div></a>
+<a href="#contact" class="project-card-item cta-card reveal"><div class="project-thumb"><img src="Images/optimized/Creativity-card.webp" width="960" height="476" loading="lazy" alt=""><div class="project-overlay"><span class="view-project">Me contacter</span></div></div><div class="project-info"><h3 class="project-name">Votre projet ?</h3><span class="project-cat">Parlons de votre besoin</span></div></a>
+</div>
         </div>
 
         <div class="clients" id="references">
@@ -356,6 +374,7 @@
             <div class="clients2 reveal">
               <span class="section-kicker">Références</span>
               <h2 class="section-title">Ils me font confiance</h2>
+              <p class="description">Parmi les références professionnelles présentées sur ce site : ENSAM, Calypshome, Dana, Renault, K-Line, Total et L’Oréal. Les projets et les contributions varient selon les missions.</p>
             </div>
             <div class="clients-logos reveal">
               <div class="logos-wrapper">
@@ -419,24 +438,25 @@
           </div>
         </section>
 
-      <div class="site-footer" id="contact">
+      </main>
+      <footer class="site-footer" id="contact">
         <div class="contact-section">
           <div class="contact-container">
-            
+
             <div class="contact-header reveal">
               <span class="section-kicker">Contact</span>
               <h2 class="section-title">Vous avez une idée, un besoin flou ou une démo à sortir vite ?</h2>
               <p class="description">
-                Expliquez-moi le contexte, l'objectif et le niveau de maturité du projet. Je reviens vers vous avec une réponse claire et actionnable.
+                Pour une première estimation, indiquez l’objectif, la plateforme visée, l’échéance, les contenus disponibles et le niveau de maturité du projet.
               </p>
             </div>
 
             <!-- NOUVELLE STRUCTURE CONTACT -->
             <div class="contact-grid">
-              
+
               <!-- Formulaire -->
               <div class="contact-form-wrapper reveal reveal-delay-1">
-                <form id="contactForm" class="contact-form" data-formspree-endpoint="https://formspree.io/f/xqegldkl">
+                <form action="https://formspree.io/f/xqegldkl" method="post" id="contactForm" class="contact-form" data-formspree-endpoint="https://formspree.io/f/xqegldkl">
                   <div class="form-row">
                     <div class="form-group">
                       <label for="name">Nom</label>
@@ -472,7 +492,7 @@
                       contact@rmdev.design
                     </a>
                   </div>
-                  
+
                   <div class="info-block">
                     <h3>Format de mission</h3>
                     <p class="info-text">
@@ -522,19 +542,25 @@
                 <a href="prototypage-interactif.html">Prototypage</a>
                 <a href="developpement-vr-unity.html">VR & Unity</a>
                 <a href="design-ui-ux-figma.html">UI/UX</a>
+                <a href="developpement-vr-unity.html">Unity & XR</a>
+                <a href="developpement-meta-quest-3.html">Meta Quest 3</a>
+                <a href="demonstrateur-vr-industriel.html">Démonstrateur industriel</a>
+                <a href="realite-mixte-entreprise.html">Réalité mixte</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="configurateur-3d-web.html">Configurateur 3D web</a>
+                <a href="a-propos-romain-maunier.html">À propos</a>
                 <a href="confidentialite.html">Confidentialité</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
+      </footer>
     </div>
   </div>
 
-<script src="./projects-data.js"></script>
 <script src="./script.js"></script>
 <script src="./signature.js"></script>
 
+<script src="header.js" defer></script>
 </body>
 </html>

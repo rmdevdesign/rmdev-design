@@ -29,36 +29,161 @@
   <link rel="stylesheet" href="vars.css">
   <link rel="stylesheet" href="expertise.css">
   <link rel="stylesheet" href="case-study.css">
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Visite VR immobilière réalisée en 48 heures","image":"https://rmdev.design/Images/VisitesVirtuelles.webp","author":{"@type":"Person","name":"Romain Maunier"},"publisher":{"@type":"Organization","name":"RMDev.Design"},"mainEntityOfPage":"https://rmdev.design/cas-client-visite-vr-immobilier.html"}
-  </script>
   <link rel="stylesheet" href="signature.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rmdev.design/#website",
+      "url": "https://rmdev.design/",
+      "name": "RM Dev Design",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      }
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://rmdev.design/#business",
+      "name": "RM Dev Design",
+      "url": "https://rmdev.design/",
+      "logo": "https://rmdev.design/Images/RMDesignLogo.png",
+      "image": "https://rmdev.design/Images/optimized/social-home.jpg",
+      "email": "contact@rmdev.design",
+      "description": "Activité freelance de Romain Maunier : design, développement Unity XR, prototypes interactifs et interfaces UI/UX, à Paris et à distance.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        }
+      ],
+      "founder": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "alternateName": "RMDev.Design"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rmdev.design/#person",
+      "name": "Romain Maunier",
+      "url": "https://rmdev.design/a-propos-romain-maunier.html",
+      "image": "https://rmdev.design/Images/optimized/profile-320.webp",
+      "jobTitle": "Designer et développeur Unity XR freelance",
+      "worksFor": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/romain-maunier-826850108/",
+        "https://www.malt.fr/profile/romainmaunier"
+      ],
+      "knowsAbout": [
+        "Prototypage interactif",
+        "Réalité virtuelle",
+        "Réalité augmentée",
+        "Unity",
+        "C#",
+        "UI/UX Design",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Visite VR immobilière réalisée en 48 heures",
+      "image": "https://rmdev.design/Images/VisitesVirtuelles.webp",
+      "author": {
+        "@id": "https://rmdev.design/#person"
+      },
+      "publisher": {
+        "@id": "https://rmdev.design/#business"
+      },
+      "mainEntityOfPage": "https://rmdev.design/cas-client-visite-vr-immobilier.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rmdev.design/cas-client-visite-vr-immobilier.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rmdev.design/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Réalisations",
+          "item": "https://rmdev.design/realisations.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Décider sur plan grâce à une visite VR livrée en 48 heures",
+          "item": "https://rmdev.design/cas-client-visite-vr-immobilier.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <header class="expertise-header">
-    <a class="expertise-logo" href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" alt="RMDev.Design"></a>
-    <nav class="expertise-nav" aria-label="Navigation principale">
-      <a href="index.html#besoins">Cas d'usage</a><a href="index.html#services">Expertises</a><a href="index.html#projets">Réalisations</a><a href="index.html#faq">FAQ</a>
-      <a class="nav-contact" href="index.html#contact">Discuter du projet</a>
-    </nav>
-  </header>
+  <!-- shared-header:start -->
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="RM Dev Design, accueil"><img class="logoRMDevDesign" src="Images/RMDesignLogo.png" width="3768" height="512" alt="RM Dev Design"></a>
+  <div class="site-nav"><nav class="header-menu-default" aria-label="Navigation principale"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav>
+  <button type="button" class="burger-menu" id="burger-menu" aria-label="Ouvrir le menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true" inert><a href="index.html#besoins" class="mobile-nav-link">Cas d’usage</a>
+<details class="expertise-menu expertise-menu-mobile"><summary class="mobile-nav-link">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="mobile-nav-link">Approche</a>
+<a href="index.html#projets" class="mobile-nav-link">Réalisations</a>
+<a href="index.html#references" class="mobile-nav-link">Références</a>
+<a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+<a href="index.html#contact" class="mobile-nav-link mobile-nav-cta">Discuter du projet</a></nav>
+<noscript><nav class="nojs-nav" aria-label="Navigation sans JavaScript"><a href="index.html#besoins" class="label">Cas d’usage</a>
+<details class="expertise-menu"><summary class="label">Expertises</summary><nav class="expertise-submenu" aria-label="Pages d’expertise"><a href="index.html#services" class="expertise-menu-link">Toutes les expertises</a><a href="developpement-vr-unity.html" class="expertise-menu-link">Unity & XR</a><a href="developpement-meta-quest-3.html" class="expertise-menu-link">Applications Quest 3</a><a href="realite-mixte-entreprise.html" class="expertise-menu-link">Réalité mixte</a><a href="demonstrateur-vr-industriel.html" class="expertise-menu-link">Démonstrateur industriel</a><a href="prototypage-interactif.html" class="expertise-menu-link">Prototypage interactif</a><a href="design-ui-ux-figma.html" class="expertise-menu-link">Design UI/UX</a><a href="configurateur-3d-web.html" class="expertise-menu-link">Configurateurs 3D web</a></nav></details>
+<a href="index.html#approche" class="label">Approche</a>
+<a href="index.html#projets" class="label">Réalisations</a>
+<a href="index.html#references" class="label">Références</a>
+<a href="index.html#faq" class="label">FAQ</a>
+<a href="index.html#contact" class="label nav-cta">Discuter du projet</a></nav></noscript>
+<!-- shared-header:end -->
   <main>
     <section class="case-hero" style="--case-image: url('Images/optimized/VisitesVirtuelles-hero.webp')">
       <div class="case-hero-inner">
-        <a class="case-back-link" href="index.html#projets">Retour aux réalisations</a>
-        <p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="index.html#projets">Réalisations</a><span>/</span>Visite VR immobilière</p>
-        <span class="eyebrow">Immobilier · Unity · Meta Quest 2</span>
+        <a class="case-back-link" href="realisations.html">Retour aux réalisations</a>
+        <p class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="realisations.html">Réalisations</a><span>/</span>Visite VR immobilière</p>
+        <span class="eyebrow">Immobilier · Unity · Compatible Meta Quest 3</span>
         <h1>Décider sur plan grâce à une visite VR livrée en 48 heures</h1>
-        <p class="case-lead">Transformation de plans DWG en appartement visitable à l'échelle, avec une version Meta Quest 2 et un walkthrough vidéo 4K.</p>
+        <p class="case-lead">Transformation de plans DWG en appartement visitable à l'échelle, avec une application compatible Meta Quest 3 et un walkthrough vidéo 4K.</p>
         <p class="case-result">Résultat : signature sur plan confirmée après la démonstration</p>
       </div>
     </section>
     <section class="case-section"><div class="case-section-heading"><h2>Le contexte</h2><div class="case-copy"><p>Une acheteuse en VEFA devait valider les volumes, l'agencement et la lumière avant de s'engager. Les plans 2D ne suffisaient pas à se projeter dans le futur logement.</p><p>L'objectif était de rendre l'espace immédiatement compréhensible sans attendre de maquette physique.</p></div></div></section>
-    <section class="case-section"><div class="case-section-heading"><h2>Le travail réalisé</h2><div class="case-copy"><ul class="case-list"><li>Nettoyage des plans DWG et modélisation des volumes dans SolidWorks.</li><li>Portage sous Unity URP avec navigation par téléportation.</li><li>Optimisation de l'occlusion et baking des lumières pour tenir 90 FPS sur Quest 2.</li><li>Export de l'application et capture d'un walkthrough vidéo 4K.</li></ul><div class="case-tags"><span class="case-tag">Unity</span><span class="case-tag">URP</span><span class="case-tag">SolidWorks</span><span class="case-tag">Meta Quest 2</span><span class="case-tag">C#</span></div></div></div></section>
+    <section class="case-section"><div class="case-section-heading"><h2>Le travail réalisé</h2><div class="case-copy"><ul class="case-list"><li>Nettoyage des plans DWG et modélisation des volumes dans SolidWorks.</li><li>Portage sous Unity URP avec navigation par téléportation.</li><li>Optimisation de l’occlusion et baking des lumières pour un rendu fluide sur casque autonome.</li><li>Export de l'application et capture d'un walkthrough vidéo 4K.</li></ul><div class="case-tags"><span class="case-tag">Unity</span><span class="case-tag">URP</span><span class="case-tag">SolidWorks</span><span class="case-tag">Compatible Meta Quest 3</span><span class="case-tag">C#</span></div></div></div></section>
     <section class="case-section"><div class="case-section-heading"><h2>Ce que le prototype a permis</h2><div class="case-copy"><p>La visite a remplacé une projection abstraite par une expérience à l'échelle. Les volumes et l'aménagement ont pu être évalués directement, ce qui a permis de confirmer la décision d'achat après la démonstration.</p></div></div></section>
     <aside class="case-next"><div><span class="eyebrow">Un espace difficile à expliquer ?</span><h2>Rendons-le visitable.</h2><p>Plans, modèle 3D ou simple intention : un premier échange permet d'identifier le prototype utile.</p></div><a class="button-primary" href="index.html#contact">Parlons de votre idée</a></aside>
   </main>
-  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="developpement-vr-unity.html">VR & Unity</a><a href="index.html#projets">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
+  <footer class="expertise-footer"><div class="expertise-footer-inner"><a href="index.html"><img src="Images/RMDesignLogo.png" width="3768" height="512" loading="lazy" alt="RMDev.Design"></a><div class="expertise-footer-links"><span>© 2026 RMDev.Design</span><a href="developpement-vr-unity.html">VR & Unity</a><a href="realisations.html">Réalisations</a><a href="confidentialite.html">Confidentialité</a></div></div></footer>
   <script src="signature.js" defer></script>
+<script src="header.js" defer></script>
 </body>
 </html>

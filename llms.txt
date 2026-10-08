@@ -1,6 +1,6 @@
 # RMDev.Design
 
-> Portfolio professionnel de Romain Maunier, designer et developpeur freelance specialise en prototypage interactif, Unity, realite virtuelle, realite augmentee et design UI/UX.
+> RM Dev Design est l’activité freelance de Romain Maunier, à Paris, en Île-de-France et à distance. Portfolio professionnel de Romain Maunier, designer et developpeur freelance specialise en prototypage interactif, Unity, realite virtuelle, realite augmentee et design UI/UX.
 
 ## Site principal
 
@@ -19,11 +19,11 @@
 
 - [Formation securite VR](https://rmdev.design/cas-client-securite-vr.html): experience industrielle utilisee plus de 800 fois pendant un salon.
 - [Demonstrateur de motorisation](https://rmdev.design/cas-client-demonstrateur-motorisation.html): visualisation interactive d'une chaine de traction hybride sous Unity HDRP.
-- [Systemes embarques](https://rmdev.design/cas-client-systemes-embarques.html): prototype Unity connecte au bus CAN dans un programme R&D de 24 mois.
+- [Systemes embarques](https://rmdev.design/cas-client-systemes-embarques.html): application Unity autour d’un simulateur de conduite, présentée sans détails confidentiels.
 - [Formation immersive](https://rmdev.design/cas-client-formation-immersive.html): entrainement a la prise de parole en VR avec analyse par IA.
 - [Visualisation 3D immobiliere](https://rmdev.design/cas-client-plan-3d.html): transformation d'un plan 2D en visualisation 3D immobiliere livree en 48 heures.
 - [XR Share](https://rmdev.design/cas-client-xr-share.html): collaboration multiplateforme entre VR, AR, mobile et PC.
-- [Visite VR immobiliere](https://rmdev.design/cas-client-visite-vr-immobilier.html): transformation de plans DWG en visite Meta Quest 2 livree en 48 heures.
+- [Visite VR immobiliere](https://rmdev.design/cas-client-visite-vr-immobilier.html): transformation de plans DWG en visite compatible Meta Quest 3 livree en 48 heures.
 - [VR in Cockpit](https://rmdev.design/cas-client-vr-cockpit.html): experience automobile Unity HDRP utilisee par plus de 1 200 visiteurs en cinq jours.
 - [Application domotique UI/UX](https://rmdev.design/cas-client-ui-ux-domotique.html): architecture, design system et plus de 100 ecrans Figma livres.
 - [Ergonomie cockpit](https://rmdev.design/cas-client-ergonomie-cockpit.html): validation en VR de la position des commandes avant fabrication.
@@ -35,3 +35,23 @@
 - Email: contact@rmdev.design
 - LinkedIn: https://www.linkedin.com/in/romain-maunier-826850108/
 - Malt: https://www.malt.fr/profile/romainmaunier
+
+## Pages ciblées
+- [Développement Meta Quest 3](https://rmdev.design/developpement-meta-quest-3.html)
+- [Démonstrateur VR industriel](https://rmdev.design/demonstrateur-vr-industriel.html)
+- [Réalité mixte en entreprise](https://rmdev.design/realite-mixte-entreprise.html)
+- [Réalisations documentées](https://rmdev.design/realisations.html)
+- [Romain Maunier](https://rmdev.design/a-propos-romain-maunier.html)
+- [Déployer et tester une application Quest 3](https://rmdev.design/guides/deployer-application-meta-quest-3.html)
+- [Quest autonome ou PC VR](https://rmdev.design/guides/quest-3-ou-pc-vr.html)
+- [Estimer un prototype VR](https://rmdev.design/guides/cout-prototype-vr-entreprise.html)
+
+## Compatibilité des applications VR
+
+Toutes les applications VR de Romain Maunier tournent sur Meta Quest 3. Les études de cas précisent le matériel utilisé lors de leur réalisation ; aucune référence développée spécifiquement pour Quest 3 n’est présentée.
+
+## Configurateurs 3D web
+
+Romain Maunier développe des configurateurs 3D web de A à Z : viewer Three.js, frontend React et backend de gestion des abonnements et d’ajout de produits.
+
+- [Configurateurs 3D web](https://rmdev.design/configurateur-3d-web.html)
