@@ -132,3 +132,12 @@ Sur les pages prototypage et UI/UX, le paragraphe isolé vers les configurateurs
 Les pages Unity XR freelance et développement VR Unity couvraient le même besoin. Leurs contenus sont regroupés sur l’URL existante `/developpement-vr-unity.html` : usages, preuves de réalisation, types de missions, stack et FAQ. Les liens internes et le menu Expertises pointent directement vers cette page unique.
 
 La nouvelle URL `/developpeur-unity-xr-freelance.html` est conservée comme redirection HTML immédiate avec canonical vers la page unifiée, noindex et lien de secours. Ce mécanisme fonctionne sur l’hébergement statique ; il ne s’agit pas d’une réponse HTTP 301. L’URL de redirection est retirée du sitemap et de llms.txt. Le sitemap contient désormais 26 URLs indexables.
+
+
+## Contrôle public du 8 octobre 2026 après publication
+
+Les pages Quest 3, démonstrateur industriel, réalisations et réalité mixte répondent en HTTP 200. L’ancienne URL développeur Unity XR répond en 200 avec la redirection HTML prévue vers la page Unity fusionnée.
+
+Les valeurs 800+, 1 200+, 100+ et 12 sont présentes dans le HTML public. L’animation numérique est supprimée pour éviter toute lecture de valeurs intermédiaires dans le DOM rendu. L’accueil conserve sa grille visuelle de projets. Les descriptions et rôles restent sur la page Réalisations et dans les études de cas ; les trois blocs textuels ajoutés au-dessus de la grille ont été retirés après revue de la mise en page. La page cockpit conserve un périmètre discret avec contexte, rôle et livrable Unity.
+
+TODO utilisateur : conserver ou confirmer les justificatifs des résultats chiffrés historiques (800 démonstrations, 1 200 visiteurs, 100 écrans). Les résultats du cockpit restent qualitatifs ; aucun gain chiffré n’est ajouté. Après publication de ces dernières corrections, relancer le crawler sur les URLs exactes sans www et comparer sa date de lecture.
